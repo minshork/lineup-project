@@ -1,6 +1,30 @@
 @charset "UTF-8";
-
-.header_inner{
+header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1004;
+  transition: 0.3s;
+}
+header:hover{
+  background: #fff;
+}
+header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 0;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  top: 100%;
+  transition: all 0.3s;
+}
+header.on::before {
+  height: 70px;
+}
+.header_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
   margin: 0 auto;
@@ -8,42 +32,94 @@
   justify-content: space-between;
   align-items: center;
 }
-.logo{
+.logo {
   flex: 1;
   max-width: 70px;
 }
-.depth02_wrap{
-  display: none;
+nav {
+  height: 100%;
 }
-.gnb_wrap .gnb{
+.depth02_wrap {
+  overflow: hidden;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+li:hover>.depth02_wrap {
+  opacity: 1;
+  visibility: visible;
+}
+li:hover>.depth02_wrap .depth02_inner {
+  opacity: 1;
+}
+.gnb_wrap .gnb {
   display: flex;
-  gap: 80px;
 }
-.gnb_wrap .gnb > li a{
-  line-height: 70px;
+.gnb_wrap .gnb li .depth01 {
   font-family: var(--fontG);
+  display: block;
+  width: 100%;
+  line-height: 70px;
 }
-.container{
+.gnb_wrap .gnb li:not(:last-of-type) .depth01 {
+  padding-right: 80px;
+}
+.container {
   height: 900px;
   background: #ddd;
 }
-
+.depth02_wrap .depth02_inner {
+  position: absolute;
+  left: 0;
+  max-width: 1400px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  transition: all 0.3s;
+  opacity: 0;
+}
+.depth02_wrap ul {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
+}
+.depth02_wrap ul li a {
+  font-family: var(--fontG);
+  line-height: 70px;
+}
 /* 푸터 */
-.footer_inner{
+.footer_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
   margin: 0 auto;
   padding: 40px 0;
 }
-.ft_top ul{
+.ft_top ul {
   display: flex;
   gap: 30px;
 }
-.ft_bottom{
+.ft_top ul li a{
+  font-weight: 500;
+}
+.ft_bottom {
   display: flex;
   gap: 40px;
+  margin-top: 40px;
 }
-.ft_bottom .ft_logo{
+.ft_bottom .ft_logo {
   max-width: 70px;
   width: 100%;
+}
+.ft_info .info_txt p{
+  font-size: 1.4rem;
+}
+.ft_info .info_txt p + p{
+  margin-top: 5px;
+}
+.ft_info .info_txt p:last-of-type{
+  margin-top: 10px;
 }
