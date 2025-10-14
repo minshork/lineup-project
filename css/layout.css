@@ -23,9 +23,6 @@ header.on::before {
   opacity: 1;
   visibility: visible;
 }
-header:hover {
-  background: #fff;
-}
 .header_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
@@ -49,13 +46,6 @@ header:hover {
   opacity: 0;
   transition: 0.3s;
 }
-header:hover .logo img.on {
-  opacity: 1;
-  transition: 0.3s;
-}
-header:hover .logo img:not(.on) {
-  opacity: 0;
-}
 nav {
   height: 100%;
 }
@@ -71,11 +61,6 @@ nav {
   pointer-events: none;
   border-top: 1px solid #ddd;
 }
-.gnb_wrap .gnb>li:hover>.depth02_wrap {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 .gnb_wrap .gnb {
   display: flex;
 }
@@ -84,13 +69,11 @@ nav {
   display: block;
   width: 100%;
   line-height: 70px;
+  color: #fff;
   transition: 0.3s;
 }
 .gnb_wrap .gnb li:not(:last-of-type) .depth01 {
   padding-right: 80px;
-}
-.gnb_wrap .gnb>li:hover .depth01 {
-  color: var(--color01);
 }
 .depth02_wrap .depth02_inner {
   max-width: 1400px;
@@ -155,6 +138,30 @@ nav {
 }
 .m_menu .menu_icon.active .bar:last-of-type {
   transform: translateX(0px)translateY(-9px) rotate(-45deg);
+}
+
+@media screen and (hover : hover) {
+  header:hover {
+    background: #fff;
+  }
+  header:hover .logo img.on {
+    opacity: 1;
+    transition: 0.3s;
+  }
+  header:hover .logo img:not(.on) {
+    opacity: 0;
+  }
+  .gnb_wrap .gnb>li:hover>.depth02_wrap {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  header:hover .gnb_wrap .gnb li .depth01 {
+    color: #000;
+  }
+  header:hover .gnb_wrap .gnb li:hover .depth01 {
+    color: var(--color01);
+  }
 }
 
 /* 푸터 */
