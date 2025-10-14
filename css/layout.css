@@ -92,10 +92,6 @@ nav {
 .gnb_wrap .gnb>li:hover .depth01 {
   color: var(--color01);
 }
-.container {
-  height: 900px;
-  background: #ddd;
-}
 .depth02_wrap .depth02_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
