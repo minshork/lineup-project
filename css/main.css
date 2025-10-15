@@ -1,3 +1,8 @@
+body {
+  width: 100vw;
+  /* max-width: 1400px; */
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -35,7 +40,7 @@
   transform: translateX(-50%);
   background-color: #e1eed1;
   display: flex;
-  border-radius: 80px;
+  border-radius: 100px;
 }
 .quickmenu__box {
   width: 200px;
@@ -64,7 +69,104 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 20px;
 }
 .minitext {
   text-align: center;
+  font-family: var(--fontP);
+}
+/* sec3시작 */
+.main__sec3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__sec3__outBox {
+  width: 100%;
+  height: 560px;
+  /* background-color: orange; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.main__sec3__leftBox {
+  width: 85%;
+  height: 560px;
+  /* background-color: blue; */
+  border: 3px solid #f5cee6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.main__sec3__rightBox {
+  width: 100%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main__sec3__imgBox {
+  width: 800px;
+  height: 500px;
+  border-radius: 250px 0 0 250px;
+  background-color: aqua;
+}
+.main__sec3__textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main__sec3__text {
+  font-family: var(--fontP);
+}
+/* sec4 시작 */
+.main__sec4 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main__sec4__outBox {
+  width: 100%;
+  height: 560px;
+  /* background-color: orange; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.main__sec4__leftBox {
+  width: 85%;
+  height: 560px;
+  /* background-color: blue; */
+  border: 3px solid #f5cee6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+.main__sec4__imgBox {
+  width: 800px;
+  height: 500px;
+  border-radius: 0px 250px 250px 0px;
+  background-color: aqua;
+}
+.main__sec4__rightBox {
+  width: 85%;
+  height: 560px;
+  /* background-color: blue; */
+  border: 3px solid #f5cee6;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.main__sec4__textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 15px;
+}
+.main__sec4__text {
+  font-family: var(--fontP);
 }
