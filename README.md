@@ -1,1 +1,103 @@
-# lineup-project
+# 🌐 Line-Up Project
+
+> **팀명:** Line-Up  
+> **프로젝트명:** Line-Up Project  
+> **구성원:** 총 4명 (팀장 1명 + 팀원 3명)  
+> **기술 스택:** HTML, CSS, JavaScript  
+> **프로젝트 유형:** 웹사이트 리뉴얼
+
+---
+
+## 🧭 브랜치 관리 방식
+
+> 기존 방식은 지속적으로 본인의 브랜치를 dev 혹은 main을 pull해서 업데이트를 통한 관리를 해줘야하기 때문에 번거로워서 바꾸게 되었습니다.
+> 기존 방식
+> - 본인 브랜치를 생성 후 지속적으로 관리
+
+> 새로운 방식
+> - 날짜별로 새로운 브랜치를 생성 후 merge후 브랜치 삭제
+
+### 🔹 기본 브랜치 구조
+| 브랜치 | 설명 |
+|:--------|:------|
+| `main` | 배포용 브랜치 |
+| `dev` | 통합 개발 브랜치 |
+| `name-date` | 팀원별 임시 작업용 브랜치 (예: lms-1016, cej-1017) |
+
+---
+
+### 🔸 작업 흐름
+1. 팀원은 **본인 이름-날짜 브랜치**(`lms-date`, `cej-date`, `khn-date`, `hhj-date`)를 생성하고 작업 후 **커밋 & 푸시**  
+2. 작업이 완료되면 **PR(Pull Request)** 생성  
+3. 팀장은 PR을 검토 후 **`dev` 브랜치에 merge 및 해당 브랜치 삭제**  
+4. 다음 날 작업 시 새로운 브랜치를 생성해 동일한 절차 반복
+
+> 💡 브랜치는 **기능 단위**가 아닌 **개인별 일일 단위**로 생성합니다.
+
+---
+
+## ⚙️ 작업 규칙
+
+1. **작업 전 항상 최신 dev 브랜치 pull**
+   - 충돌 방지를 위해 필수
+2. **main 및 dev 브랜치는 직접 푸시 금지**
+   - 오직 팀장만 merge 가능 (충돌 방지)
+3. **PR 제목 규칙**
+   - `[이름-날짜] 작업 내용 요약` 예: `[lms-1016] imgSilde JavaScript기능 구현`
+4. **커밋 메시지 규칙** (해주시면 좋고 안해도됩니당)
+   - `add:` 새로운 파일 추가  
+   - `fix:` 버그 수정  
+   - `style:` 코드 스타일 변경 (기능 변화 없음)  
+   - `update:` 기능 수정 또는 개선  
+   - 예시: `[add] main.css 추가`, `[fix] nav 메뉴 hover 오류 수정`
+
+---
+
+## 📅 관리 요약
+
+| 구분 | 담당 | 설명 |
+|------|------|------|
+| Merge 관리 | 팀장 | 모든 PR 확인 후 승인/거부 |
+| 브랜치 생성 | 팀원 | 이름 기반 브랜치 생성 |
+| 브랜치 삭제 | 팀장 | merge 후 불필요 브랜치 삭제 |
+| main 배포 | 팀장 | dev 확인 후 main으로 merge |
+
+---
+
+## 📘 작업 예시
+
+1. **작업 시작 전 dev or main 최신화**
+```bash
+# 새로운 작업 시작 시 dev 최신화(업데이트)
+git switch dev
+git pull origin dev
+```
+
+2. **새 작업 브랜치 생성**
+```bash
+# 새로운 작업 시작 전에 개인별 일일 단위 브랜치 생성
+git switch -c name-date
+```
+
+3. **작업 완료(커밋 앤 푸시)**
+```bash
+git add .
+git commit -m "[add] imgSlide.js 파일 추가, [update] common.js 수정"
+git push origin name-date
+```
+
+4. **풀 리퀘스트(Pull Request)생성 및 팀장님께 보고**
+base : dev <- compare:name-date 확인 (중요!!!)
+- 제목: [name-date] 변경 내용
+- 설명: 본인 작업 내용 간단하게 or 제목 내용 동일하게
+> 예시: [lms-1016] 메인페이지 수정
+
+**다음 날 작업시 1번부터 다시 반복!**
+
+
+### 혹시라도 이해가 안되시면 notion링크 달아드릴테니 이것도 한번 읽어주세요!
+## 🔗 notion guide 링크
+
+👉 [Line-Up-Github-Guide](https://www.notion.so/LineUp_Github_Guide-28e0c6e9805780a1b312cb4e77e4af2f?source=copy_link)
+
+---
