@@ -78,6 +78,8 @@ git pull origin dev
 2. **새 작업 브랜치 생성**
 ```bash
 # 새로운 작업 시작 전에 개인별 일일 단위 브랜치 생성
+# 아래 명령어는 브랜치 생성 + 이동이기 때문에 git switch를 안해줘도 되긴합니다
+# 혹시 모르니 git branch로 본인의 브랜치가 어디인지 확인해줘도 좋아요!
 git switch -c name-date
 ```
 
