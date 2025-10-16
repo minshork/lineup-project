@@ -25,7 +25,7 @@
 |:--------|:------|
 | `main` | 배포용 브랜치 |
 | `dev` | 통합 개발 브랜치 |
-| `name-date` | 팀원별 임시 작업용 브랜치 (예: lms-1016, cej-1017) |
+| `name-date` | 팀원별 임시 작업용 브랜치 (예: `lms-1016`, `cej-1017`) |
 > 집에서 작업할 경우 **이름-home**으로 브랜치 생성 후 작업해주세요.(예시: `lms-home`)
 
 ---
@@ -101,12 +101,10 @@ git push origin name-date
 - 설명: 본인 작업 내용 간단하게 or 제목 내용 동일하게
 > 예시: [lms-1016] 메인페이지 수정
 
-5. **다음 날 작업시 1번부터 다시 반복!**
-
-
-### 혹시라도 이해가 안되시면 notion링크 달아드릴테니 이것도 한번 읽어주세요!
-## 🔗 notion guide 링크
-
-👉 [Line-Up-Github-Guide](https://www.notion.so/LineUp_Github_Guide-28e0c6e9805780a1b312cb4e77e4af2f?source=copy_link)
+### 5. **다음 날 작업시 1번부터 다시 반복!**
 
 ---
+
+## ✅ notion guide 링크
+#### 혹시라도 이해가 안되시면 notion링크 달아드릴테니 이것도 한번 읽어주세요!
+👉 [LineUp-Github-Guide](https://www.notion.so/LineUp_Github_Guide-28e0c6e9805780a1b312cb4e77e4af2f?source=copy_link)
