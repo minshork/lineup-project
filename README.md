@@ -91,7 +91,7 @@ git push origin name-date
 ```
 
 4. **풀 리퀘스트(Pull Request)생성 및 팀장님께 보고**
-base : dev <- compare:name-date 확인 (중요!!!)
+- base : dev <- compare:name-date 확인 (중요!!!)
 - 제목: [name-date] 변경 내용
 - 설명: 본인 작업 내용 간단하게 or 제목 내용 동일하게
 > 예시: [lms-1016] 메인페이지 수정
