@@ -81,5 +81,4 @@ input:focus::placeholder, textarea:focus::placeholder { color:transparent; }
   --color01 : #276850;
   --color02 : #449658;
   --fontP : 'Pretendard';
-  --fontG : 'GmarketSans';
 }
