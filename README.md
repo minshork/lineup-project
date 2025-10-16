@@ -58,7 +58,7 @@
 - `fix:` 버그 수정 
 - `update:` 기능 수정 또는 개선  
 - 예시: `[add] main.css 추가`, `[fix] nav 메뉴 hover 오류 수정`
-- 한글 예시: `[추가] main.css 추가, [버그픽스] nav 메뉴 hover 오류 수정`
+- 한글 예시: `[추가] main.css 추가, [오류 수정] nav 메뉴 hover 오류 수정`
 
 ---
 
