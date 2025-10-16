@@ -116,7 +116,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 3% 0 1%;
+  /* padding: 0 3% 0 1%; */
   box-sizing: border-box;
 }
 
@@ -130,6 +130,8 @@
   gap: 8%;
   cursor: pointer;
   transition: all 0.4s ease;
+  padding: 0 2%;
+  border-right: 1px solid #cee4b5;
 }
 .quickmenu__btnBox__btn:hover {
   background-color: #a3ca75;
@@ -137,6 +139,10 @@
 .quickmenu__btnBox__btn:hover svg,
 .quickmenu__btnBox__btn:hover p {
   color: #fff;
+}
+.quickmenu__btnBox__btn:last-of-type{
+  padding-right: 5%;
+  border-right: none;
 }
 
 .quickmenu__btnBox__btn > p {

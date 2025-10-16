@@ -26,7 +26,7 @@ header.on::before {
 .header_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
-  min-height: 70px;
+  min-height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -65,11 +65,11 @@ nav {
   display: flex;
 }
 .gnb_wrap .gnb li .depth01 {
-  font-family: var(--fontG);
   display: block;
   width: 100%;
-  line-height: 70px;
+  line-height: 100px;
   color: #fff;
+  font-size: 1.9rem;
   transition: 0.3s;
 }
 .gnb_wrap .gnb li:not(:last-of-type) .depth01 {
@@ -87,7 +87,6 @@ nav {
   transition: all 0.3s ease;
 }
 .depth02_wrap ul li a {
-  font-family: var(--fontG);
   line-height: 70px;
   display: block;
   padding: 0 30px;
@@ -208,6 +207,6 @@ footer {
 .ft_info .info_txt p:last-of-type {
   margin-top: 10px;
 }
-.wrap {
+/* .wrap {
   background: url(../assets/img/main/main_bg.png) no-repeat center bottom;
-}
+} */
