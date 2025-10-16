@@ -26,7 +26,7 @@ header.on::before {
 .header_inner {
   max-width: 1400px;
   width: calc(100% - 40px);
-  min-height: 70px;
+  min-height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -67,8 +67,9 @@ nav {
 .gnb_wrap .gnb li .depth01 {
   display: block;
   width: 100%;
-  line-height: 70px;
+  line-height: 100px;
   color: #fff;
+  font-size: 1.9rem;
   transition: 0.3s;
 }
 .gnb_wrap .gnb li:not(:last-of-type) .depth01 {
