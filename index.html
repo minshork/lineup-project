@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
   <div class="wrap">
     <!-- // header -->
     <header id="header">
@@ -113,84 +114,122 @@
       </div>
     </header>
     <!-- header // -->
+    
   
     <!-- cej 섹션 HTML 작업공간 -->
     <div class="container">
+
+      <!-- 섹션 1 시작 -->
       <section class="main__sec1">
+        <!-- 이미지 페이드인아웃 구간 -->
         <div class="main__sec1__imgBox">
-          <img src="/assets/KakaoTalk_20251014_151705264.jpg" />
-          <img />
-          <img />
-          <img />
+          <img src="/assets/img/main/main_img1.jpg" alt="메인 이미지 1"/>
+          <img src="/assets/img/main/main_img2.jpg" alt="메인 이미지 2"/>
+          <img src="/assets/img/main/main_img3.jpg" alt="메인 이미지 3"/>
+          <img src="/assets/img/main/main_img4.jpg" alt="메인 이미지 4"/>
+          <img src="/assets/img/main/main_img5.jpg" alt="메인 이미지 5"/>
         </div>
         <div class="main__sec1__imgBox__textBox">
-          <img src="/assets/main_text.png" alt="" />
+          <img src="/assets/main_text.png" alt="메인 타이틀 텍스트" />
         </div>
+      </section>
+      <!-- 섹션 1 종료 -->
+        
+      <!-- 퀵메뉴 위치 고정을 위한 섹션 2 포함 컨테이너 -->
+      <div class="main__sec2Wrapper">
+        <!-- 퀵메뉴 -->
         <div class="main__sec1__quickmenu">
-          <div class="quickmenu__box"></div>
-          <div class="quickmenu__box">
-            <div class="quickmenu__box__icon"></div>
-            <p>교통정보</p>
-          </div>
-          <div class="quickmenu__box">
-            <div class="quickmenu__box__icon"></div>
-            <p>관광코스</p>
-          </div>
-          <div class="quickmenu__box">
-            <div class="quickmenu__box__icon"></div>
-            <p>문화관광해설사</p>
-          </div>
-          <div class="quickmenu__box">
-            <div class="quickmenu__box__icon"></div>
-            <p>공중화장실</p>
-          </div>
-        </div>
-      </section>
+          <!-- 날씨 api 삽입 후 조정 필요 -->
+          <div class="quickmenu__weather"></div> 
 
-      <section class="main__sec2">
-        <img src="/assets/mountain.png" />
-        <div class="main__sec2__text">
-          <h1>계룡산</h1>
-          <div>
-            <p class="minitext">
-              계룡산은 멀리서 보면 평범한 여느 산과 그리 다를 바가 없다.<br />
-              그러나 그곳에 가서 곳곳에 숨겨진 아름다운 골짜기와 바위, 나무를
-              둘러보게 되면<br />
-              그 산의 신비로움과 아름다움에 빠져들지 않을 수가 없게 된다<br />
-              산봉우리가 줄지어 날카롭게 솟아 있고, 깎아지는 듯한 낭떠러지와
-              울창하게 들어선 나무들이<br />
-              곳곳의 깊디깊은 골짜기와 그 골짜기에서 흐르는 쪽빛 내와 어울려<br />
-              뛰어난 경치를 이루어 놓았다.
-            </p>
-          </div>
-          <div class="button">View More</div>
-        </div>
-      </section>
-
-      <section class="main__sec3"></section>
-      <div class="main__sec3__outBox">
-        <div class="main__sec3__leftBox">
-          <div class="main__sec3__textBox">
-            <div><h2>차 한잔에 여행을 그린다.</h2></div>
-            <div><h1>Driving Car.fe</h1></div>
-            <div class="main__sec3__text">
-              <p>
-                자연과 함께 머물 수 있는 언택트 여행지가 각광받는 요즘.<br />
-                캠핑이 부담이 된다면, 작은 쉼터나 공원에서<br />
-                차를 세우고 가볍게 차 한잔 하는 '드라이빙 카페'<br />
-                컨셉의 여행은 어떨까요? 훈훈하게 부는 바람의 온도와 <br />
-                냄새를 느끼며 차 한 잔 하기 좋은 장소를 소개해 드릴게요.
-              </p>
+          <!-- 퀵메뉴 버튼 -->
+          <div class="quickmenu__btnBox">
+            <!-- 교통정보 -->
+            <div href="#none" class="quickmenu__btnBox__btn">
+                <svg class="quickmenu__btnBox__btn__icon btn-transport">
+                  <use href="sprites.xml#btn-transport"></use>
+                </svg>
+              <p>교통정보</p>
             </div>
-            <div>둘러보기</div>
+            <!-- 관광코스 -->
+            <div href="#none" class="quickmenu__btnBox__btn">
+              <svg class="quickmenu__btnBox__btn__icon btn-tour">
+                  <use href="sprites.xml#btn-tour"></use>
+                </svg>
+              <p>관광코스</p>
+            </div>
+            <!-- 문화관광해설사 -->
+            <div href="#none" class="quickmenu__btnBox__btn">
+              <svg class="quickmenu__btnBox__btn__icon btn-guide">
+                  <use href="sprites.xml#btn-guide"></use>
+                </svg>
+              <p>문화관광해설사</p>
+            </div>
+            <!-- 공중화장실 -->
+            <div href="#none" class="quickmenu__btnBox__btn">
+              <svg class="quickmenu__btnBox__btn__icon btn-toilet">
+                  <use href="sprites.xml#btn-toilet"></use>
+                </svg>
+              <p>공중화장실</p>
+            </div>
+          </div>
+          <!-- 퀵메뉴 버튼 종료 -->
+        </div>
+        <!-- 퀵메뉴 종료 -->
+        
+      <!-- 섹션 2 시작 -->
+      <section class="main__sec2">
+        <!-- 섹션 2 배경 -->
+        <div class="main__sec2__background">
+          <img src="/assets/mountain.png" />
+        </div>
+        
+        <!-- 섹션 2 텍스트 -->
+        <div class="main__sec2__textGuideLine">
+          <div class="main__sec2__textGuideLine__text">
+            <h1 class="main__sec2__textGuideLine__text__title">계룡산</h1>
+              <p>
+                계룡산은 멀리서 보면 평범한 여느 산과 그리 다를 바가 없다.<br />
+                그러나 그곳에 가서 곳곳에 숨겨진 아름다운 골짜기와 바위, 나무를
+                둘러보게 되면<br />
+                그 산의 신비로움과 아름다움에 빠져들지 않을 수가 없게 된다<br />
+                산봉우리가 줄지어 날카롭게 솟아 있고, 깎아지는 듯한 낭떠러지와
+                울창하게 들어선<br />
+                나무들이 곳곳의 깊디깊은 골짜기와 그 골짜기에서 흐르는 쪽빛 내와 어울려<br />
+                뛰어난 경치를 이루어 놓았다.
+              </p>
+            <div href="#none">View More →</div>
           </div>
         </div>
-        <div class="main__sec3__rightBox">
-          <div class="main__sec3__imgBox"></div>
-        </div>
+      </section>
+      <!-- 섹션 2 종료 -->
       </div>
-      <!-- 섹션4시작 -->
+      <!-- 퀵메뉴 고정 컨테이너 종료 -->
 
+      <!-- 섹션 3 시작 -->
+      <section class="main__sec3">
+        <div class="main__sec3__background"></div>
+
+        <div class="main__sec3__textBox">
+            <div class="main__sec3__textBox__title">
+              <h2>차 한잔에 여행을 그린다.</h2>
+              <h1>Driving Car.fe</h1>
+            </div>
+            <p>
+              자연과 함께 머물 수 있는 언택트 여행지가 각광받는 요즘
+              캠핑이 부담이 된다면, 작은 쉼터나 공원에서
+              차를 세우고 가볍게 차 한잔 하는 '드라이빙 카페'
+              컨셉의 여행은 어떨까요? 훈훈하게 부는 바람의 온도와
+              냄새를 느끼며 차 한 잔 하기 좋은 장소를 소개해 드릴게요.
+            </p>
+            <div class="main__sec3__textBox__btn">둘러보기</div>
+          </div>
+    
+        </div>
+      </section>
+      <!-- 섹션 3 종료 -->
+      
+      <!-- 섹션 4 시작 -->
       <section class="main__sec4">
         <div class="main__sec4__outBox">
           <div class="main__sec4__leftBox">
@@ -215,8 +254,17 @@
           </div>
         </div>
       </section>
+      <!-- 섹션 4 종료 -->
+
+      <!-- 섹션 5 imgRolling 구간 -->
+      
+      <!-- 섹션 5 종료 -->
     </div>
+    <!-- cej top버튼 작업공간 -->
+     <button class="main__topButton" id="topBtn">TOP</button>
     <!-- cej 섹션 HTML 작업공간 -->
+
+    
   
     <!-- // footer -->
     <footer>
