@@ -91,6 +91,7 @@ git switch -c name-date
 ```
 
 3. **작업 완료(커밋 앤 푸시)**
+>  ###### 커밋은 자주 해주시면 좋아요 === 백업 파일 생성하는것과 같음
 ```bash
 git add .
 git commit -m "[add] imgSlide.js 파일 추가, [update] common.js 수정"
