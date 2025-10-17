@@ -113,6 +113,7 @@ git push origin name-date
 ```bash
 # 브랜치를 제거하기 위해서는 해당 브랜치에 있으면 안됨
 git switch dev
+git fetch -p
 
 # 제거하기 위한 브랜치 목록 확인하기
 git branch
