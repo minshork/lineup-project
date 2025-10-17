@@ -149,66 +149,6 @@
                 </div>
               </div>
               <!-- 서브 콘텐츠 들어가는 영역 -->
-              <div class="direction_map_wrap">
-                <div class="map_inner">
-                  <div id="map" style="width:100%;height:400px;"></div>
-                  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4f4ebe661c36aefe675331e6a866c590"></script>
-                  <script>
-                      var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-                      var options = { //지도를 생성할 때 필요한 기본 옵션
-                        center: new kakao.maps.LatLng(36.274385, 127.248795), //지도의 중심좌표.
-                        level: 3 //지도의 레벨(확대, 축소 정도)
-                      };
-
-                      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-
-                      // 마커가 표시될 위치입니다 
-                      var markerPosition  = new kakao.maps.LatLng(36.274570, 127.248530); 
-
-                      // 마커를 생성합니다
-                      var marker = new kakao.maps.Marker({
-                          position: markerPosition
-                      });
-
-                      // 마커가 지도 위에 표시되도록 설정합니다
-
-                      var imageSrc = '../../assets/img/sub/ico_location.png', // 마커이미지의 주소입니다    
-                          imageSize = new kakao.maps.Size(32, 32), // 마커이미지의 크기입니다
-                          imageOption = {offset: new kakao.maps.Point(14, 32)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-                      // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-                      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-                          markerPosition = new kakao.maps.LatLng(36.274570, 127.248530); // 마커가 표시될 위치입니다
-
-                      // 마커를 생성합니다
-                      var marker = new kakao.maps.Marker({
-                        position: markerPosition,
-                        image: markerImage // 마커이미지 설정 
-                      });
-
-                      // 마커가 지도 위에 표시되도록 설정합니다
-                      marker.setMap(map);
-                  </script>
-                  <div class="map_info">
-                    <div class="map_contents">
-                      <div class="logo_img">
-                        <img src="../../assets/img/common/logo.png" alt="">
-                      </div>
-                      <div class="address_wrap">
-                        <ul>
-                          <li class="adr"><span>주소</span>충청남도 계룡시 장안로 46 (금암동) (우 32823) (지번 금암동 10)</li>
-                          <li class="call"><span>연락처</span>TEL. 042&#41; 840 - 2114 / FAX. 042&#41; 840 - 2904</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="parking">
-                  <span>주차현황</span>
-                  <p>총240면(일반 211면, 장애인 6면, 임산부 2면, 경차 13면, 친환경 8면)<br>
-                    <strong>※ 주차장(면) 추가조성 및 시설관리는 연중 지속 추진되고 있습니다.</strong></p>
-                </div>
-              </div>
               
             </div>
           </div>

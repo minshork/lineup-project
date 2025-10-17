@@ -402,33 +402,3 @@
 .main__sec4__text {
   font-family: var(--fontP);
 }
-
-/* TOP버튼 */
-.main__topButton {
-  width: 73px;
-  height: 73px;
-  background-color: darkgreen;
-  color: white;
-  position: fixed;
-  right: 140px;
-  bottom: 40px;
-  border-radius: 15px;
-  padding: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.3s linear;
-}
-.main__topButton.show {
-  opacity: 1;
-}
-
-.main__topButton:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-.main__topButton::before {
-  content: url(/assets/img/common/ico_top.svg);
-  display: block;
-  margin-right: 6px;
-  font-size: 12px;
-}
