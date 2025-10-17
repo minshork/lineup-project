@@ -1,4 +1,9 @@
 /* 전체 구간 */
+
+body{
+  width: 100vw;
+  overflow-x: hidden;
+}
 .container {
   width: 100vw;
 }
@@ -52,9 +57,9 @@
 /* 섹션 1 페이드인아웃 이미지 캡슐 */
 .main__sec1__curImg {
   position: absolute;
-  padding: 14px 24px;
+  padding: 14px 20px;
   height: 25px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.45);
   border-radius: 30px;
   z-index: 1000;
   bottom: 20%;
@@ -75,6 +80,8 @@
   border-radius: 50%;
   cursor: pointer;
 }
+/* 섹션 1 종료 */
+
 
 /* 퀵메뉴 고정을 위한 컨테이너 */
 .main__sec2Wrapper {
@@ -159,6 +166,7 @@
   color: #59945d;
   transition: all 0.4s ease;
 }
+/* 퀵메뉴 종료 */
 
 /* 섹션 2 시작 */
 .main__sec2 {
@@ -178,6 +186,7 @@
 /* 섹션 2 텍스트 */
 .main__sec2__textGuideLine {
   width: 85%;
+  max-width: 1600px;
   height: 100%;
   display: flex;
   justify-content: end;
@@ -224,15 +233,15 @@
   line-height: 1.6;
 }
 
-.main__sec2__textGuideLine__text > div {
+.main__sec2__textGuideLine__btn {
   font-size: 2rem;
   color: #5b9960;
-  letter-spacing: 0;
+  letter-spacing: -0.1rem;
   position: relative;
   cursor: pointer;
 }
 
-.main__sec2__textGuideLine__text > div::after {
+.main__sec2__textGuideLine__btn::after {
   content: "";
   position: absolute;
   left: 0;
@@ -244,187 +253,150 @@
   transition: width 0.4s ease;
 }
 
-.main__sec2__textGuideLine__text > div:hover::after {
+.main__sec2__textGuideLine__btn:hover::after {
   width: 100%;
 }
 /* 섹션 2 종료 */
 
-/* 섹션 3 시작 */
-.main__sec3 {
+
+/* 섹션 3 - 4 공통 css */
+
+
+.main__sec3__background, .main__sec4__background{
+  width: clamp(500px, 57vw, 1200px);
+  height: clamp(200px, 60vh, 800px);
+  /* aspect-ratio: 1050 / 600; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 5px 8px 15px rgba(100, 100, 100, 0.25);
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.main__sec3__textBox, .main__sec4__textBox{
+  width: 85%;
+  max-width: 1600px;
+  /* background-color: azure; */
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5%;
+}
+
+.main__sec3__textBox__title > h2, .main__sec4__textBox__title > h2 {
+  font-family: var(--fontG);
+  font-weight: 400;
+  font-size: 2.8rem;
+}
+
+.main__sec3__textBox__title > h1, .main__sec4__textBox__title > h1 {
+  font-size: 5.2rem;
+}
+
+.main__sec3__textBox__title, .main__sec4__textBox__title {
+  margin-bottom: 24px;
+}
+
+.main__sec3__textBox__btn, .main__sec4__textBox__btn {
+  width: clamp(140px, 8vw, 200px);
+  height: 48px;
+  box-shadow: 3px 3px 5px rgba(100, 100, 100, 0.25);
+  background: #9ACB69;
+  background: linear-gradient(90deg, rgba(154, 203, 105, 1) 0%, rgba(89, 163, 92, 1) 35%, rgba(154, 203, 105, 1) 69%, rgba(68, 150, 88, 1) 100%);
+  background-size: 310% 200%;
+  transition: all 0.5s ease;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  font-family: var(--fontG);
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.main__sec3__textBox__btn:hover, .main__sec4__textBox__btn:hover{
+  background-position: right center;
+}
+
+.main__sec3__textBox > p, .main__sec4__textBox > p {
+  width: 25vw;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 24px;
+  font-family: var(--fontP);
+}
+
+.main__sec3, .main__sec4 {
   width: 100%;
   height: 80vh;
   padding: 100px 0;
   display: flex;
   align-items: center;
-  /* position: relative; */
 }
 
-.main__sec3__background {
-  width: clamp(700px, 57vw, 1200px);
-  aspect-ratio: 1050 / 600;
+/* 섹션 3 - 4 공통 css 종료 */
+
+
+/* 섹션 3 시작 */
+.main__sec3__background{
   background-image: url(/assets/img/main/main_img7.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  box-shadow: 5px 8px 15px rgba(100, 100, 100, 0.25);
   border-radius: 999px 0 0 999px;
-  position: absolute;
   right: 0;
 }
+/* 섹션 3 종료 */
 
-.main__sec3__textBox {
-  width: 85%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
 
-.main__sec3__textBox__title > h2 {
-  font-family: var(--fontG);
-  font-weight: 400;
-  font-size: 2.8rem;
-}
-.main__sec3__textBox__title > h1 {
-  font-size: 5.2rem;
-}
-.main__sec3__textBox__title {
-  margin-bottom: 24px;
+/* 섹션 4 시작 */
+.main__sec4__textBox{
+  align-items: flex-end;
 }
 
-.main__sec3__textBox > p {
-  width: 24vw;
-  font-size: 2rem;
-  line-height: 1.6;
-  text-align: justify;
-  margin-bottom: 24px;
-}
-
-.main__sec3__textBox__btn {
-  width: 10vw;
-  height: 48px;
-  background-color: #59945d;
-  text-align: center;
-  line-height: 47px;
-  color: #fff;
-  font-family: var(--fontG);
-  font-size: 2rem;
-  font-weight: 400;
-  border-radius: 24px;
-  cursor: pointer;
-}
-
-.main__sec3__outBox {
-  width: 100%;
-  height: 560px;
-  /* background-color: orange; */
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.main__sec3__leftBox {
-  width: 85%;
-  height: 560px;
-  /* background-color: blue; */
-  border: 3px solid #f5cee6;
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-.main__sec3__rightBox {
-  width: 100%;
-  height: 100%;
-  /* background-color: green; */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.main__sec3__imgBox {
-  width: 800px;
-  height: 500px;
-  border-radius: 250px 0 0 250px;
-  background-color: aqua;
-}
-.main__sec3__textBox {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.main__sec3__text {
-  font-family: var(--fontP);
-}
-/* sec4 시작 */
-.main__sec4 {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.main__sec4__outBox {
-  width: 100%;
-  height: 560px;
-  /* background-color: orange; */
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.main__sec4__leftBox {
-  width: 85%;
-  height: 560px;
-  /* background-color: blue; */
-  border: 3px solid #f5cee6;
-  position: absolute;
-  display: flex;
-  align-items: center;
-}
-.main__sec4__imgBox {
-  width: 800px;
-  height: 500px;
-  border-radius: 0px 250px 250px 0px;
-  background-color: aqua;
-}
-.main__sec4__rightBox {
-  width: 85%;
-  height: 560px;
-  /* background-color: blue; */
-  border: 3px solid #f5cee6;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.main__sec4__textBox {
+.main__sec4__textBox__title{
   display: flex;
   flex-direction: column;
   align-items: end;
-  gap: 15px;
 }
-.main__sec4__text {
-  font-family: var(--fontP);
+
+.main__sec4__background{
+  background-image: url(/assets/img/main/main_img6.jpg);
+  border-radius: 0 999px 999px 0;
+  left: 0;
 }
+
+/* 섹션 4 종료 */
+
+
+/* 섹션 5 (이미지 롤링) 시작 */
+
+/* 섹션 5 (이미지 롤링) 종료 */
+
 
 /* TOP버튼 */
 .main__topButton {
   width: 73px;
   height: 73px;
-  background-color: darkgreen;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   position: fixed;
-  right: 140px;
-  bottom: 40px;
-  border-radius: 15px;
+  right: 30px; bottom: 30px;
+  border-radius: 10px;
   padding: 5px;
   font-size: 15px;
   cursor: pointer;
   opacity: 0;
-  transition: all 0.3s linear;
+  transition: all 0.3s ease;
 }
 .main__topButton.show {
   opacity: 1;
 }
 
 .main__topButton:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
 }
 .main__topButton::before {
   content: url(/assets/img/common/ico_top.svg);
