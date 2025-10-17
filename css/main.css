@@ -106,6 +106,28 @@
   height: 100%;
   background-color: #76b25c;
   border-radius: 9999px 0 0 9999px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.quickmenu__weather > div{
+  margin-left: 30px;
+}
+#weather__des{
+  font-size: 14px;
+}
+#weather__icon{
+  width: 100%;
+  height: 100%;
+  scale: 1.7;
+}
+#weather__temp{
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 /* 퀵메뉴 버튼 */
@@ -401,6 +423,66 @@
 }
 .main__sec4__text {
   font-family: var(--fontP);
+}
+/* sec5 시작 */
+.main__sec5 {
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+  display: flex;
+}
+.main__sec5__rollBox{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.main__sec5__rolling{
+    display: flex;
+}
+.main__sec5__rolling ul{
+    display: flex;
+    padding: 10px 0;
+}
+.main__sec5__rolling ul li{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    border: 5px solid lightgreen;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+.main__sec5__rolling ul li img{
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+}
+
+.main__sec5__aniLeft{
+    animation: main__sec5__move1 linear infinite 50s;
+}
+.main__sec5__aniRight{
+    animation: main__sec5__move2 linear infinite 50s;
+}
+
+@keyframes main__sec5__move1 {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes main__sec5__move2 {
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 /* TOP버튼 */

@@ -148,7 +148,11 @@
         <!-- 퀵메뉴 -->
         <div class="main__sec1__quickmenu">
           <!-- 날씨 api 삽입 후 조정 필요 -->
-          <div class="quickmenu__weather"></div> 
+          <div class="quickmenu__weather">
+            <div id="weather__des">튼구름</div>
+            <div><img id="weather__icon" src="" alt=""></div>
+            <div id="weather__temp">22.3</div>
+          </div> 
 
           <!-- 퀵메뉴 버튼 -->
           <div class="quickmenu__btnBox">
@@ -265,7 +269,14 @@
       <!-- 섹션 4 종료 -->
 
       <!-- 섹션 5 imgRolling 구간 -->
-      
+      <section class="main__sec5">
+        <div class="main__sec5__rollBox main__sec5__mv1">
+            <div class="main__sec5__rolling main__sec5__ro1"></div>
+        </div>
+        <div class="main__sec5_rollBox main__sec5__mv2">
+            <div class="main__sec5__rolling main__sec5__ro2"></div>
+        </div>
+      </section>
       <!-- 섹션 5 종료 -->
     </div>
     <!-- cej top버튼 작업공간 -->
@@ -318,6 +329,8 @@
 
   <script src="./js/common.js"></script>
   <script src="./js/imgFadeInOut.js"></script>
+  <script src="./js/weatherAPI.js"></script>
+  <script src="./js/imgRolling.js"></script>
 </body>
 </html>
 
