@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/* 편의안내 - 오시는길 */
+.direction_map_wrap #map {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.map_info {
+  background: var(--color02);
+  border-radius: 0 0 15px 15px;
+
+}
+
+.map_info .map_contents {
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  gap: 80px;
+}
+
+.map_info .map_contents .logo_img {
+  position: relative;
+}
+
+.map_info .map_contents .logo_img::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 40px);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.map_info .map_contents .address_wrap {
+  color: #fff;
+}
+
+.map_info .map_contents .address_wrap li {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.map_info .map_contents .address_wrap li span {
+  display: inline-block;
+  min-width: 75px;
+}
+
+.map_info .map_contents .address_wrap li+li {
+  margin-top: 10px;
+}
+
+.map_info .map_contents .address_wrap li span::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-right: 7px;
+}
+
+.map_info .map_contents .address_wrap li.adr span::before {
+  background: url(../../assets/img/sub/ico_address.png);
+  background-size: contain;
+}
+
+.map_info .map_contents .address_wrap li.call span::before {
+  background: url(../../assets/img/sub/ico_call.png);
+  background-size: contain;
+}
+
+.direction_map_wrap .parking {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  line-height: 24px;
+  font-family: var(--fontP);
+}
+
+.direction_map_wrap .parking span::before {
+  content: '!';
+  display: inline-block;
+  font-size: 4rem;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color01);
+  color: #fff;
+  text-align: center;
+  line-height: 23px;
+  font-size: 1.3rem;
+  margin-right: 8px;
+  margin-top: -1px;
+}
+
+.direction_map_wrap .parking p strong {
+  width: 100%;
+  font-weight: 400;
+  color: var(--color01);
+}
+
+
+/* 편의안내 - 공중 화장실 */
+.toilet_txt{
+  font-size: 2rem;
+  font-family: var(--fontP);
+  margin-bottom: 20px;
+}
+.toilet_list_wp > ul li + li{
+  margin-top: 25px;
+}
+.toilet_list_wp > ul li .arcoBtn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #c5e3b4;
+  line-height: 55px;
+  color: var(--color01);
+  text-align: left;
+  padding: 2px 25px 0;
+  font-size: 1.8rem;
+  border-radius: 10px;
+}
+.toilet_list_wp > ul li .arcoBtn.on{
+  border-radius: 10px 10px 0 0;
+  transition: 0.3s;
+}
+.toilet_list_wp > ul li .arcoBtn::after{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  content: '+';
+  color: #fff;
+  font-size: 2.5rem;
+  line-height: 35px;
+  border-radius: 50%;
+  background: var(--color01);
+  transition: all 0.3s;
+}
+.toilet_list_wp > ul li .arcoBtn.on::after{
+  content: '-';
+}
+.toilet_list_wp > ul li .toilet_map{
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+  max-height: 0;
+}
+.toilet_list_wp > ul li .toilet_map .inner{
+  padding: 25px;
+}
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map{
+  max-height: 600px;
+}
+.toilet_list_wp > ul li .toilet_map .text{
+  margin-bottom: 20px;
+}
+.toilet_list_wp > ul li .toilet_map .text p{
+  display: flex;
+  align-items: center;
+  line-height: 25px;
+  gap: 5px;
+}
+.toilet_list_wp > ul li .toilet_map .text p::before{
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.toilet_list_wp > ul li .toilet_map .text .location::before{
+  background: url(../../assets/img/sub/ico_pin.png) no-repeat center center;
+  background-size: contain;
+}
+.toilet_list_wp > ul li .toilet_map .text .time::before{
+  background: url(../../assets/img/sub/ico_clock.png) no-repeat center center;
+  background-size: 22px;
+}
+.maps {
+  width: 100%;
+  height: 400px;
+}
+.customoverlay {
+  position: relative;
+  bottom: 85px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  border-bottom: 2px solid #ddd;
+  float: left;
+}
+.customoverlay:nth-of-type(n) {
+  border: 0;
+  box-shadow: 0px 1px 2px #888;
+}
+.customoverlay a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 14px;
+  overflow: hidden;
+  background: var(--color02) url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
+}
+
+.customoverlay .title {
+  display: block;
+  text-align: center;
+  background: #fff;
+  margin-right: 35px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--fontP);
+}
+
+.customoverlay:after {
+  content: '';
+  position: absolute;
+  margin-left: -12px;
+  left: 50%;
+  bottom: -12px;
+  width: 22px;
+  height: 12px;
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+}

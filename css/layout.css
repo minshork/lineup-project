@@ -94,7 +94,7 @@ nav {
   position: relative;
 }
 .depth02_wrap ul li a:hover {
-  color: var(--color01);
+  color: var(--color02);
 }
 .depth02_wrap ul li a::before{
   content: '';
@@ -105,8 +105,9 @@ nav {
   height: 2px;
   bottom: 25px;
   border-radius: 50%;
-  background-color: var(--color01);
+  background-color: var(--color02);
   transition: 0.3s;
+  opacity: 0.5;
 }
 .depth02_wrap ul li a:hover:before{
   width: calc(100% - 55px);
@@ -175,7 +176,7 @@ nav {
     color: #000;
   }
   header:hover .gnb_wrap .gnb li:hover .depth01 {
-    color: var(--color01);
+    color: var(--color02);
   }
 }
 
