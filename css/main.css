@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* 전체 구간 */
 
 body{
@@ -395,8 +397,9 @@ body{
 /* 섹션 5 (이미지 롤링) 시작 */
 .main__sec5 {
   width: 100%;
-  height: 600px;
-  border: 1px solid black;
+  height: 640px;
+  /* padding-bottom: 60px; */
+  /* border: 1px solid black; */
 }
 .main__sec5__rollBox{
   display: flex;
@@ -405,50 +408,49 @@ body{
 }
 .main__sec5__rolling{
     display: flex;
+    /* transform: translateX(%); */
 }
 .main__sec5__rolling ul{
     display: flex;
     padding: 10px 0;
 }
 .main__sec5__rolling ul li{
-    position: relative;
-    width: 200px;
-    height: 100px;
-    border-radius: 50px;
-    border: 5px solid lightgreen;
-    margin-right: 30px;
-    margin-bottom: 30px;
-}
-.main__sec5__rolling ul li img{
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
+    width: 360px;
+    aspect-ratio: 320 / 250;
+    border-radius: 16px;
+    /* border: 5px solid lightgreen; */
+    margin-right: 35px;
+    margin-bottom: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 3px 7px rgba(100, 100, 100 , 0.3);
 }
 
-#moveBox1, #moveBox3{
-    animation: main__sec5__move1 linear infinite 50s;
+.main__sec5__aniLeft{
+    animation: main__sec5__move1 linear infinite 30s;
+    /* transform: translateX(-50%); */
 }
-#moveBox2, #moveBox4{
-    animation: main__sec5__move2 linear infinite 50s;
+.main__sec5__aniRight{
+    animation: main__sec5__move2 linear infinite 30s;
+    /* transform: translateX(-50%); */
 }
 
-/* @keyframes main__sec5__move1 {
+@keyframes main__sec5__move1 {
     0%{
         transform: translateX(0);
     }
     100%{
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
 @keyframes main__sec5__move2 {
     0%{
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
     100%{
         transform: translateX(0%);
     }
-} */
+}
 /* 섹션 5 (이미지 롤링) 종료 */
