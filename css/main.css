@@ -453,33 +453,3 @@ body{
     }
 }
 /* 섹션 5 (이미지 롤링) 종료 */
-
-
-/* TOP버튼 */
-.main__topButton {
-  width: 73px;
-  height: 73px;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  position: fixed;
-  right: 30px; bottom: 30px;
-  border-radius: 10px;
-  padding: 5px;
-  font-size: 15px;
-  cursor: pointer;
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-.main__topButton.show {
-  opacity: 1;
-}
-
-.main__topButton:hover {
-  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-}
-.main__topButton::before {
-  content: url(/assets/img/common/ico_top.svg);
-  display: block;
-  margin-right: 6px;
-  font-size: 12px;
-}
