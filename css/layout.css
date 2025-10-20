@@ -91,9 +91,25 @@ nav {
   display: block;
   padding: 0 30px;
   transition: 0.3s;
+  position: relative;
 }
 .depth02_wrap ul li a:hover {
   color: var(--color01);
+}
+.depth02_wrap ul li a::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  bottom: 25px;
+  border-radius: 50%;
+  background-color: var(--color01);
+  transition: 0.3s;
+}
+.depth02_wrap ul li a:hover:before{
+  width: calc(100% - 55px);
 }
 .m_menu{
   display: none;
