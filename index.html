@@ -148,38 +148,42 @@
         <!-- 퀵메뉴 -->
         <div class="main__sec1__quickmenu">
           <!-- 날씨 api 삽입 후 조정 필요 -->
-          <div class="quickmenu__weather"></div> 
+          <div class="quickmenu__weather">
+            <div id="weather__des">튼구름</div>
+            <div><img id="weather__icon" src="" alt=""></div>
+            <div id="weather__temp">22.3</div>
+          </div> 
 
           <!-- 퀵메뉴 버튼 -->
           <div class="quickmenu__btnBox">
             <!-- 교통정보 -->
-            <div href="#none" class="quickmenu__btnBox__btn">
+            <a href="#none" class="quickmenu__btnBox__btn">
                 <svg class="quickmenu__btnBox__btn__icon btn-transport">
                   <use href="sprites.xml#btn-transport"></use>
                 </svg>
               <p>교통정보</p>
-            </div>
+            </a>
             <!-- 관광코스 -->
-            <div href="#none" class="quickmenu__btnBox__btn">
+            <a href="#none" class="quickmenu__btnBox__btn">
               <svg class="quickmenu__btnBox__btn__icon btn-tour">
                   <use href="sprites.xml#btn-tour"></use>
                 </svg>
               <p>관광코스</p>
-            </div>
+            </a>
             <!-- 문화관광해설사 -->
-            <div href="#none" class="quickmenu__btnBox__btn">
+            <a href="#none" class="quickmenu__btnBox__btn">
               <svg class="quickmenu__btnBox__btn__icon btn-guide">
                   <use href="sprites.xml#btn-guide"></use>
                 </svg>
               <p>문화관광해설사</p>
-            </div>
+            </a>
             <!-- 공중화장실 -->
-            <div href="#none" class="quickmenu__btnBox__btn">
+            <a href="#none" class="quickmenu__btnBox__btn">
               <svg class="quickmenu__btnBox__btn__icon btn-toilet">
                   <use href="sprites.xml#btn-toilet"></use>
                 </svg>
               <p>공중화장실</p>
-            </div>
+            </a>
           </div>
           <!-- 퀵메뉴 버튼 종료 -->
         </div>
@@ -206,7 +210,7 @@
                 나무들이 곳곳의 깊디깊은 골짜기와 그 골짜기에서 흐르는 쪽빛 내와 어울려<br />
                 뛰어난 경치를 이루어 놓았다.
               </p>
-            <div href="#none">View More →</div>
+            <a href="#none" class="main__sec2__textGuideLine__btn">View More →</a>
           </div>
         </div>
       </section>
@@ -230,7 +234,7 @@
               컨셉의 여행은 어떨까요? 훈훈하게 부는 바람의 온도와
               냄새를 느끼며 차 한 잔 하기 좋은 장소를 소개해 드릴게요.
             </p>
-            <div class="main__sec3__textBox__btn">둘러보기</div>
+            <a href="#none" class="main__sec3__textBox__btn">둘러보기</a>
           </div>
     
         </div>
@@ -238,36 +242,39 @@
       <!-- 섹션 3 종료 -->
       
       <!-- 섹션 4 시작 -->
-      <section class="main__sec4">
-        <div class="main__sec4__outBox">
-          <div class="main__sec4__leftBox">
-            <div class="main__sec4__imgBox"></div>
-          </div>
-          <div class="main__sec4__rightBox">
-            <div class="main__sec4__textBox">
-              <div><h2>좋은 기운으로 물드는산책</h2></div>
-              <div><h1>Working Star</h1></div>
-              <div class="main__sec4__text">
-                <p>
-                  일과 휴식의 조화. 일하다의 워킹'과 걷다의 '워킹' 걷기는<br />
-                  운동으로도 좋고 스트레스 해소에도 도움이 되는데요, 단순히
-                  걷는<br />
-                  것만으로 기쁨을 얻을 수 있습니다. 계룡시의 이곳저곳을
-                  걸으며<br />
-                  볼 수 있는 코스를 소개해 드릴게요.<br />
-                </p>
-              </div>
-              <div>둘러보기</div>
+        <section class="main__sec4">
+        <div class="main__sec4__background"></div>
+
+        <div class="main__sec4__textBox">
+            <div class="main__sec4__textBox__title">
+              <h2>좋은 기운으로 물드는 산책</h2>
+              <h1>Working Star</h1>
             </div>
+            <p>
+              일과 휴식의 조화. 일하다의 '워킹'과 걷다의 '워킹', 
+              걷기는 운동으로도 좋고 스트레스 해소에도 도움이 되는데요, 단순히 걷는
+              것만으로도 기쁨을 얻을 수 있습니다.
+              계룡시의 이곳저곳을 걸으며 볼 수 있는 코스를 소개해 드릴게요.
+            </p>
+            <a href="#none" class="main__sec4__textBox__btn">둘러보기</a>
           </div>
+    
         </div>
       </section>
       <!-- 섹션 4 종료 -->
 
       <!-- 섹션 5 imgRolling 구간 -->
-      
+      <section class="main__sec5">
+        <div class="main__sec5__rollBox main__sec5__mv1">
+            <div class="main__sec5__rolling main__sec5__ro1"></div>
+        </div>
+        <div class="main__sec5_rollBox main__sec5__mv2">
+            <div class="main__sec5__rolling main__sec5__ro2"></div>
+        </div>
+      </section>
       <!-- 섹션 5 종료 -->
     </div>
+
     <!-- cej top버튼 작업공간 -->
     <button class="main__topButton" id="topBtn">TOP</button>
     <!-- cej 섹션 HTML 작업공간 -->
@@ -315,6 +322,8 @@
 
   <script src="./js/common.js"></script>
   <script src="./js/imgFadeInOut.js"></script>
+  <script src="./js/weatherAPI.js"></script>
+  <script src="./js/imgRolling.js"></script>
 </body>
 </html>
 
