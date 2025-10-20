@@ -11,7 +11,7 @@
 .sub_title_wrap .title {
   font-size: 45px;
 }
-.sub_inner{
+.sub_inner {
   flex: 1;
   padding-top: 80px;
   padding-bottom: 100px;
@@ -129,161 +129,17 @@
     display: none;
   }
 }
-/* 은조 작업시작 - 관광코스 페이지 */
-.tour_course_wrap .course_tabs {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  background-color: #fff700;
-  position: relative;
-  top: -40px;
-  font-weight: bold;
-}
-.course_tabs button {
-  border: none;
-  background: transparent;
-  font-size: 18px;
-  cursor: pointer;
-  color: #333;
-  padding: 8px 16px;
-  transition: 0.2s;
-}
-.tab-menu button.active {
-  color: #0a7a32;
-  border-bottom: 3px solid #0a7a32;
-}
-/* 콘텐츠 공통 스타일 */
-.tab-content {
-  display: none;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.tab-content.active {
-  display: block;
-}
-
-/* 하루코스 카드 레이아웃 */
-.timeline-wrap {
-  background: #f2f8f2;
-  padding: 60px 0;
-  border-radius: 16px;
-}
-
-.timeline-title {
-  text-align: center;
-  font-size: 28px;
-  color: #0a7a32;
-  margin-bottom: 60px;
-}
-
-/* 전체 타임라인 */
-.timeline {
-  position: relative;
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* 세로선 */
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background: #a3c9a3;
-  z-index: 0;
-}
-
-/* 각 아이템 */
-.timeline-item {
-  width: 50%;
-  position: relative;
-  margin-bottom: 80px;
-}
-
-.timeline-item.left {
-  left: 0;
-}
-
-.timeline-item.right {
-  left: 50%;
-}
-
-/* 점 */
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  right: -10px;
-  width: 18px;
-  height: 18px;
-  background: #0a7a32;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  z-index: 2;
-}
-.timeline-item.right::before {
-  left: -10px;
-  right: auto;
-}
-
-/* 콘텐츠 구조 */
-.timeline-content {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 1;
-}
-
-.timeline-item.left .timeline-content {
-  flex-direction: row;
-  text-align: left;
-}
-
-.timeline-item.right .timeline-content {
-  flex-direction: row-reverse;
-  text-align: right;
-}
-
-.timeline-content img {
-  width: 40%;
-  border-radius: 12px;
-}
-
-.text-box h3 {
-  color: #0a7a32;
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
-.text-box p {
-  color: #333;
-  line-height: 1.5;
-  font-size: 15px;
-}
-
-
 
 /* 편의안내 - 오시는길 */
 
-.direction_map_wrap #map{
+.direction_map_wrap #map {
   border-radius: 10px 10px 0 0;
   width: 100%;
   overflow: hidden;
-} 
-.map_info{
+}
+.map_info {
   background: var(--color02);
   border-radius: 0 0 15px 15px;
-  
 }
 .map_info .map_contents {
   display: flex;
@@ -291,11 +147,11 @@
   align-items: center;
   gap: 80px;
 }
-.map_info .map_contents .logo_img{
+.map_info .map_contents .logo_img {
   position: relative;
 }
-.map_info .map_contents .logo_img::after{
-  content: '';
+.map_info .map_contents .logo_img::after {
+  content: "";
   position: absolute;
   width: 1px;
   height: calc(100% + 10px);
@@ -304,23 +160,23 @@
   left: calc(100% + 40px);
   background: rgba(255, 255, 255, 0.5);
 }
-.map_info .map_contents .address_wrap{
+.map_info .map_contents .address_wrap {
   color: #fff;
 }
-.map_info .map_contents .address_wrap li{
+.map_info .map_contents .address_wrap li {
   display: flex;
   align-items: baseline;
   gap: 20px;
 }
-.map_info .map_contents .address_wrap li span{
+.map_info .map_contents .address_wrap li span {
   display: inline-block;
   min-width: 75px;
 }
-.map_info .map_contents .address_wrap li + li{
+.map_info .map_contents .address_wrap li + li {
   margin-top: 10px;
 }
-.map_info .map_contents .address_wrap li span::before{
-  content: '';
+.map_info .map_contents .address_wrap li span::before {
+  content: "";
   display: inline-block;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -328,23 +184,23 @@
   height: 24px;
   margin-right: 7px;
 }
-.map_info .map_contents .address_wrap li.adr span::before{
+.map_info .map_contents .address_wrap li.adr span::before {
   background: url(../assets/img/sub/ico_address.png);
   background-size: contain;
 }
-.map_info .map_contents .address_wrap li.call span::before{
+.map_info .map_contents .address_wrap li.call span::before {
   background: url(../assets/img/sub/ico_call.png);
   background-size: contain;
 }
-.direction_map_wrap .parking{
+.direction_map_wrap .parking {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 20px;
   line-height: 24px;
 }
-.direction_map_wrap .parking span::before{
-  content: '!';
+.direction_map_wrap .parking span::before {
+  content: "!";
   display: inline-block;
   width: 22px;
   height: 22px;
@@ -357,8 +213,8 @@
   margin-right: 8px;
   margin-top: -1px;
 }
-.direction_map_wrap .parking p strong{
- width: 100%;
- font-weight: 400;
- color: var(--color01);
+.direction_map_wrap .parking p strong {
+  width: 100%;
+  font-weight: 400;
+  color: var(--color01);
 }
