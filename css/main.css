@@ -397,7 +397,6 @@ body{
   width: 100%;
   height: 600px;
   border: 1px solid black;
-  display: flex;
 }
 .main__sec5__rollBox{
   display: flex;
@@ -428,14 +427,14 @@ body{
     height: 80%;
 }
 
-.main__sec5__aniLeft{
+#moveBox1, #moveBox3{
     animation: main__sec5__move1 linear infinite 50s;
 }
-.main__sec5__aniRight{
+#moveBox2, #moveBox4{
     animation: main__sec5__move2 linear infinite 50s;
 }
 
-@keyframes main__sec5__move1 {
+/* @keyframes main__sec5__move1 {
     0%{
         transform: translateX(0);
     }
@@ -451,5 +450,5 @@ body{
     100%{
         transform: translateX(0%);
     }
-}
+} */
 /* 섹션 5 (이미지 롤링) 종료 */
