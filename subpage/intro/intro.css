@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+/* 계룡산 소개 시작 intro_01 */
+.intro_01_container{
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+}
