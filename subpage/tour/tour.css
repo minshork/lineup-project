@@ -19,15 +19,13 @@
   padding: 8px 16px;
   transition: 0.2s;
 }
-.tab-menu button.active {
+.course_tabs button.active {
   color: #0a7a32;
   border-bottom: 3px solid #0a7a32;
 }
 /* 콘텐츠 공통 스타일 */
 .tab-content {
   display: none;
-  padding: 40px 20px;
-  max-width: 800px;
   margin: 0 auto;
 }
 .tab-content.active {
@@ -53,7 +51,6 @@
   position: relative;
   width: 100%;
   max-width: 1100px;
-  /* 기존 900px */
   margin: 0 auto;
 }
 
@@ -75,17 +72,24 @@
 .timeline-item {
   width: 50%;
   position: relative;
-  margin-bottom: 80px;
+  opacity: 0;
+  transition: all 0.8s ease;
 }
 
 .timeline-item.left {
   left: 0;
-  padding-right: 20px;
+  padding-right: 50px;
+  transform: translateX(-60px);
 }
 
 .timeline-item.right {
   left: 50%;
-  padding-left: 20px;
+  padding-left: 50px;
+  transform: translateX(60px);
+}
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-item.left .timeline-content {
@@ -98,18 +102,17 @@
 }
 
 /* 점 */
-/* 기본 점: 카드 중앙쯤에 배치 */
+
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 90px;
   transform: translateY(-50%);
   right: -10px;
   width: 20px;
   height: 20px;
   background: #0a7a32;
   border-radius: 50%;
-  border: 3px solid #fff;
   z-index: 2;
 }
 
@@ -136,17 +139,16 @@
 .timeline-content {
   display: block;
   align-items: center;
-  gap: 25px;
   justify-content: space-around;
   background: #fff;
-  /* 기존 30px */
   border-radius: 16px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
   margin: 5px;
   width: 75%;
-  height: 400px;
+  height: 320px;
+  overflow: hidden;
 }
 
 .timeline-content img {
@@ -168,4 +170,7 @@
   color: #333;
   line-height: 1.5;
   font-size: 15px;
+}
+.timeline-item.left .text-box {
+  padding-bottom: 35px;
 }
