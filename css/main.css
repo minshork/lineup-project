@@ -120,23 +120,24 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   color: white;
+  padding: 10px 0;
+  box-sizing: border-box;
 }
-.quickmenu__weather > div{
-  margin-left: 30px;
+.quickmenu__weather > div, .quickmenu__weather > svg{
+  margin-left: 15%;
 }
 #weather__des{
-  font-size: 14px;
+  font-size: clamp(1rem, 1.1vw, 2rem);
 }
 #weather__icon{
-  width: 100%;
-  height: 100%;
-  scale: 1.7;
+  width: 43%;
+  height: 43%;
 }
 #weather__temp{
-  padding-top: 20px;
-  font-size: 25px;
-  font-weight: normal;
+  font-size: clamp(1rem, 2.6vw, 3.2rem);
+  font-weight: 500;
 }
 
 /* 퀵메뉴 버튼 */
@@ -183,6 +184,7 @@ body{
   transition: all 0.4s ease;
 }
 
+/* 퀵메뉴 아이콘 */
 .quickmenu__btnBox__btn__icon {
   width: 42%;
   height: 42%;
@@ -285,7 +287,6 @@ body{
 
 /* 섹션 3 - 4 공통 css */
 
-
 .main__sec3__background, .main__sec4__background{
   width: clamp(500px, 57vw, 1200px);
   height: clamp(200px, 60vh, 800px);
@@ -358,7 +359,7 @@ body{
 .main__sec3, .main__sec4 {
   width: 100%;
   height: 80vh;
-  padding: 100px 0;
+  padding-top: 160px;
   display: flex;
   align-items: center;
 }
@@ -397,18 +398,20 @@ body{
 /* 섹션 5 (이미지 롤링) 시작 */
 .main__sec5 {
   width: 100%;
-  height: 640px;
-  /* padding-bottom: 60px; */
-  /* border: 1px solid black; */
+  /* height: 640px; */
+  padding-bottom: 160px;
+  padding-top: 200px;
+  position: relative;
 }
 .main__sec5__rollBox{
   display: flex;
   width: 100%;
   overflow: hidden;
+  position: relative;
+  z-index: 5;
 }
 .main__sec5__rolling{
     display: flex;
-    /* transform: translateX(%); */
 }
 .main__sec5__rolling ul{
     display: flex;
@@ -418,13 +421,19 @@ body{
     width: 360px;
     aspect-ratio: 320 / 250;
     border-radius: 16px;
-    /* border: 5px solid lightgreen; */
     margin-right: 35px;
     margin-bottom: 15px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow: 5px 3px 7px rgba(100, 100, 100 , 0.3);
+    box-shadow: 5px 4px 7px rgba(100, 100, 100 , 0.3);
+}
+
+.main__sec5__footerBg{
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  z-index: 0;
 }
 
 .main__sec5__aniLeft{

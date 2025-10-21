@@ -150,8 +150,10 @@
           <!-- 날씨 api 삽입 후 조정 필요 -->
           <div class="quickmenu__weather">
             <div id="weather__des">튼구름</div>
-            <div><img id="weather__icon" src="" alt=""></div>
-            <div id="weather__temp">22.3</div>
+            <svg fill="#fff" id="weather__icon">
+              <use href="sprites.xml#weather-cloudy"></use>
+            </svg>
+            <div id="weather__temp">22</div>
           </div> 
 
           <!-- 퀵메뉴 버튼 -->
@@ -271,6 +273,7 @@
         <div class="main__sec5__rollBox main__sec5__mv2">
             <div class="main__sec5__rolling main__sec5__ro2"></div>
         </div>
+        <img class="main__sec5__footerBg" src="./assets/img/main/main_footer_img.png" alt="푸터 고정 이미지"/>
       </section>
       <!-- 섹션 5 종료 -->
     </div>
