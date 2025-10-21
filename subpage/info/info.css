@@ -121,9 +121,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background: #c5e3b4;
-  line-height: 55px;
-  color: var(--color01);
+  background: #f5f5f5;
+  line-height: 80px;
   text-align: left;
   padding: 2px 25px 0;
   font-size: 1.8rem;
@@ -131,24 +130,41 @@
 }
 .toilet_list_wp > ul li .arcoBtn.on{
   border-radius: 10px 10px 0 0;
+  color: var(--color01);
   transition: 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn::after{
+  content: '';
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  content: '+';
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 35px;
-  border-radius: 50%;
-  background: var(--color01);
+  width: 35px;
+  height: 35px;
+  background: url(../../assets/img/sub/ico_arco_arrow.svg) no-repeat;
+  background-size: contain;
   transition: all 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn.on::after{
-  content: '-';
+  transform: rotate(180deg);
 }
+.toilet_list_wp > ul li .arcoBtn + .toilet_map :is(.location, .time){
+  transform: translateY(10px);
+  opacity: 0;
+  transition: 1s;
+}
+.toilet_list_wp > ul li .arcoBtn + .toilet_map .location{
+  transition-delay: 0.4s;
+}
+.toilet_list_wp > ul li .arcoBtn + .toilet_map .time{
+  transition-delay: 0.6s;
+}
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map .location{
+  transform: translateY(0);
+  opacity: 1;
+}
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map .time{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .toilet_list_wp > ul li .toilet_map{
   overflow: hidden;
   border-radius: 0 0 10px 10px;
@@ -210,7 +226,6 @@
   overflow: hidden;
   background: var(--color02) url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;
 }
-
 .customoverlay .title {
   display: block;
   text-align: center;
@@ -221,7 +236,6 @@
   font-weight: 500;
   font-family: var(--fontP);
 }
-
 .customoverlay:after {
   content: '';
   position: absolute;
@@ -230,5 +244,89 @@
   bottom: -12px;
   width: 22px;
   height: 12px;
-  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')
+  background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png');
+}
+.transpo_wrap{
+  margin-top: 55px;
+}
+.transpo_wrap .info{
+  display: flex;
+}
+.transpo_wrap .info:not(:last-of-type){
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+}
+.transpo_wrap .info + .info{
+  margin-top: 40px;
+}
+.transpo_wrap .info .left_ico{
+  flex: 0 0 20%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.transpo_wrap .info .left_ico::before{
+  content: '';
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: url(../../assets/img/sub/ico_car.png) no-repeat;
+  margin: 0 auto;
+}
+.transpo_wrap .info .right_info .name{
+  color: #2157ad;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.transpo_wrap .info .right_info ul li{
+  position: relative;
+  font-family: var(--fontP);
+  font-size: 1.8rem;
+  padding-left: 12px;
+  letter-spacing: -0.02em;
+}
+.transpo_wrap .info .right_info ul li::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #2157ad;
+  border-radius: 50%;
+  left: 0;
+  top: 9px;
+}
+
+.transpo_wrap .info .right_info .box + .box{
+  margin-top: 25px;
+}
+
+/* 편의시설 - 안전 정보 */
+.basic_table .scroll_table{
+  overflow-x: auto;
+}
+.basic_table table{
+  min-width: 670px;
+  white-space: nowrap;
+  border-top: 2px solid var(--color01);
+}
+.basic_table table thead tr{
+  border-bottom: 1px solid #ddd;
+}
+.basic_table table thead tr th{
+  font-weight: 400;
+  padding: 15px 15px 10px;
+  text-align: center;
+  background: #fafafa;
+}
+.basic_table table thead tr th:not(:last-of-type){
+  border-right: 1px solid #ddd;
+}
+.basic_table table tbody tr td{
+  padding: 15px 15px 10px;
+  text-align: center;
+}
+.basic_table table tbody tr{
+  border-bottom: 1px solid #ddd;
+}
+.basic_table table tbody tr td:not(:last-of-type){
+  border-right: 1px solid #ddd;
 }

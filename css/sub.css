@@ -129,3 +129,59 @@
     display: none;
   }
 }
+
+/* 탭 */
+.tab_container .tab_btn_wrap{
+  display: flex;
+  align-items: flex-end;
+}
+.tab_container .tab_btn_wrap li{
+  flex: 1;
+  text-align: center;
+}
+.tab_container .tab_btn_wrap li button{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+  font-size: 1.8rem;
+  padding: 5px 15px;
+  border-bottom: 1px solid #ddd;
+  letter-spacing: -0.02em;
+  transition: 0.3s;
+  position: relative;
+}
+.tab_container .tab_btn_wrap li:not(:last-of-type) button{
+  border-right: none;
+}
+.tab_container .tab_btn_wrap li button.current{
+  color: var(--color02);
+}
+.tab_container .tab_btn_wrap li button::after{
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background: var(--color02);
+  transition: 0.4s;
+}
+.tab_container .tab_btn_wrap li button.current::after{
+  width: 100%;
+}
+.tab_container .tab_contents{
+  margin-top: 50px;
+}
+.tab_container .tab_contents .tab_con_wrap{
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(20px);
+}
+.tab_container .tab_contents .tab_con_wrap.on{
+  opacity: 1;
+  max-height: 100%;
+  transform: translateY(0px);
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
