@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   gap: 50px;
-  /* background-color: #fff700; */
   position: relative;
   top: -40px;
   font-weight: bold;
 }
+
 .course_tabs button {
   border: none;
   background: transparent;
@@ -19,15 +19,18 @@
   padding: 8px 16px;
   transition: 0.2s;
 }
+
 .course_tabs button.active {
   color: #0a7a32;
   border-bottom: 3px solid #0a7a32;
 }
+
 /* 콘텐츠 공통 스타일 */
 .tab-content {
   display: none;
   margin: 0 auto;
 }
+
 .tab-content.active {
   display: block;
 }
@@ -41,7 +44,7 @@
 
 .timeline-title {
   text-align: center;
-  font-size: 28px;
+  font-size: 35px;
   color: #0a7a32;
   margin-bottom: 60px;
 }
@@ -70,69 +73,71 @@
 
 /* 각 아이템 */
 .timeline-item {
-  width: 50%;
   position: relative;
   opacity: 0;
-  transition: all 0.8s ease;
+  width: 45%; /* 좌우 대칭 유지용 */
 }
 
+/* 좌우 배치 */
 .timeline-item.left {
-  left: 0;
-  padding-right: 50px;
-  transform: translateX(-60px);
+  left: 5%; /* 왼쪽은 살짝 안쪽으로 */
+  text-align: right;
+  padding-right: 30px;
 }
 
 .timeline-item.right {
   left: 50%;
-  padding-left: 50px;
-  transform: translateX(60px);
-}
-.timeline-item.visible {
-  opacity: 1;
-  transform: translateX(0);
+  padding-left: 30px;
 }
 
+/* 카드만 애니메이션 적용 */
+.timeline-item .timeline-content {
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* 카드가 처음에는 양옆으로 살짝 나가있음 */
 .timeline-item.left .timeline-content {
-  margin-left: auto;
-  margin-right: 0;
+  transform: translateX(-60px);
 }
 
 .timeline-item.right .timeline-content {
-  margin-left: 0;
+  transform: translateX(60px);
 }
 
-/* 점 */
+/* 스크롤 시 나타나기 */
+.timeline-item.visible {
+  opacity: 1;
+}
 
+.timeline-item.visible .timeline-content {
+  transform: translateX(0);
+}
+
+/* 아이템 간격 */
+.timeline .timeline-item:not(:first-of-type) {
+  margin-top: -80px;
+}
+
+/* 점 (고정된 중앙 라인 맞춤) */
 .timeline-item::before {
   content: "";
   position: absolute;
-  top: 90px;
-  transform: translateY(-50%);
-  right: -10px;
+  top: 90px; /* 카드 높이에 맞게 조정 */
   width: 20px;
   height: 20px;
   background: #0a7a32;
   border-radius: 50%;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* 오른쪽 아이템은 반대쪽으로 점 이동 */
+/* 왼쪽 아이템 점은 세로선 오른쪽 끝 */
+.timeline-item.left::before {
+  right: -10px;
+}
+
+/* 오른쪽 아이템 점은 세로선 왼쪽 끝 */
 .timeline-item.right::before {
   left: -10px;
-  right: auto;
-}
-
-/* 첫 번째 아이템: 맨 위로 점 이동 */
-.timeline-item:first-child::before {
-  top: 0;
-  transform: none;
-}
-
-/* 마지막 아이템: 맨 아래로 점 이동 */
-.timeline-item:last-child::before {
-  top: auto;
-  bottom: 0;
-  transform: none;
 }
 
 /* 콘텐츠 구조 */
@@ -145,9 +150,7 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
-  margin: 5px;
-  width: 75%;
-  height: 320px;
+  width: 100%; /* timeline-item 기준 */
   overflow: hidden;
 }
 
@@ -170,7 +173,4 @@
   color: #333;
   line-height: 1.5;
   font-size: 15px;
-}
-.timeline-item.left .text-box {
-  padding-bottom: 35px;
 }
