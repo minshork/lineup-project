@@ -199,6 +199,10 @@ footer {
   color: #fff;
   font-size: 1.4rem;
 }
+.ft_top ul li a:hover{
+  text-decoration: underline;
+  text-underline-offset: 0.4em;
+}
 .ft_bottom {
   display: flex;
   gap: 30px;
