@@ -26,14 +26,14 @@
 }
 
 /* 콘텐츠 공통 스타일 */
-.tab-content {
+/* .tab-content {
   display: none;
   margin: 0 auto;
 }
 
 .tab-content.active {
   display: block;
-}
+} */
 
 /* 하루코스 카드 레이아웃 */
 .timeline-wrap {
@@ -173,4 +173,7 @@
   color: #333;
   line-height: 1.5;
   font-size: 15px;
+}
+.sub_contents .sideBar .lnb li.on a {
+  color: var(--color02);
 }
