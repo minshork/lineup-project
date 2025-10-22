@@ -125,19 +125,19 @@
         <div class="sub_contents">
           <div class="inner">
             <div class="sideBar">
-                <div class="slide_title">
-                  <p>편의 안내</p>
-                </div>
-                <div class="lnb_wrap">
-                  <ul class="lnb">
-                    <li class="on"><a href="./info_01.html"><span>오시는 길</span></a></li>
-                    <li><a href="./info_02.html"><span>공중 화장실</span></a></li>
-                    <li><a href="./info_03.html"><span>안전 정보</span></a></li>
-                    <li><a href="./info_04.html"><span>문화 관광 해설사</span></a></li>
-                  </ul>
-                </div>
+              <div class="slide_title">
+                <p>편의 안내</p>
+              </div>
+              <div class="lnb_wrap">
+                <ul class="lnb">
+                  <li class="on"><a href="./info_01.html"><span>오시는 길</span></a></li>
+                  <li><a href="./info_02.html"><span>공중 화장실</span></a></li>
+                  <li><a href="./info_03.html"><span>안전 정보</span></a></li>
+                  <li><a href="./info_04.html"><span>문화 관광 해설사</span></a></li>
+                </ul>
+              </div>
             </div>
-  
+
             <div class="sub_inner">
               <div class="page_title_wrap">
                 <p>오시는 길</p>
@@ -153,42 +153,43 @@
               <div class="direction_map_wrap">
                 <div class="map_inner">
                   <div id="map" style="width:100%;height:350px;"></div>
-                  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4f4ebe661c36aefe675331e6a866c590"></script>
+                  <script type="text/javascript"
+                    src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4f4ebe661c36aefe675331e6a866c590"></script>
                   <script>
-                      var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-                      var options = { //지도를 생성할 때 필요한 기본 옵션
-                        center: new kakao.maps.LatLng(36.274385, 127.248795), //지도의 중심좌표.
-                        level: 3 //지도의 레벨(확대, 축소 정도)
-                      };
+                    var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+                    var options = { //지도를 생성할 때 필요한 기본 옵션
+                      center: new kakao.maps.LatLng(36.274385, 127.248795), //지도의 중심좌표.
+                      level: 3 //지도의 레벨(확대, 축소 정도)
+                    };
 
-                      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+                    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 
-                      // 마커가 표시될 위치입니다 
-                      var markerPosition  = new kakao.maps.LatLng(36.274570, 127.248530); 
+                    // 마커가 표시될 위치입니다 
+                    var markerPosition = new kakao.maps.LatLng(36.274570, 127.248530);
 
-                      // 마커를 생성합니다
-                      var marker = new kakao.maps.Marker({
-                          position: markerPosition
-                      });
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                      position: markerPosition
+                    });
 
-                      // 마커가 지도 위에 표시되도록 설정합니다
+                    // 마커가 지도 위에 표시되도록 설정합니다
 
-                      var imageSrc = '../../assets/img/sub//info/ico_location.png', // 마커이미지의 주소입니다    
-                          imageSize = new kakao.maps.Size(32, 32), // 마커이미지의 크기입니다
-                          imageOption = {offset: new kakao.maps.Point(14, 32)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+                    var imageSrc = '../../assets/img/sub//info/ico_location.png', // 마커이미지의 주소입니다    
+                      imageSize = new kakao.maps.Size(32, 32), // 마커이미지의 크기입니다
+                      imageOption = { offset: new kakao.maps.Point(14, 32) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
-                      // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-                      var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-                          markerPosition = new kakao.maps.LatLng(36.274570, 127.248530); // 마커가 표시될 위치입니다
+                    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                      markerPosition = new kakao.maps.LatLng(36.274570, 127.248530); // 마커가 표시될 위치입니다
 
-                      // 마커를 생성합니다
-                      var marker = new kakao.maps.Marker({
-                        position: markerPosition,
-                        image: markerImage // 마커이미지 설정 
-                      });
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                      position: markerPosition,
+                      image: markerImage // 마커이미지 설정 
+                    });
 
-                      // 마커가 지도 위에 표시되도록 설정합니다
-                      marker.setMap(map);
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
                   </script>
                   <div class="map_info">
                     <div class="map_contents">
@@ -203,106 +204,107 @@
                       </div>
                     </div>
                   </div>
-                   <div class="parking">
-                  <span>주차현황</span>
-                  <p>총240면(일반 211면, 장애인 6면, 임산부 2면, 경차 13면, 친환경 8면)<br>
-                    <strong>※ 주차장(면) 추가조성 및 시설관리는 연중 지속 추진되고 있습니다.</strong></p>
-                </div>
+                  <div class="parking">
+                    <span>주차현황</span>
+                    <p>총240면(일반 211면, 장애인 6면, 임산부 2면, 경차 13면, 친환경 8면)<br>
+                      <strong>※ 주차장(면) 추가조성 및 시설관리는 연중 지속 추진되고 있습니다.</strong>
+                    </p>
+                  </div>
                   <div class="transpo_wrap">
-                      <div class="info">
-                        <div class="left_ico">
-                          <p>자가용 이용 시</p>
-                        </div>
-                        <div class="right_info">
-                          <div class="box">
-                            <p class="name">서울방면</p>
-                            <ul>
-                              <li>호남고속도로 → 계룡IC → 계룡</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">부산방면</p>
-                            <ul>
-                              <li>경부고속도로 → 대전남부순환고속도로 → 호남고속도로 → 계룡IC → 계룡</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">인천방면</p>
-                            <ul>
-                              <li>서해안고속도로 → 서평택분기점 → 안성분기점 → 경부고속도로 → 호남고속도로 →계룡IC → 계룡</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">대구방면</p>
-                            <ul>
-                              <li>경부고속도로 → 대전남부순환고속도로 → 호남고속도로 → 계룡IC → 계룡</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">광주방면</p>
-                            <ul>
-                              <li>호남고속도로 → 계룡IC → 계룡</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">대전방면</p>
-                            <ul>
-                              <li>국도4번 → 계룡</li>
-                            </ul>
-                          </div>
-                        </div>
+                    <div class="info">
+                      <div class="left_ico">
+                        <p>자가용 이용 시</p>
                       </div>
-                      <div class="info">
-                        <div class="left_ico">
-                          <p>기차 이용 시</p>
+                      <div class="right_info">
+                        <div class="box">
+                          <p class="name">서울방면</p>
+                          <ul>
+                            <li>호남고속도로 → 계룡IC → 계룡</li>
+                          </ul>
                         </div>
-                        <div class="right_info">
-                          <div class="box">
-                            <p class="name">서울방면</p>
-                            <ul>
-                              <li>고속철도(KTX) : 용산역 → 계룡역 (약1시간25분 소요)</li>
-                              <li>일반열차 : 용산역 → 계룡역 (약2시간 소요)</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">광주방면 (일반열차)</p>
-                            <ul>
-                              <li>광주송정역 → 계룡역 (약1시간50분소요)</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">대전방면 (일반열차)</p>
-                            <ul>
-                              <li>
-                                서대전역 → 계룡역 (약15분소요)
-                              </li>
-                            </ul>
-                          </div>
+                        <div class="box">
+                          <p class="name">부산방면</p>
+                          <ul>
+                            <li>경부고속도로 → 대전남부순환고속도로 → 호남고속도로 → 계룡IC → 계룡</li>
+                          </ul>
                         </div>
-                      </div>
-                      <div class="info">
-                        <div class="left_ico">
-                          <p>버스 이용 시</p>
+                        <div class="box">
+                          <p class="name">인천방면</p>
+                          <ul>
+                            <li>서해안고속도로 → 서평택분기점 → 안성분기점 → 경부고속도로 → 호남고속도로 →계룡IC → 계룡</li>
+                          </ul>
                         </div>
-                        <div class="right_info">
-                          <div class="box">
-                            <p class="name">서울방면 (시외버스)</p>
-                            <ul>
-                              <li>남부터미널 매일 06:00 ～ 18:10까지 운행 (약2시간10분 소요)</li>
-                            </ul>
-                          </div>
-                          <div class="box">
-                            <p class="name">대전방면(시내버스)</p>
-                            <ul>
-                              <li>대전에서 202번좌석버스, 48번 시내버스 이용</li>
-                            </ul>
-                          </div>
+                        <div class="box">
+                          <p class="name">대구방면</p>
+                          <ul>
+                            <li>경부고속도로 → 대전남부순환고속도로 → 호남고속도로 → 계룡IC → 계룡</li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <p class="name">광주방면</p>
+                          <ul>
+                            <li>호남고속도로 → 계룡IC → 계룡</li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <p class="name">대전방면</p>
+                          <ul>
+                            <li>국도4번 → 계룡</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
+                    <div class="info">
+                      <div class="left_ico">
+                        <p>기차 이용 시</p>
+                      </div>
+                      <div class="right_info">
+                        <div class="box">
+                          <p class="name">서울방면</p>
+                          <ul>
+                            <li>고속철도(KTX) : 용산역 → 계룡역 (약1시간25분 소요)</li>
+                            <li>일반열차 : 용산역 → 계룡역 (약2시간 소요)</li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <p class="name">광주방면 (일반열차)</p>
+                          <ul>
+                            <li>광주송정역 → 계룡역 (약1시간50분소요)</li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <p class="name">대전방면 (일반열차)</p>
+                          <ul>
+                            <li>
+                              서대전역 → 계룡역 (약15분소요)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info">
+                      <div class="left_ico">
+                        <p>버스 이용 시</p>
+                      </div>
+                      <div class="right_info">
+                        <div class="box">
+                          <p class="name">서울방면 (시외버스)</p>
+                          <ul>
+                            <li>남부터미널 매일 06:00 ～ 18:10까지 운행 (약2시간10분 소요)</li>
+                          </ul>
+                        </div>
+                        <div class="box">
+                          <p class="name">대전방면(시내버스)</p>
+                          <ul>
+                            <li>대전에서 202번좌석버스, 48번 시내버스 이용</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
+
             </div>
           </div>
 
@@ -351,7 +353,7 @@
     <!-- footer // -->
   </div>
 
-    <script src="../../js/common.js"></script>
+  <script src="../../js/common.js"></script>
 </body>
 
 </html>
