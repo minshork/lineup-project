@@ -66,12 +66,12 @@
 }
 
 .map_info .map_contents .address_wrap li.adr span::before {
-  background: url(../../assets/img/sub/ico_address.png);
+  background: url(../../assets/img/sub/info/ico_address.png);
   background-size: contain;
 }
 
 .map_info .map_contents .address_wrap li.call span::before {
-  background: url(../../assets/img/sub/ico_call.png);
+  background: url(../../assets/img/sub/info/ico_call.png);
   background-size: contain;
 }
 
@@ -87,14 +87,13 @@
 .direction_map_wrap .parking span::before {
   content: '!';
   display: inline-block;
-  font-size: 4rem;
   width: 22px;
   height: 22px;
   border-radius: 50%;
   background-color: var(--color01);
   color: #fff;
   text-align: center;
-  line-height: 23px;
+  line-height: 20px;
   font-size: 1.3rem;
   margin-right: 8px;
   margin-top: -1px;
@@ -108,7 +107,7 @@
 
 
 /* 편의안내 - 공중 화장실 */
-.toilet_txt{
+.top_sub_txt{
   font-size: 2rem;
   font-family: var(--fontP);
   margin-bottom: 20px;
@@ -138,7 +137,7 @@
   display: inline-block;
   width: 35px;
   height: 35px;
-  background: url(../../assets/img/sub/ico_arco_arrow.svg) no-repeat;
+  background: url(../../assets/img/sub/info/ico_arco_arrow.svg) no-repeat;
   background-size: contain;
   transition: all 0.3s;
 }
@@ -151,10 +150,10 @@
   transition: 1s;
 }
 .toilet_list_wp > ul li .arcoBtn + .toilet_map .location{
-  transition-delay: 0.4s;
+  transition-delay: 0.2s;
 }
 .toilet_list_wp > ul li .arcoBtn + .toilet_map .time{
-  transition-delay: 0.6s;
+  transition-delay: 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn.on + .toilet_map .location{
   transform: translateY(0);
@@ -164,19 +163,18 @@
   transform: translateY(0);
   opacity: 1;
 }
-
-.toilet_list_wp > ul li .toilet_map{
-  overflow: hidden;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.5s;
+.toilet_list_wp > ul li .toilet_map {
+  opacity: 0;
+  transition:  0.4s ease;
   max-height: 0;
+  overflow: hidden;
+}
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map {
+  opacity: 1;
+  max-height: 600px;
 }
 .toilet_list_wp > ul li .toilet_map .inner{
   padding: 25px;
-}
-.toilet_list_wp > ul li .arcoBtn.on + .toilet_map{
-  max-height: 600px;
 }
 .toilet_list_wp > ul li .toilet_map .text{
   margin-bottom: 20px;
@@ -194,17 +192,26 @@
   height: 30px;
 }
 .toilet_list_wp > ul li .toilet_map .text .location::before{
-  background: url(../../assets/img/sub/ico_pin.png) no-repeat center center;
+  background: url(../../assets/img/sub/info/ico_pin.png) no-repeat center center;
   background-size: contain;
 }
 .toilet_list_wp > ul li .toilet_map .text .time::before{
-  background: url(../../assets/img/sub/ico_clock.png) no-repeat center center;
+  background: url(../../assets/img/sub/info/ico_clock.png) no-repeat center center;
   background-size: 22px;
 }
 .maps {
   width: 100%;
   height: 400px;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  opacity: 0;
+  transform: translateY(30px);
 }
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map .maps{
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .customoverlay {
   position: relative;
   bottom: 85px;
@@ -251,6 +258,7 @@
 }
 .transpo_wrap .info{
   display: flex;
+  align-items: flex-start
 }
 .transpo_wrap .info:not(:last-of-type){
   border-bottom: 1px solid #ddd;
@@ -269,8 +277,15 @@
   display: block;
   width: 70px;
   height: 70px;
-  background: url(../../assets/img/sub/ico_car.png) no-repeat;
+  background: url(../../assets/img/sub/info/map_car.png) no-repeat;
+  background-size: contain;
   margin: 0 auto;
+}
+.transpo_wrap .info:nth-of-type(2) .left_ico::before{
+  background-image: url(../../assets/img/sub/info/map_train.png);
+}
+.transpo_wrap .info:nth-of-type(3) .left_ico::before{
+  background-image: url(../../assets/img/sub/info/map_bus.png);
 }
 .transpo_wrap .info .right_info .name{
   color: #2157ad;
@@ -292,9 +307,8 @@
   background: #2157ad;
   border-radius: 50%;
   left: 0;
-  top: 9px;
+  top: 10px;
 }
-
 .transpo_wrap .info .right_info .box + .box{
   margin-top: 25px;
 }
@@ -329,4 +343,134 @@
 }
 .basic_table table tbody tr td:not(:last-of-type){
   border-right: 1px solid #ddd;
+}
+.safety_info_wrap .bg_safety_box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border-radius: 10px;
+  padding: 40px;
+  background: #f9f9f9;
+}
+.safety_info_wrap .bg_safety_box::before{
+  flex-shrink: 0;
+  content: '';
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background: #fff url(../../assets/img/sub/info/ico_safety.png) no-repeat center center;
+  border-radius: 50%;
+}
+.bg_safety_box .box_wrap .basic_txt{
+  margin-bottom: 20px;
+  font-size: 1.9rem;
+}
+.bg_safety_box .box_wrap .strong{
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.9rem;
+}
+.bg_safety_box .box_wrap ul li{
+  position: relative;
+  padding-left: 14px;
+  font-size: 1.8rem;
+}
+.bg_safety_box .box_wrap ul li::before{
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #333;
+}
+.bg_safety_box .box_wrap ul li strong{
+  color: var(--color01);
+}
+.bg_safety_box .box_wrap ul li + li{
+  margin-top: 8px;
+}
+
+/* 편의시설 - 문화 관광 해설사 */
+.tourism_guide_wrap .guide_info > ul{
+  display: flex;
+  gap: 30px;
+}
+.tourism_guide_wrap .guide_info > ul > li{
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.tourism_guide_wrap .guide_info > ul > li .img_wp{
+  max-height: 250px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #d7e7e7;
+}
+.tourism_guide_wrap .guide_info > ul > li .img_wp img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp{
+  padding: 25px 15px;
+  border: 1px solid #ddd;
+  height: calc(100% - 250px);
+  border-radius: 0 0 15px 15px;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .tit_txt{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.bar_list li{
+  position: relative;
+  padding-left: 15px;
+  font-size: 1.6rem;
+}
+.bar_list li + li{
+  margin-top: 5px;
+}
+.bar_list li::before{
+  content: '';
+  width: 7px;
+  height: 1.5px;
+  background: #333;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt{
+  line-height: 25px;
+  font-size: 1.6rem;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt .sub_txt{
+  display: flex;
+  font-size: 1.4rem;
+  line-height: 21px;
+  margin-top: 10px;
+  text-align: left;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt .sub_txt::before{
+  flex-shrink: 0;
+  content: '!';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color01);
+  color: #fff;
+  line-height: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-right: 7px;
+  margin-top: -1px;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt p{
+  text-align: center;
+}
+.tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt p + .bar_list{
+  margin-top: 10px;
 }
