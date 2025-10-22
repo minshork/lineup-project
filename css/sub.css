@@ -172,6 +172,7 @@
 }
 .tab_container .tab_contents{
   margin-top: 50px;
+  overflow: hidden;
 }
 .tab_container .tab_contents .tab_con_wrap{
   opacity: 0;
