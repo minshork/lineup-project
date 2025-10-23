@@ -367,22 +367,21 @@ textarea:focus::placeholder {
 .main__topButton::after {
   content: "";
   position: absolute;
-  width: 140%;
-  height: 140%;
+  width: 120%;
+  height: 120%;
   border: 25px solid rgba(68, 150, 88, 0.3);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: top left;
+  left: calc(-50% + 20px);
+  top: calc(-50% + 20px);
+  transform-origin: center;
   border-radius: 50%;
   animation: bgScale 1.5s infinite alternate;
 }
 @keyframes bgScale {
   0% {
-    transform: scale(1) translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: scale(0.9) translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.9);
   }
 }
 .main__topButton.show {
