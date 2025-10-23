@@ -86,9 +86,9 @@ function closeimg_intro03(){
     setTimeout(() => {
         desBox.style.opacity = "0";
         desBox.style.pointerEvents = "none";
-        introWrap.style.height = "auto";
         setTimeout(() => {
             for(let i = 0; i < imgBoxs.length; i++){
+                introWrap.style.height = "auto";
                 imgBoxs[i].style.opacity = "1";
                 imgBoxs[i].style.pointerEvents = "auto";
             };
