@@ -1,7 +1,12 @@
 @charset "UTF-8";
 
 /* 전체 구간 */
-
+.main__topButton::after {
+  width: 140%;
+  height: 140%;
+  left: 50%;
+  top: 50%;
+}
 body {
   width: 100vw;
   overflow-x: hidden;
