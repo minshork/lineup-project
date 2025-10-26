@@ -24,7 +24,7 @@ let getWeather = async(lat, lon) => {
     temp.textContent = Math.floor(data.main.temp) + " °C"; // 온도(소수점 제거)
 
     let iconNum = data.weather[0].icon;
-    console.log(iconNum);
+    // console.log(iconNum);
     switch(iconNum.slice(0, 2)){
         // 맑음
         case "01":

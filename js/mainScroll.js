@@ -107,6 +107,6 @@ let sec2Top = sec2Wrap.offsetTop;
 let sec3Top = sec3Wrap.offsetTop;
 let sec4Top = sec4Wrap.offsetTop;
 
-console.log(sec2Top);
-console.log(sec3Top);
-console.log(sec4Top);
+// console.log(sec2Top);
+// console.log(sec3Top);
+// console.log(sec4Top);
