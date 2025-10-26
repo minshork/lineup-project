@@ -12,8 +12,6 @@ window.addEventListener("scroll", () => {
         // Section2 변수
         let sec2Back = document.querySelector(".main__sec2__background > img");
         let set2Title = document.querySelector(".main__sec2__textGuideLine__text__title");
-        let sec2Des = document.querySelector(".main__sec2__textGuideLine__text > p");
-        let sec2View = document.querySelector(".main__sec2__textGuideLine__btn");
 
         // 산 배경 이벤트
         sec2Back.style.opacity = "1";
@@ -24,6 +22,10 @@ window.addEventListener("scroll", () => {
         set2Title.style.opacity = "1";
 
         if(scrY > sec2Top - 200){
+            // Section2 변수
+            let sec2Des = document.querySelector(".main__sec2__textGuideLine__text > p");
+            let sec2View = document.querySelector(".main__sec2__textGuideLine__btn");
+
             // 계룡산 설명
             sec2Des.style.opacity = "1";
 
@@ -39,8 +41,6 @@ window.addEventListener("scroll", () => {
         let sec3Back = document.querySelector(".main__sec3__background");
         let sec3Title = document.querySelector(".main__sec3__textBox__title > h1");
         let sec3subTitle = document.querySelector(".main__sec3__textBox__title > h2");
-        let sec3Des = document.querySelector(".main__sec3__textBox > p");
-        let sec3View = document.querySelector(".main__sec3__textBox__btn");
         
         // 그림
         sec3Back.style.opacity = "1";
@@ -55,6 +55,10 @@ window.addEventListener("scroll", () => {
         sec3Title.style.transform = "translateX(0)";
 
         if(scrY > sec3Top - 300){
+            // Section3 변수
+            let sec3Des = document.querySelector(".main__sec3__textBox > p");
+            let sec3View = document.querySelector(".main__sec3__textBox__btn");
+
             // 설명
             sec3Des.style.opacity = "1";
             sec3Des.style.transform = "translateX(0)";
@@ -71,8 +75,6 @@ window.addEventListener("scroll", () => {
         let sec4Back = document.querySelector(".main__sec4__background");
         let sec4Title = document.querySelector(".main__sec4__textBox__title > h1");
         let sec4subTitle = document.querySelector(".main__sec4__textBox__title > h2");
-        let sec4Des = document.querySelector(".main__sec4__textBox > p");
-        let sec4View = document.querySelector(".main__sec4__textBox__btn");
 
         // 그림
         sec4Back.style.opacity = "1";
@@ -87,6 +89,10 @@ window.addEventListener("scroll", () => {
         sec4Title.style.transform = "translateX(0)";
 
         if(scrY > sec4Top - 300){
+            // Section4 변수
+            let sec4Des = document.querySelector(".main__sec4__textBox > p");
+            let sec4View = document.querySelector(".main__sec4__textBox__btn");
+
             // 설명
             sec4Des.style.opacity = "1";
             sec4Des.style.transform = "translateX(0)";
