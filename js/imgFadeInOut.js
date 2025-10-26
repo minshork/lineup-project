@@ -1,7 +1,7 @@
 let imgs = document.querySelectorAll(".main__sec1__imgBox > img");
 let curimgs = document.querySelectorAll(".main__sec1__curImg > span");
 let i = 0;
-let imgFd;
+let imgFD;
 let resumeFD;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,7 +32,9 @@ curimgs.forEach((item, idx) => {
         clearInterval(imgFD);
         clearTimeout(resumeFD);
 
-        curimgs.forEach((it) => {it.style.backgroundColor = "rgba(255,255,255,0.4)"});
+        curimgs.forEach((it) => {
+            it.style.backgroundColor = "rgba(255,255,255,0.4)";
+        });
         item.style.backgroundColor = "#FFF";
 
         imgs[i].style.opacity = 0;

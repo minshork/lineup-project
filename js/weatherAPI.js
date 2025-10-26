@@ -24,6 +24,7 @@ let getWeather = async(lat, lon) => {
     temp.textContent = Math.floor(data.main.temp) + " °C"; // 온도(소수점 제거)
 
     let iconNum = data.weather[0].icon;
+    console.log(iconNum);
     switch(iconNum.slice(0, 2)){
         // 맑음
         case "01":
@@ -32,11 +33,11 @@ let getWeather = async(lat, lon) => {
         
         // 맑은 구름
         case "02":
+        case "03":
             icon.setAttribute("href", "sprites.xml#weather-few-cloudy");
             break;
 
         // 흐림, 구름 많음
-        case "03":
         case "04":
         case "50":
             icon.setAttribute("href", "sprites.xml#weather-cloudy");

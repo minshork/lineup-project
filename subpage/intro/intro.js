@@ -74,6 +74,7 @@ function imgDesOpen_intro03(num){
     document.querySelector(".intro_03_adr").innerHTML = products[num].addr;
     document.querySelector(".intro_03_des_box").style.transform = "scaleX(1)";
     document.querySelector(".intro_03_des_title").style.width = "100%";
+    document.querySelector(".intro_03_des_img").style.borderRadius = "0px 0px 0px 15px";
     setTimeout(() => {
         arrow.style.transform = "translateY(-50%) rotate(270deg)";
     }, 500);
@@ -86,6 +87,7 @@ function imgDesClose_intro03(){
     document.querySelector(".intro_03_des_title").style.width = "290px";
     setTimeout(() => {
         arrow.style.transform = "translateY(-50%) rotate(450deg)";
+        document.querySelector(".intro_03_des_img").style.borderRadius = "0px 0px 15px 15px";
         setTimeout(() => {
             arrow.style.transform = "translateY(-50%) rotate(90deg)";
         }, 1000);
@@ -107,8 +109,8 @@ function clickimg_intro03(){
             //     imgBoxs[i].style.transform = "rotate(360deg)";
             // }, 20);
             setTimeout(() => {
-                document.querySelector(".intro_03_des_img").style.backgroundImage = `url(${products[i].url})`;
                 document.querySelector(".intro_03_des_title > p").innerHTML = products[i].title;
+                document.querySelector(".intro_03_des_img").style.backgroundImage = `url(${products[i].url})`;
                 introWrap.style.height = "586px";
                 desBox.style.opacity = "1";
                 desBox.style.pointerEvents = "auto";
