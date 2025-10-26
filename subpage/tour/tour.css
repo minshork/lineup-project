@@ -187,26 +187,24 @@
 .attraction {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 .tree_outBox {
   display: flex;
   justify-content: space-between;
   gap: 50px;
 }
+
 .tree_textBox {
   width: 35%;
-  /* height: 350px; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-  background: skyblue;
-  /* padding: 57px; */
-  /* display: flex; */
-  padding-top: 19px;
-  padding-left: 23px;
-  line-height: 2.1;
-  /* text-align: center; */
+  background: #edf8e2;
+  /* padding-top: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 3;
+  border-radius: 15px;
 }
 .tree_gallerys {
   position: relative;
@@ -218,14 +216,27 @@
   flex: 1;
 }
 .tree_gallery {
-  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
   transition: transform 0.5s ease-in-out;
 }
 .tree_gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 15px;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.tree_gallery img:first-child {
+  opacity: 1;
+}
+.tree_gallery img.active {
+  opacity: 1;
 }
 .prev,
 .next {
@@ -244,4 +255,22 @@
 }
 .next {
   right: 10px;
+}
+/* 자세히보기 버튼 */
+.detail_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--color01);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.detail_btn:hover {
+  background-color: var(--color02);
 }

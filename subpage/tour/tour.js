@@ -47,3 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", showWhenScroll);
   showWhenScroll();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const galleries = document.querySelectorAll(".tree_gallery");
+
+  galleries.forEach((gallery) => {
+    const slides = gallery.querySelectorAll("img");
+    let index = 0;
+
+    function showSlide() {
+      slides.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+      index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 4000); // 4초마다 전환
+  });
+});
