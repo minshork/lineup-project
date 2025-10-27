@@ -161,6 +161,7 @@
 .text-box {
   text-align: center;
   padding: 25px;
+  box-shadow: 3px 3px 7px rgba(100, 100, 100, 0.3);
 }
 
 .text-box h3 {
@@ -173,6 +174,7 @@
   color: #333;
   line-height: 1.5;
   font-size: 15px;
+  font-family: var(--fontP);
 }
 .sub_contents .sideBar .lnb li.on a {
   color: var(--color02);
@@ -203,8 +205,17 @@
   /* padding-top: 20px; */
   padding-left: 20px;
   padding-right: 20px;
-  line-height: 3;
+  line-height: 2;
   border-radius: 15px;
+  box-shadow: 3px 3px 7px rgba(100, 100, 100, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.tree_textBox p {
+  font-family: var(--fontP);
 }
 .tree_gallerys {
   position: relative;
@@ -214,6 +225,7 @@
   border-radius: 15px;
   height: 350px;
   flex: 1;
+  /* box-shadow: 3px 3px 7px rgba(100, 100, 100, 0.3); */
 }
 .tree_gallery {
   position: relative;
@@ -222,15 +234,19 @@
   transition: transform 0.5s ease-in-out;
 }
 .tree_gallery img {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 15px;
-  object-fit: cover;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  object-fit: cover;
+}
+.tall {
+  object-fit: contain;
 }
 .tree_gallery img:first-child {
   opacity: 1;
@@ -238,24 +254,59 @@
 .tree_gallery img.active {
   opacity: 1;
 }
-.prev,
-.next {
+.arrow {
+  position: absolute;
+  top: 47%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+.arrow.left {
+  left: 30px;
+}
+.arrow.right {
+  right: 30px;
+}
+
+.arrow.left::before,
+.arrow.right::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow.left::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.arrow.right::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+/* #prev,
+#next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: white;
+  font-weight: bold;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 50%;
   font-size: 30px;
 }
-.prev {
+#prev {
   left: 10px;
 }
-.next {
+#next {
   right: 10px;
-}
+} */
 /* 자세히보기 버튼 */
 .detail_btn {
   display: inline-flex;
@@ -273,4 +324,8 @@
 
 .detail_btn:hover {
   background-color: var(--color02);
+}
+.txt {
+  display: flex;
+  flex-direction: column;
 }
