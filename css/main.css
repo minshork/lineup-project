@@ -407,7 +407,7 @@ body {
 
 /* 섹션 3 시작 */
 .main__sec3__background {
-  background-image: url(/assets/img/main/main_img7.jpg);
+  background-image: url(../assets/img/main/main_img7.jpg);
   border-radius: 999px 0 0 999px;
   right: 0;
 
@@ -455,7 +455,7 @@ body {
 }
 
 .main__sec4__background {
-  background-image: url(/assets/img/main/main_img6.jpg);
+  background-image: url(../assets/img/main/main_img6.jpg);
   border-radius: 0 999px 999px 0;
   left: 0;
 
