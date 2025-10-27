@@ -34,13 +34,8 @@
     position: relative;
     opacity: 1;
 
-    transition: 1s all ease;
+    transition: all 1s ease;
 }
-/* .intro_03_product_con.on{
-    position: absolute;
-    top: 50%; left: 0;
-    transform: translateY(-50%);
-} */
 .intro_03_product_con:hover{
     animation: prdAni 2.0s infinite ease-in-out;
 }
@@ -101,8 +96,10 @@
 #intro03_des_close{
     position: absolute;
     top: 50%; right: 20px;
-    transform: translateY(-50%) rotate(270deg);
+    transform: translateY(-50%) rotate(90deg);
     cursor: pointer;
+
+    transition: all 0.5s ease;
 }
 #intro03_des_close > img{
     pointer-events: none;
@@ -119,7 +116,7 @@
     width: 290px;
     height: 218px;
     aspect-ratio: 290 / 218;
-    background-image: url(../../assets/img/sub/intro/intro_03_product01.jpg);
+    /* background-image: url(../../assets/img/sub/intro/intro_03_product01.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

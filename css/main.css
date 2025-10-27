@@ -285,7 +285,7 @@ body {
   opacity: 0;
   transform-origin: left;
   transform: scaleX(0);
-  transition: all 0.8s ease;
+  transition: all 1.5s ease-in-out;
 }
 
 .main__sec2__textGuideLine__btn::after {
@@ -338,6 +338,10 @@ body {
   font-family: var(--fontG);
   font-weight: 400;
   font-size: 2.8rem;
+
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 1.0s ease;
 }
 
 .main__sec3__textBox__title > h1,
@@ -406,6 +410,23 @@ body {
   background-image: url(/assets/img/main/main_img7.jpg);
   border-radius: 999px 0 0 999px;
   right: 0;
+
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translateX(100px);
+}
+
+.main__sec3__textBox__title > h1,
+.main__sec3__textBox > p{
+  opacity: 0;
+  transform: translate(-50px);
+  transition: all 1.2s ease;
+}
+
+.main__sec3__textBox__btn{
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 1.5s ease;
 }
 /* 섹션 3 종료 */
 
@@ -420,10 +441,27 @@ body {
   align-items: end;
 }
 
+.main__sec4__textBox__title > h1,
+.main__sec4__textBox > p{
+  opacity: 0;
+  transform: translate(50px);
+  transition: all 1.2s ease;
+}
+
+.main__sec4__textBox__btn{
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all 1.5s ease;
+}
+
 .main__sec4__background {
   background-image: url(/assets/img/main/main_img6.jpg);
   border-radius: 0 999px 999px 0;
   left: 0;
+
+  opacity: 0;
+  transition: all 1.5s ease;
+  transform: translateX(-100px);
 }
 /* 섹션 4 종료 */
 
