@@ -27,3 +27,22 @@ window.addEventListener("scroll", () => {
 topBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// 탭
+const tabBtns = document.querySelectorAll(
+  ".tab_container .tab_btn_wrap li button"
+);
+const tabCon = document.querySelectorAll(".tab_contents .tab_con_wrap");
+tabBtns.forEach((item, idx) => {
+  item.addEventListener("click", function () {
+    tabBtns.forEach((el) => {
+      el.classList.remove("current");
+    });
+    this.classList.add("current");
+
+    tabCon.forEach((e) => {
+      e.classList.remove("on");
+    });
+    tabCon[idx].classList.add("on");
+  });
+});

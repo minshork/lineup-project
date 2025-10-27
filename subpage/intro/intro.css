@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+
+/* 계룡산 소개 시작 intro_01 */
+.intro_01_container{
+    border: 1px solid black;
+    width: 100%;
+    height: 500px;
+}
+
+
+/* 특산품 시작 intro_03 */
+.intro_03_wrap{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.intro_03_container{
+    display: grid;
+    /* display: none; */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items: center;
+    /* position: absolute; */
+    column-gap: 100px;
+    row-gap: 150px;
+    padding: 100px 0px 100px 0px;
+}
+
+.intro_03_product_con{
+    background-color: var(--color01);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+
+    transition: all 1s ease;
+}
+.intro_03_product_con:hover{
+    animation: prdAni 2.0s infinite ease-in-out;
+}
+
+.intro_03_product_con > p{
+    text-align: center;
+    padding: 20px 0px 15px 0px;
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: -56px;
+    background-color: var(--color02);
+    border-radius: 15px 15px 0px 0px;
+    z-index: 10;
+}
+.intro_03_product{
+    width: 290px;
+    aspect-ratio: 290 / 218;
+    border-radius: 0px 0px 15px 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes prdAni {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.intro_03_des_wrap{
+    /* display: none; */
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.intro_03_des_title{
+    width: 290px;
+    position: relative;
+    background-color: var(--color02);
+    padding: 20px 0px 15px 0px;
+    border-radius: 15px 15px 0px 0px;
+
+    transition: all 0.5s ease;
+}
+#intro03_des_close{
+    position: absolute;
+    top: 50%; right: 20px;
+    transform: translateY(-50%) rotate(90deg);
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+#intro03_des_close > img{
+    pointer-events: none;
+}
+.intro_03_des_title > p{
+    text-align: center;
+    color: white;
+}
+.intro_03_des_con{
+    display: flex;
+}
+
+.intro_03_des_img{
+    width: 290px;
+    height: 218px;
+    aspect-ratio: 290 / 218;
+    /* background-image: url(../../assets/img/sub/intro/intro_03_product01.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px 0px 15px 15px;
+    /* border: 1px solid black; */
+}
+
+.intro_03_des_box{
+    background-color: #71b984;
+    border-radius: 0px 0px 15px 0px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease;
+}
+
+.intro_03_des{
+    padding: 30px 50px 10px 50px;
+}
+.intro_03_ad{
+    padding: 10px 50px;
+}
+.intro_03_ad > p{
+    padding: 5px 0px;
+}

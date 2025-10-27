@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+/* 은조 작업시작 - 관광코스 페이지 */
+.tour_course_wrap .course_tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+  top: -40px;
+  font-weight: bold;
+}
+
+.course_tabs button {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  color: #333;
+  padding: 8px 16px;
+  transition: 0.2s;
+}
+
+.course_tabs button.active {
+  color: #0a7a32;
+  border-bottom: 3px solid #0a7a32;
+}
+
+/* 콘텐츠 공통 스타일 */
+/* .tab-content {
+  display: none;
+  margin: 0 auto;
+}
+
+.tab-content.active {
+  display: block;
+} */
+
+/* 하루코스 카드 레이아웃 */
+.timeline-wrap {
+  padding: 60px 0;
+  border-radius: 16px;
+  background-color: #ecf7ec;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 35px;
+  color: #0a7a32;
+  margin-bottom: 60px;
+}
+
+/* 전체 타임라인 */
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 세로선 */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: #a3c9a3;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+/* 각 아이템 */
+.timeline-item {
+  position: relative;
+  opacity: 0;
+  width: 45%; /* 좌우 대칭 유지용 */
+}
+
+/* 좌우 배치 */
+.timeline-item.left {
+  left: 5%; /* 왼쪽은 살짝 안쪽으로 */
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 30px;
+}
+
+/* 카드만 애니메이션 적용 */
+.timeline-item .timeline-content {
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* 카드가 처음에는 양옆으로 살짝 나가있음 */
+.timeline-item.left .timeline-content {
+  transform: translateX(-60px);
+}
+
+.timeline-item.right .timeline-content {
+  transform: translateX(60px);
+}
+
+/* 스크롤 시 나타나기 */
+.timeline-item.visible {
+  opacity: 1;
+}
+
+.timeline-item.visible .timeline-content {
+  transform: translateX(0);
+}
+
+/* 아이템 간격 */
+.timeline .timeline-item:not(:first-of-type) {
+  margin-top: -80px;
+}
+
+/* 점 (고정된 중앙 라인 맞춤) */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 90px; /* 카드 높이에 맞게 조정 */
+  width: 20px;
+  height: 20px;
+  background: #0a7a32;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+/* 왼쪽 아이템 점은 세로선 오른쪽 끝 */
+.timeline-item.left::before {
+  right: -10px;
+}
+
+/* 오른쪽 아이템 점은 세로선 왼쪽 끝 */
+.timeline-item.right::before {
+  left: -10px;
+}
+
+/* 콘텐츠 구조 */
+.timeline-content {
+  display: block;
+  align-items: center;
+  justify-content: space-around;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  width: 100%; /* timeline-item 기준 */
+  overflow: hidden;
+}
+
+.timeline-content img {
+  width: 100%;
+}
+
+.text-box {
+  text-align: center;
+  padding: 25px;
+}
+
+.text-box h3 {
+  color: #0a7a32;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.text-box p {
+  color: #333;
+  line-height: 1.5;
+  font-size: 15px;
+}
+.sub_contents .sideBar .lnb li.on a {
+  color: var(--color02);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: black;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+.attraction {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.tree_outBox {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.tree_textBox {
+  width: 35%;
+  background: #edf8e2;
+  /* padding-top: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 3;
+  border-radius: 15px;
+}
+.tree_gallerys {
+  position: relative;
+  /* width: 60%; */
+  /* margin: auto; */
+  overflow: hidden;
+  border-radius: 15px;
+  height: 350px;
+  flex: 1;
+}
+.tree_gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.tree_gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.tree_gallery img:first-child {
+  opacity: 1;
+}
+.tree_gallery img.active {
+  opacity: 1;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 30px;
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+/* 자세히보기 버튼 */
+.detail_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--color01);
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.detail_btn:hover {
+  background-color: var(--color02);
+}
