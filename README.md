@@ -123,9 +123,3 @@ git branch -d 브랜치이름
 ```
 
 ### 6. **다음 날 작업시 1번부터 다시 반복!**
-
----
-
-## ✅ notion guide 링크
-#### 혹시라도 이해가 안되시면 notion링크 달아드릴테니 이것도 한번 읽어주세요!
-👉 [LineUp-Github-Guide](https://www.notion.so/LineUp_Github_Guide-28e0c6e9805780a1b312cb4e77e4af2f?source=copy_link)
