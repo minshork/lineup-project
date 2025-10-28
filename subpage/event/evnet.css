@@ -113,7 +113,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
+    gap: 60px;
 }
 
 .itemBox__item{
@@ -154,6 +154,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 
 /* 이미지 슬라이드 화살표 */
 .arrow{
@@ -237,14 +238,14 @@
 .event02__programGuide__titleBox{
     width: 100%;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
-.icon{
-    width: 50px;
-    height: 50px;
-    background-color: aqua;
+.event02__icon{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 4px;
 }
 
 .titleBox__title{
@@ -253,7 +254,7 @@
 }
 
 .event02__programGuide__content{
-    margin: 15px 0 0 65px;
+    margin: 15px 0 0 80px;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -270,6 +271,39 @@
 }
 .event02__programGuide__content>li>ul{
     margin-top: 4px;
+}
+
+.event02__programGuide__time{
+    border: 3px solid #449658;
+    /* background-color: #edf5ed; */
+    margin-top: 10px;
+}
+
+tr,th,td{
+    border: 2px solid #449658;
+    font-family: var(--fontP);
+}
+th{
+    background-color: #edf5ed;
+    color: #276850;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+tr>td:nth-child(1){
+    text-align: center;
+}
+
+.table__ul{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+}
+.table__ul>li{
+    margin-left: 20px;
+    list-style: disc;
 }
 
 /* event 02 자연 생태체험 css 종료 */
