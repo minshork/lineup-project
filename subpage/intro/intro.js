@@ -7,7 +7,76 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // intro_01 js
+window.addEventListener("scroll", () => {
+    // 윈도우 스크롤 값
+    const scrY = window.scrollY;
+    
+    // Section Top
+    const sec1Top = document.querySelector(".intro_01_title").offsetTop;
+    const sec2Top = document.querySelector(".intro_01_placeCon").offsetTop;
+    const sec3Top = document.querySelector(".tab_container").offsetTop;
 
+    // Section 1
+    if(scrY > sec1Top - 300){
+        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 95%)";
+    }
+    else if(scrY < sec1Top - 300){
+        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 25%)";
+    }
+
+    // Section 2
+    if(scrY > sec2Top - 900 && scrY < sec3Top - 900){
+        document.querySelector('.intro_01_placeCon h1').style.transform = "translateY(0)";
+        document.querySelector('.intro_01_placeCon h1').style.opacity = "1";
+        
+    }
+    else if(scrY < sec2Top - 900){
+        document.querySelector('.intro_01_placeCon h1').style.transform = "translateY(-30px)";
+        document.querySelector('.intro_01_placeCon h1').style.opacity = "0";
+    }
+    else if(scrY > sec3Top - 200){
+        document.querySelector('.intro_01_placeCon h1').style.transform = "translateY(30px)";
+        document.querySelector('.intro_01_placeCon h1').style.opacity = "0";
+    };
+
+    if(scrY > sec2Top - 700 && scrY < sec3Top - 600){
+        document.querySelector(".intro_01_place01 img").style.transform = "translateX(0)";
+        document.querySelector(".intro_01_place01 img").style.opacity = "1";
+
+        document.querySelector(".intro_01_place01 div").style.transform = "translateX(0)";
+        document.querySelector(".intro_01_place01 div").style.opacity = "1";
+    }
+    else if(scrY < sec2Top - 700 || scrY > sec3Top - 200){
+        document.querySelector(".intro_01_place01 img").style.transform = "translateX(40px)";
+        document.querySelector(".intro_01_place01 img").style.opacity = "0";
+
+        document.querySelector(".intro_01_place01 div").style.transform = "translateX(-40px)";
+        document.querySelector(".intro_01_place01 div").style.opacity = "0";
+    }
+
+    if(scrY > sec2Top - 400 && scrY < sec3Top - 100){
+        document.querySelector(".intro_01_place02 img").style.transform = "translateX(0)";
+        document.querySelector(".intro_01_place02 img").style.opacity = "1";
+
+        document.querySelector(".intro_01_place02 div").style.transform = "translateX(0)";
+        document.querySelector(".intro_01_place02 div").style.opacity = "1";
+    }
+    else if(scrY < sec2Top || scrY > sec3Top - 100){
+        document.querySelector(".intro_01_place02 img").style.transform = "translateX(-40px)";
+        document.querySelector(".intro_01_place02 img").style.opacity = "0";
+
+        document.querySelector(".intro_01_place02 div").style.transform = "translateX(40px)";
+        document.querySelector(".intro_01_place02 div").style.opacity = "0";
+    }
+
+    // Section 3
+    if(scrY > sec3Top - 800){
+        document.querySelector(".tab_container").style.opacity = "1";
+    }
+    else if(scrY < sec3Top - 900){
+        document.querySelector(".tab_container").style.opacity = "0";
+    }
+});
 
 // intro_02 js
 
@@ -60,7 +129,7 @@ let products = [
 
 
 function backimg_intro03() {
-    let imgBoxs = document.querySelectorAll(".intro_03_product");
+    const imgBoxs = document.querySelectorAll(".intro_03_product");
 
     for(let i = 0; i < imgBoxs.length; i++){
         imgBoxs[i].style.backgroundImage = `url(../../assets/img/sub/intro/intro_03_product0${i + 1}.jpg)`;
@@ -68,21 +137,25 @@ function backimg_intro03() {
 };
 
 function imgDesOpen_intro03(num){
-    let arrow = document.getElementById("intro03_des_close");
+    const arrow = document.getElementById("intro03_des_close");
 
     document.querySelector(".intro_03_des > p").innerHTML = products[num].des;
     document.querySelector(".intro_03_adr").innerHTML = products[num].addr;
     document.querySelector(".intro_03_des_box").style.transform = "scaleX(1)";
     document.querySelector(".intro_03_des_title").style.width = "100%";
     document.querySelector(".intro_03_des_img").style.borderRadius = "0px 0px 0px 15px";
+    document.querySelector(".intro_03_des_wrap").style.transition = "all 1.3s ease";
+    document.querySelector(".intro_03_des_wrap").style.boxShadow = "0px 3px 7px rgba(100,100,100,0.25)";
     setTimeout(() => {
         arrow.style.transform = "translateY(-50%) rotate(270deg)";
     }, 500);
 }
 
 function imgDesClose_intro03(){
-    let arrow = document.getElementById("intro03_des_close");
+    const arrow = document.getElementById("intro03_des_close");
 
+    document.querySelector(".intro_03_des_wrap").style.transition = "all 0.2s ease";
+    document.querySelector(".intro_03_des_wrap").style.boxShadow = "none";
     document.querySelector(".intro_03_des_box").style.transform = "scaleX(0)";
     document.querySelector(".intro_03_des_title").style.width = "290px";
     setTimeout(() => {
@@ -95,9 +168,9 @@ function imgDesClose_intro03(){
 }
 
 function clickimg_intro03(){
-    let imgBoxs = document.querySelectorAll(".intro_03_product_con");
-    let introWrap = document.querySelector(".intro_03_wrap");
-    let desBox = document.querySelector(".intro_03_des_wrap");
+    const imgBoxs = document.querySelectorAll(".intro_03_product_con");
+    const introWrap = document.querySelector(".intro_03_wrap");
+    const desBox = document.querySelector(".intro_03_des_wrap");
 
     for(let i = 0; i < imgBoxs.length; i++){
         imgBoxs[i].addEventListener("click", () => {
@@ -105,9 +178,6 @@ function clickimg_intro03(){
                 imgBoxs[j].style.opacity = "0";
                 imgBoxs[j].style.pointerEvents = "none";
             }
-            // setTimeout(() => {
-            //     imgBoxs[i].style.transform = "rotate(360deg)";
-            // }, 20);
             setTimeout(() => {
                 document.querySelector(".intro_03_des_title > p").innerHTML = products[i].title;
                 document.querySelector(".intro_03_des_img").style.backgroundImage = `url(${products[i].url})`;
@@ -123,9 +193,9 @@ function clickimg_intro03(){
 };
 
 function closeimg_intro03(){
-    let imgBoxs = document.querySelectorAll(".intro_03_product_con");
-    let introWrap = document.querySelector(".intro_03_wrap");
-    let desBox = document.querySelector(".intro_03_des_wrap");
+    const imgBoxs = document.querySelectorAll(".intro_03_product_con");
+    const introWrap = document.querySelector(".intro_03_wrap");
+    const desBox = document.querySelector(".intro_03_des_wrap");
     
     imgDesClose_intro03()
     setTimeout(() => {
@@ -139,5 +209,4 @@ function closeimg_intro03(){
             };
         }, 1000);
     }, 1000);
-    
 }

@@ -1,5 +1,5 @@
-let imgs = document.querySelectorAll(".main__sec1__imgBox > img");
-let curimgs = document.querySelectorAll(".main__sec1__curImg > span");
+const imgs = document.querySelectorAll(".main__sec1__imgBox > img");
+const curimgs = document.querySelectorAll(".main__sec1__curImg > span");
 let i = 0;
 let imgFD;
 let resumeFD;

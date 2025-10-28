@@ -30,7 +30,7 @@
 /* 첫 타이틀 영역 */
 .intro_01_title {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 600px;
     position: relative;
 }
 
@@ -53,8 +53,8 @@
     color: #333;
     margin-bottom: 40px;
     background-color: rgba(144, 238, 144, 0.15);
-    box-shadow: 3px 3px 7px rgba(100,100,100,0.25);
-    padding: 60px 30px;
+    /* box-shadow: 3px 3px 7px rgba(100,100,100,0.25); */
+    padding: 60px 25px;
     border-radius: 12px;
     font-family: var(--fontP);
     line-height: 1.5;
@@ -66,11 +66,16 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     margin-bottom: 50px;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, 25%);
+
+    transition: all 1.0s ease;
 }
 
 /* 장소 콘텐츠 */
 .intro_01_placeCon {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .intro_01_placeCon h1 {
@@ -78,6 +83,10 @@
     text-align: center;
     color: var(--color01);
     margin-bottom: 60px;
+
+    transform: translateY(-30px);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 
 .intro_01_placeCon h1 span:nth-child(1),
@@ -87,7 +96,6 @@
 }
 
 /* 암용추/숫용추 - 1 */
-
 .intro_01_place01,
 .intro_01_place02 {
     display: flex;
@@ -119,12 +127,21 @@
     font-family: var(--fontP);
 }
 
-/* 역사 섹션 */
-.intro_01_history01,
-.intro_01_history02 {
-    margin-bottom: 100px;
+.intro_01_place01 img,
+.intro_01_place02 div{
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 1s ease;
 }
 
+.intro_01_place02 img,
+.intro_01_place01 div{
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 1s ease;
+}
+
+/* 역사 섹션 */
 .intro_01_history01 h1{
     font-size: 4.5rem;
     color: var(--color01);
@@ -145,6 +162,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+}
+.intro_01_history01 > div{
+    flex-direction: row-reverse;
 }
 
 .intro_01_history01 > div > div,
@@ -174,6 +194,12 @@
     padding: 0px 10px;
     line-height: 1.6;
     font-family: var(--fontP);
+}
+
+.intro_01_tap{
+    opacity: 0;
+    width: 100%;
+    transition: all 1s ease;
 }
 
 
@@ -251,13 +277,14 @@
     transform: translateY(-50%);
     pointer-events: none;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1.5s ease;
+    border-radius: 15px;
 }
 
 .intro_03_des_title{
     width: 290px;
     position: relative;
-    background-color: var(--color02);
+    background-color: var(--color01);
     padding: 20px 0px 15px 0px;
     border-radius: 15px 15px 0px 0px;
 
@@ -291,11 +318,13 @@
     background-position: center;
     background-size: cover;
     border-radius: 0px 0px 15px 15px;
+    /* box-shadow: 0px 3px 7px rgba(100,100,100,0.25); */
     /* border: 1px solid black; */
 }
 
 .intro_03_des_box{
-    background-color: #71b984;
+    background-color: rgba(144, 238, 144, 0.15);
+    /* box-shadow: 3px 3px 7px rgba(100,100,100,0.25); */
     border-radius: 0px 0px 15px 0px;
     transform: scaleX(0);
     transform-origin: left;
