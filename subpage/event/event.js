@@ -74,7 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // event 02 자연생태체험
 
+
 // event 03 고택체험
+
+// gallary
 document.querySelectorAll(".swiper-mini .swiper-img").forEach((img) => {
   img.setAttribute("draggable", "false");
 });
