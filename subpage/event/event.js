@@ -44,6 +44,34 @@ document.querySelectorAll(".itemBox__item__wrap").forEach((item) => {
   });
 });
 
+// 유튜브 재생바 제한
+let player1;
+
+function onYouTubeIframeAPIReady(){
+  player1 = new YT.Player('player1', {
+    videoId : 'VNklDNlh3H4',
+    playerVars: {
+      controls: 0,
+      modestbranding: 1,
+      rel: 0,
+      showinfo: 0,
+      fs: 0,
+      iv_load_policy: 3,
+      autoplay: 0,
+      playsinline: 1,
+      origin: window.location.origin
+    }
+  }) 
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  let btn = document.querySelector('.playBtn')
+  btn.addEventListener("click", ()=>{
+    player1.playVideo()
+    btn.style.display = 'none'
+  })
+})
+
 // event 02 자연생태체험
 
 // event 03 고택체험
