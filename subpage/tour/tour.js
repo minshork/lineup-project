@@ -77,3 +77,35 @@ document.addEventListener("DOMContentLoaded", function () {
     showImage(index);
   });
 });
+// 아코디언 기능만
+document.addEventListener("DOMContentLoaded", function () {
+  const acc = document.querySelectorAll(".arrcordian");
+
+  acc.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // 활성화 클래스 토글
+      btn.classList.toggle("active");
+
+      // 내부의 panel 찾기 (현재 HTML 구조 기준)
+      const panel = btn.querySelector(".panel");
+
+      if (!panel) return;
+
+      // 열기/닫기 토글
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        // 다른 아코디언 패널은 닫고, 현재만 열리게 하고 싶다면:
+        acc.forEach((other) => {
+          const otherPanel = other.querySelector(".panel");
+          if (otherPanel && other !== btn) {
+            otherPanel.style.display = "none";
+            other.classList.remove("active");
+          }
+        });
+
+        panel.style.display = "block";
+      }
+    });
+  });
+});
