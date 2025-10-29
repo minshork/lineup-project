@@ -1,331 +1,436 @@
 @charset "UTF-8";
 
 /* 섹션 상단 공통 textBox 영역 */
-.event01__sec1__textBox01, .event02__sec1__textBox01, .event03__sec1__textBox01{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 60px;
+.event01__sec1__textBox01,
+.event02__sec1__textBox01,
+.event03__sec1__textBox01 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 60px;
 }
 
-.event01__sec1__textBox01>h4, .event02__sec1__textBox01>h4, .event03__sec1__textBox01>h4{
-    font-weight: 400;
-    font-size: 2.8rem;
+.event01__sec1__textBox01 > h4,
+.event02__sec1__textBox01 > h4,
+.event03__sec1__textBox01 > h4 {
+  font-weight: 400;
+  font-size: 2.8rem;
 }
-.event01__sec1__textBox01>h1, .event02__sec1__textBox01>h1, .event03__sec1__textBox01>h1{
-    color: var(--color01);
-    font-size: 4.4rem;
+.event01__sec1__textBox01 > h1,
+.event02__sec1__textBox01 > h1,
+.event03__sec1__textBox01 > h1 {
+  color: var(--color01);
+  font-size: 4.4rem;
 }
-.event01__sec1__textBox01>h6, .event02__sec1__textBox01>h6, .event03__sec1__textBox01>h6{
-    font-size: 1.6rem;
-    font-weight: 400;
+.event01__sec1__textBox01 > h6,
+.event02__sec1__textBox01 > h6,
+.event03__sec1__textBox01 > h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
-
 
 /* event 01 계룡軍문화축제 css */
-.event01__sec1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+.event01__sec1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
-.event01__sec1__textBox01{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 60px;
+.event01__sec1__textBox01 {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 60px;
 }
 
-.event01__sec1__textBox01>h4{
-    font-weight: 400;
-    font-size: 2.8rem;
+.event01__sec1__textBox01 > h4 {
+  font-weight: 400;
+  font-size: 2.8rem;
 }
-.event01__sec1__textBox01>h1{
-    color: var(--color01);
-    font-size: 4.4rem;
+.event01__sec1__textBox01 > h1 {
+  color: var(--color01);
+  font-size: 4.4rem;
 }
-.event01__sec1__textBox01>h6{
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-.event01__sec1__img01{
-    width: 90%;
-    border-radius: 12px;
-    margin: 0 auto;
-    box-shadow: 5px 5px 10px rgba(100,100,100,0.4);
-    margin-bottom: 60px;
+.event01__sec1__textBox01 > h6 {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
-.event01__sec1__textBox02{
-    width: 100%;
-    padding: 60px;
-    text-align: center;
-    background-color: #edf5ed;
-    box-sizing: border-box;
-    margin-bottom: 60px;
-    border-radius: 12px;
-}
-.event01__sec1__textBox02>h2{
-    font-size: 3.2rem;
-    color: var(--color01);
-    margin-bottom: 30px;
+.event01__sec1__img01 {
+  width: 90%;
+  border-radius: 12px;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px rgba(100, 100, 100, 0.4);
+  margin-bottom: 60px;
 }
 
-.event01__sec1__textBox02>p{
-    font-family: var(--fontP);
-    font-size: 1.6rem;
-    line-height: 1.6;
+.event01__sec1__textBox02 {
+  width: 100%;
+  padding: 60px;
+  text-align: center;
+  background-color: #edf5ed;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  border-radius: 12px;
+}
+.event01__sec1__textBox02 > h2 {
+  font-size: 3.2rem;
+  color: var(--color01);
+  margin-bottom: 30px;
 }
 
-.event01__sec1__img02{
-    position: relative;
-    width: 90%;
-    height: clamp(100px, 40vh, 450px);
-    overflow-y: hidden;
-    border-radius: 12px;
-    box-shadow: 5px 5px 10px rgba(100,100,100,0.4);
-    margin-bottom: 60px;
-}
-.event01__sec1__img02>img{
-    position: absolute;
-    top: -30%;
+.event01__sec1__textBox02 > p {
+  font-family: var(--fontP);
+  font-size: 1.6rem;
+  line-height: 1.6;
 }
 
-.event01__sec1__textBox03{
-    text-align: center;
-    font-family: var(--fontP);
-    font-size: 1.6rem;
-    line-height: 1.6;
+.event01__sec1__img02 {
+  position: relative;
+  width: 90%;
+  height: clamp(100px, 40vh, 450px);
+  overflow-y: hidden;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(100, 100, 100, 0.4);
+  margin-bottom: 60px;
+}
+.event01__sec1__img02 > img {
+  position: absolute;
+  top: -30%;
 }
 
-.event01__sec1__title{
-    font-size: 4rem;
-    color: var(--color01);
-    margin-top: 60px;
+.event01__sec1__textBox03 {
+  text-align: center;
+  font-family: var(--fontP);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.event01__sec1__title {
+  font-size: 4rem;
+  color: var(--color01);
+  margin-top: 60px;
 }
 /* 계룡軍문화축제 행사 ul, li */
-.itemBox{
-    margin-top: 40px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
+.itemBox {
+  margin-top: 40px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
 }
 
-.itemBox__item{
-    width: 100%;
-    background-color: var(--color01);
-    color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 3px 5px 7px rgba(100,100,100,0.3);
-    margin-top: 10px;
+.itemBox__item {
+  width: 100%;
+  background-color: var(--color01);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 3px 5px 7px rgba(100, 100, 100, 0.3);
+  margin-top: 10px;
 }
 
-.itemBox__item__wrap{
-    width: 100%;
-    position: relative;
+.itemBox__item__wrap {
+  width: 100%;
+  position: relative;
 }
 
-.item__wrap__text{
-    width: 100%;
-    height: 60px;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 63px;
+.item__wrap__text {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 63px;
 }
 
-.item__wrap__imgBox{
-    position: relative;
-    width: 700%;
-    height: 280px;
-    overflow: hidden;
-    display: flex;
-    transition: transform 0.6s ease-in-out;
+.item__wrap__imgBox {
+  position: relative;
+  width: 700%;
+  height: 280px;
+  overflow: hidden;
+  display: flex;
+  transition: transform 0.6s ease-in-out;
 }
 
-.item__wrap__imgBox>img{
-    width: calc(100% / 7);
-    height: 100%;
-    object-fit: cover;
+.itemBox__item:nth-child(1) .arrow{
+  display: none;
 }
+
+.item__wrap__imgBox > img, .videoBox{
+  width: calc(100% / 7);
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 영상 영역 */
+.videoBox {
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+  /* background-color: aqua; */
+}
+
+#player1{
+  width: 100%;
+  height: 100%;
+}
+
+.playBtn{
+  position: absolute;
+  top: 48%; left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 60px;
+  height: 60px;
+}
+
 
 
 /* 이미지 슬라이드 화살표 */
-.arrow{
-    position: absolute;
-    top: 47%;
-    width: 40px; height: 40px;
-    cursor: pointer;
-    z-index: 10;
+.arrow {
+  position: absolute;
+  top: 47%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
 }
-.arrow.left{left: 30px;}
-.arrow.right{right: 30px;}
-
-.arrow.left::before, .arrow.right::before{
-    content: '';
-    position: absolute;
-    width: 20px; height: 20px;
-    border-top: 3px solid white;
-    border-left: 3px solid white;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+.arrow.left {
+  left: 30px;
+}
+.arrow.right {
+  right: 30px;
 }
 
-.arrow.left::before{transform: translate(-50%, -50%) rotate(-45deg);}
-.arrow.right::before{transform: translate(-50%, -50%) rotate(135deg);}
+.arrow.left::before,
+.arrow.right::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow.left::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.arrow.right::before {
+  transform: translate(-50%, -50%) rotate(135deg);
+}
 
 /* event 01 계룡軍문화축제 css 종료 */
-
-
 
 /* event 02 자연 생태체험 css */
 
 /* 발도르프 감성놀이 */
-.event02__experience{
-    width: 100%;
-    padding: 40px;
-    background-color: #edf5ed;
-    border-radius: 12px;
-    display: flex;
-    gap: 4%;
-    align-items: center;
+.event02__experience {
+  width: 100%;
+  padding: 40px;
+  background-color: #edf5ed;
+  border-radius: 12px;
+  display: flex;
+  gap: 4%;
+  align-items: center;
 }
 
-.experience__img{
-    width: 30%;
-    height: auto;
-    aspect-ratio: 290 / 170;
-    object-fit: cover;
-    /* background-color: aqua; */
+.experience__img {
+  width: 30%;
+  height: auto;
+  aspect-ratio: 290 / 170;
+  object-fit: cover;
+  /* background-color: aqua; */
 }
 
-.experience__textBox{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.experience__textBox {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.experience__textBox>h4{
-    color: var(--color01);
-    font-size: 2.8rem;
+.experience__textBox > h4 {
+  color: var(--color01);
+  font-size: 2.8rem;
 }
-.experience__textBox>p{
-    font-family: var(--fontP);
-    font-size: 1.8rem;
-    line-height: 1.5;
+.experience__textBox > p {
+  font-family: var(--fontP);
+  font-size: 1.8rem;
+  line-height: 1.5;
 }
-.pointColor{
-    color: var(--color01);
-    font-weight: 600;
-}
-
-.event02__programGuide{
-    margin-top: 60px;
-    width: 100%;
+.pointColor {
+  color: var(--color01);
+  font-weight: 600;
 }
 
-.event02__programGuide__inner{
-    width: 100%;
-    margin-bottom: 60px;
-}
-.event02__programGuide__titleBox{
-    width: 100%;
-    display: flex;
-    gap: 15px;
-    align-items: center;
+.event02__programGuide {
+  margin-top: 60px;
+  width: 100%;
 }
 
-.event02__icon{
-    width: 40px;
-    height: 40px;
-    margin-bottom: 4px;
+.event02__programGuide__inner {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.event02__programGuide__titleBox {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
 
-.titleBox__title{
-    font-size: 3.2rem;
-    color: var(--color01);
+.event02__icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 4px;
 }
 
-.event02__programGuide__content{
-    margin: 15px 0 0 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    font-family: var(--fontP);
-    font-size: 1.6rem;
-    
+.titleBox__title {
+  font-size: 3.2rem;
+  color: var(--color01);
 }
 
-.event02__programGuide__content>li{
-    list-style: disc;
-}
-.event02__programGuide__content>li::marker{
-    color: var(--color01);
-}
-.event02__programGuide__content>li>ul{
-    margin-top: 4px;
-}
-
-.event02__programGuide__time{
-    border: 3px solid #449658;
-    /* background-color: #edf5ed; */
-    margin-top: 10px;
+.event02__programGuide__content {
+  margin: 15px 0 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-family: var(--fontP);
+  font-size: 1.6rem;
 }
 
-tr,th,td{
-    border: 2px solid #449658;
-    font-family: var(--fontP);
+.event02__programGuide__content > li {
+  list-style: disc;
 }
-th{
-    background-color: #edf5ed;
-    color: #276850;
-    height: 60px;
-    font-size: 2rem;
-    font-weight: 600;
+.event02__programGuide__content > li::marker {
+  color: var(--color01);
 }
-tr>td:nth-child(1){
-    text-align: center;
+.event02__programGuide__content > li > ul {
+  margin-top: 4px;
 }
 
-.table__ul{
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    
+.event02__programGuide__time {
+  border: 3px solid #449658;
+  /* background-color: #edf5ed; */
+  margin-top: 10px;
 }
-.table__ul>li{
-    margin-left: 20px;
-    list-style: disc;
+
+tr,
+th,
+td {
+  border: 2px solid #449658;
+  font-family: var(--fontP);
+}
+th {
+  background-color: #edf5ed;
+  color: #276850;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+tr > td:nth-child(1) {
+  text-align: center;
+}
+
+.table__ul {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.table__ul > li {
+  margin-left: 20px;
+  list-style: disc;
 }
 
 /* event 02 자연 생태체험 css 종료 */
 
-
 /* evevt 03 고택 체험 css 시작 */
-.event03__sec1__textBox02{
-    width: 100%;
-    padding: 60px;
-    text-align: center;
-    background-color: #edf5ed;
-    box-sizing: border-box;
-    margin-bottom: 60px;
-    border-radius: 12px;
+.event03__sec1__textBox02 {
+  width: 100%;
+  padding: 60px;
+  text-align: center;
+  background-color: #edf5ed;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+  border-radius: 12px;
 }
-.event03__sec1__textBox02>h2{
-    font-size: 3.2rem;
-    color: var(--color01);
-    margin-bottom: 30px;
+.event03__sec1__textBox02 > h2 {
+  font-size: 3.2rem;
+  color: var(--color01);
+  margin-bottom: 30px;
 }
-.event03__sec1__textBox02>p{
-    font-family: var(--fontP);
-    font-size: 1.6rem;
-    line-height: 1.6;
+.event03__sec1__textBox02 > p {
+  font-family: var(--fontP);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+/* 썸네일 갤러리 */
+.event03__thumbsGallery {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.swiper-lg {
+  margin: 0 auto;
+  width: 100%;
+  height: 60vh;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.4);
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+
+.swiper-mini {
+  width: 100%;
+}
+.swiper-mini > .swiper-wrap::-webkit-scrollbar {
+  display: none; /* 크롬 스크롤바 숨김 */
+}
+
+.swiper-mini > .swiper-wrap {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  gap: 20px;
+  cursor: grab;
+}
+
+.swiper-mini .swiper-img {
+  flex: 0 0 auto;
+  width: 25%;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.6;
+  box-shadow: 2px 2px 7px rgba(100, 100, 100, 0.4);
+  transition: opacity 0.3s;
+}
+
+.swiper-mini .swiper-img.active {
+  opacity: 1;
+  border: inset 3px solid var(--color01);
+}
+
+.swiper-lg .swiper-img {
+  width: 100%;
+  display: none;
+}
+
+.event03__tab__title{
+  color: var(--color01);
+  font-size: 4.4rem;
+  text-align: center;
+  margin: 100px 0 60px 0 ;
 }
