@@ -203,6 +203,10 @@
 }
 
 /* 명소 시작 intro_02 */
+.intro_02_tap{
+    width: 100%;
+}
+
 .intro_02_spot_title{
     text-align: center;
     margin: 75px 0px;
@@ -216,6 +220,33 @@
     font-size: 1.6rem;
     margin-bottom: 30px;
     font-weight: 400;
+}
+
+.intro_02_spot_desBox{
+    width: 90%;
+    margin-bottom: 40px;
+    background-color: rgba(144, 238, 144, 0.15);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+    padding: 60px 50px;
+    border-radius: 12px;
+    font-family: var(--fontP);
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+.intro_02_spot_desImg{
+    width: 45%;
+    height: 300px;
+    background-image: url(../../assets/img/sub/intro/intro_02_spot_mountain01.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+.intro_02_spot_desText{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
 }
 
 
