@@ -350,7 +350,7 @@ textarea:focus::placeholder {
 .main__topButton {
   width: 50px;
   height: 50px;
-  background-color: var(--color02);
+  background-color: var(--color01);
   color: #fff;
   position: fixed;
   z-index: 11;
@@ -369,7 +369,7 @@ textarea:focus::placeholder {
   position: absolute;
   width: 120%;
   height: 120%;
-  border: 25px solid rgba(68, 150, 88, 0.3);
+  background: rgba(68, 150, 88, 0.3);
   left: calc(-50% + 20px);
   top: calc(-50% + 20px);
   transform-origin: center;
