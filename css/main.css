@@ -134,8 +134,10 @@ body {
   font-size: clamp(1rem, 1.1vw, 2rem);
 }
 #weather__icon {
-  width: 43%;
-  height: 43%;
+  width: 38%;
+  height: 38%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #weather__temp {
   font-size: clamp(1rem, 2.6vw, 3.2rem);
@@ -497,8 +499,9 @@ body {
 
 .main__sec5__footerBg {
   position: absolute;
-  bottom: -200px;
-  width: 100vw;
+  width: 1200px;
+  bottom: -150px;
+  width: 100%;
   z-index: -1;
 }
 
