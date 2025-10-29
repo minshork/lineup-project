@@ -48,20 +48,32 @@ document.addEventListener("DOMContentLoaded", function () {
   showWhenScroll();
 });
 
+// 이미지 슬라이더 기능 추가
 document.addEventListener("DOMContentLoaded", function () {
-  const galleries = document.querySelectorAll(".tree_gallery");
+  const galleries = document.querySelectorAll(".tree_gallerys");
 
-  galleries.forEach((gallery) => {
-    const slides = gallery.querySelectorAll("img");
+  galleries.forEach((galleryBox) => {
+    const images = galleryBox.querySelectorAll(".tree_gallery img");
+    const prevBtn = galleryBox.querySelector(".arrow.left");
+    const nextBtn = galleryBox.querySelector(".arrow.right");
     let index = 0;
 
-    function showSlide() {
-      slides.forEach((img, i) => {
-        img.classList.toggle("active", i === index);
+    function showImage(idx) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === idx);
       });
-      index = (index + 1) % slides.length;
     }
 
-    setInterval(showSlide, 4000); // 4초마다 전환
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      showImage(index);
+    });
+
+    showImage(index);
   });
 });
