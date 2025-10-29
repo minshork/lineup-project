@@ -193,6 +193,7 @@
   flex-direction: column;
   gap: 50px;
 }
+/* 드라이빙 카페 */
 .tree_outBox {
   display: flex;
   justify-content: space-between;
@@ -219,22 +220,18 @@
 }
 .tree_gallerys {
   position: relative;
-  /* width: 60%; */
-  /* margin: auto; */
   overflow: hidden;
   border-radius: 15px;
   height: 350px;
   flex: 1;
-  /* box-shadow: 3px 3px 7px rgba(100, 100, 100, 0.3); */
 }
+
 .tree_gallery {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.5s ease-in-out;
 }
 .tree_gallery img {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -246,14 +243,14 @@
   object-fit: cover;
 }
 .tall {
-  object-fit: contain;
+  object-position: bottom;
 }
-.tree_gallery img:first-child {
-  opacity: 1;
-}
+
 .tree_gallery img.active {
   opacity: 1;
+  z-index: 1;
 }
+
 .arrow {
   position: absolute;
   top: 47%;
@@ -288,6 +285,7 @@
 .arrow.right::before {
   transform: translate(-50%, -50%) rotate(135deg);
 }
+
 /* #prev,
 #next {
   position: absolute;

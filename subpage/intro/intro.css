@@ -3,7 +3,7 @@
 
 /* 계룡산 소개 시작 intro_01 */
 .intro_01_container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -11,9 +11,197 @@
     justify-content: center;
 }
 
-.intro_01_title{
+/* .intro_01_title{
     width: 95%;
+} */
+
+/* 전체 컨테이너 */
+.intro_01_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    /* font-family: "Noto Serif KR", serif; */
+    /* background-color: #f7f3eb; */
+    padding: 80px 0;
+    line-height: 1.6;
 }
+
+/* 첫 타이틀 영역 */
+.intro_01_title {
+    text-align: center;
+    margin-bottom: 600px;
+    position: relative;
+}
+
+.intro_01_title_text{
+    margin-bottom: 60px;
+}
+
+.intro_01_title_text > h1 {
+    font-size: 4.4rem;
+    color: var(--color01);
+}
+.intro_01_title_text > h4{
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.intro_01_title > p {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 40px;
+    background-color: rgba(144, 238, 144, 0.15);
+    /* box-shadow: 3px 3px 7px rgba(100,100,100,0.25); */
+    padding: 60px 25px;
+    border-radius: 12px;
+    font-family: var(--fontP);
+    line-height: 1.5;
+}
+
+.intro_01_title > img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin-bottom: 50px;
+    position: absolute;
+    top: 0; left: 50%;
+    transform: translate(-50%, 25%);
+
+    transition: all 1.0s ease;
+}
+
+/* 장소 콘텐츠 */
+.intro_01_placeCon {
+    margin-bottom: 50px;
+}
+
+.intro_01_placeCon h1 {
+    font-size: 4.6rem;
+    text-align: center;
+    color: var(--color01);
+    margin-bottom: 60px;
+
+    transform: translateY(-30px);
+    transition: all 0.8s ease;
+    opacity: 0;
+}
+
+.intro_01_placeCon h1 span:nth-child(1),
+.intro_01_placeCon h1 span:nth-child(3){
+    color: var(--color01);
+    font-weight: bold;
+}
+
+/* 암용추/숫용추 - 1 */
+.intro_01_place01,
+.intro_01_place02 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.intro_01_place01 img,
+.intro_01_place02 img {
+    width: 50%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* 순서 반전 (두 번째는 이미지 왼쪽) */
+.intro_01_place02 {
+    flex-direction: row-reverse;
+}
+
+/* 본문 글 */
+.intro_01_place01 p,
+.intro_01_place02 p {
+    margin-bottom: 16px;
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: var(--fontP);
+}
+
+.intro_01_place01 img,
+.intro_01_place02 div{
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 1s ease;
+}
+
+.intro_01_place02 img,
+.intro_01_place01 div{
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 1s ease;
+}
+
+/* 역사 섹션 */
+.intro_01_history01 h1{
+    font-size: 4.5rem;
+    color: var(--color01);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.intro_01_history02 h1{
+    font-size: 4.5rem;
+    color: var(--color01);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro_01_history01 > div,
+.intro_01_history02 > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.intro_01_history01 > div{
+    flex-direction: row-reverse;
+}
+
+.intro_01_history01 > div > div,
+.intro_01_history02 > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.intro_01_history01 > div > img{
+    border-radius: 12px;
+}
+
+.intro_01_history02 > div > img{
+    width: 50%;
+    height: 500px;
+}
+
+.intro_01_history01 p{
+    font-size: 1.6rem;
+    padding: 0px 10px;
+    line-height: 1.6;
+    font-family: var(--fontP);
+}
+.intro_01_history02 p{
+    font-size: 1.6rem;
+    padding: 0px 10px;
+    line-height: 1.6;
+    font-family: var(--fontP);
+}
+
+.intro_01_tap{
+    opacity: 0;
+    width: 100%;
+    transition: all 1s ease;
+}
+
 
 
 /* 특산품 시작 intro_03 */
@@ -25,43 +213,44 @@
 
 .intro_03_container{
     display: grid;
-    /* display: none; */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    /* position: absolute; */
-    column-gap: 100px;
-    row-gap: 150px;
-    padding: 100px 0px 100px 0px;
+    position: relative;
+    gap: 60px;
+    /* padding: 100px 0px; */
+    /* background-color: #71b984; */
 }
 
 .intro_03_product_con{
+    width: 100%;
     background-color: var(--color01);
-    border-radius: 15px;
+    border-radius: 12px;
+    overflow: hidden;
     cursor: pointer;
     position: relative;
     opacity: 1;
-
     transition: all 1s ease;
+    box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.4);
 }
 .intro_03_product_con:hover{
-    animation: prdAni 2.0s infinite ease-in-out;
+    animation: prdAni 1.2s infinite ease-in-out;
 }
 
 .intro_03_product_con > p{
     text-align: center;
-    padding: 20px 0px 15px 0px;
+    height: 60px;
     width: 100%;
     color: white;
-    position: absolute;
-    top: -56px;
-    background-color: var(--color02);
-    border-radius: 15px 15px 0px 0px;
+    line-height: 64px;
+    background-color: var(--color01);
     z-index: 10;
+    font-size: 2rem;
+    font-weight: 400;
 }
 .intro_03_product{
-    width: 290px;
+    width: 100%;
     aspect-ratio: 290 / 218;
-    border-radius: 0px 0px 15px 15px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -73,7 +262,7 @@
     }
 
     50%{
-        transform: translateY(20px);
+        transform: translateY(8px);
     }
 
     100%{
@@ -88,13 +277,14 @@
     transform: translateY(-50%);
     pointer-events: none;
     opacity: 0;
-    transition: all 1s ease;
+    transition: all 1.5s ease;
+    border-radius: 15px;
 }
 
 .intro_03_des_title{
     width: 290px;
     position: relative;
-    background-color: var(--color02);
+    background-color: var(--color01);
     padding: 20px 0px 15px 0px;
     border-radius: 15px 15px 0px 0px;
 
@@ -128,11 +318,13 @@
     background-position: center;
     background-size: cover;
     border-radius: 0px 0px 15px 15px;
+    /* box-shadow: 0px 3px 7px rgba(100,100,100,0.25); */
     /* border: 1px solid black; */
 }
 
 .intro_03_des_box{
-    background-color: #71b984;
+    background-color: rgba(144, 238, 144, 0.15);
+    /* box-shadow: 3px 3px 7px rgba(100,100,100,0.25); */
     border-radius: 0px 0px 15px 0px;
     transform: scaleX(0);
     transform-origin: left;

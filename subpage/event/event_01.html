@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="../../css/layout.css">
   <link rel="stylesheet" href="../../css/sub.css" />
   <link rel="stylesheet" href="./evnet.css"/>
+
+  <link rel="icon" href="../../assets/favicon.png"/>
+  <link rel="apple-touch-icon" href="../../assets/favicon.png"/>
 </head>
 
 <body>
@@ -205,13 +208,11 @@
                           <div class="arrow right"></div>
                         </div>
                       <div class="item__wrap__imgBox">
-                        <img src="../../assets/img/sub/event/item-0-5.jpg" alt="블랙이글스5">
-                        <img src="../../assets/img/sub/event/item-0-1.jpg" alt="블랙이글스1">
-                        <img src="../../assets/img/sub/event/item-0-2.jpg" alt="블랙이글스2">
-                        <img src="../../assets/img/sub/event/item-0-3.jpg" alt="블랙이글스3">
-                        <img src="../../assets/img/sub/event/item-0-4.jpg" alt="블랙이글스4">
-                        <img src="../../assets/img/sub/event/item-0-5.jpg" alt="블랙이글스5">
-                        <img src="../../assets/img/sub/event/item-0-1.jpg" alt="블랙이글스1">
+                        <div class="videoBox">
+                          <img class="videoThumbnail" src="https://img.youtube.com/vi/VNklDNlh3H4/maxresdefault.jpg" alt="thumbnail">
+                          <div id="player1"></div>
+                          <button class="playBtn">▶</button>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -364,6 +365,7 @@
     <!-- footer // -->
   </div>
 
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="../../js/common.js"></script>
   <script src="./event.js"></script>
 </body>

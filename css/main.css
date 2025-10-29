@@ -100,15 +100,12 @@ body {
   top: 0;
   left: 50%;
   transform: translate(-50%, -80%);
-
   width: 60vw;
   aspect-ratio: 5 / 1;
-
   background-color: #e1eed1;
   display: flex;
   border-radius: 9999px;
   box-shadow: 3px 7px 16px rgba(100, 100, 100, 0.25);
-
   overflow: hidden;
   z-index: 1000;
 }
@@ -212,9 +209,8 @@ body {
   width: clamp(700px, 60vw, 70vw);
   position: absolute;
   bottom: 0;
-
   transition: all 1s ease;
-  transform: translateY(-50px);
+  transform: translateY(50px);
   opacity: 0;
 }
 
@@ -341,7 +337,7 @@ body {
 
   opacity: 0;
   transform: translateY(-30px);
-  transition: all 1.0s ease;
+  transition: all 1s ease;
 }
 
 .main__sec3__textBox__title > h1,
@@ -417,13 +413,13 @@ body {
 }
 
 .main__sec3__textBox__title > h1,
-.main__sec3__textBox > p{
+.main__sec3__textBox > p {
   opacity: 0;
   transform: translate(-50px);
   transition: all 1.2s ease;
 }
 
-.main__sec3__textBox__btn{
+.main__sec3__textBox__btn {
   transform-origin: left;
   transform: scaleX(0);
   transition: all 1.5s ease;
@@ -442,13 +438,13 @@ body {
 }
 
 .main__sec4__textBox__title > h1,
-.main__sec4__textBox > p{
+.main__sec4__textBox > p {
   opacity: 0;
   transform: translate(50px);
   transition: all 1.2s ease;
 }
 
-.main__sec4__textBox__btn{
+.main__sec4__textBox__btn {
   transform-origin: right;
   transform: scaleX(0);
   transition: all 1.5s ease;

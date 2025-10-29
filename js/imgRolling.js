@@ -28,12 +28,9 @@ function addListDown(div){
 
 let ro1 = document.querySelector(".main__sec5__ro1");
 let ro2 = document.querySelector(".main__sec5__ro2");
-// let check = document.querySelector(".main__sec5");
 
 addListUp(ro1);
 addListDown(ro2);
 
 ro1.classList.add('main__sec5__aniLeft'); 
 ro2.classList.add('main__sec5__aniRight');
-
-// console.log(check)

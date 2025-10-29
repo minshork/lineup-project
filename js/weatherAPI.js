@@ -20,11 +20,10 @@ let getWeather = async(lat, lon) => {
     let data = await res.json();
 
     des.textContent = data.weather[0].description // 설명
-    // temp.textContent = data.main.temp + " °C"; // 온도
     temp.textContent = Math.floor(data.main.temp) + " °C"; // 온도(소수점 제거)
+    // temp.textContent = data.main.temp + " °C"; // 온도
 
     let iconNum = data.weather[0].icon;
-    // console.log(iconNum);
     switch(iconNum.slice(0, 2)){
         // 맑음
         case "01":
