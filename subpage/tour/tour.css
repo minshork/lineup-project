@@ -242,6 +242,9 @@
   transition: opacity 1.5s ease-in-out;
   object-fit: cover;
 }
+.tall {
+  object-position: bottom;
+}
 
 .tree_gallery img.active {
   opacity: 1;
