@@ -18,7 +18,7 @@ window.addEventListener("scroll", () => {
         sec2Back.style.transform = "translateY(0)";
 
         // 계룡산 제목
-        set2Title.style.transform = "translateX(0)";
+        set2Title.style.transform = "translateY(0)";
         set2Title.style.opacity = "1";
 
         if(scrY > sec2Top - 200){
@@ -28,6 +28,7 @@ window.addEventListener("scroll", () => {
 
             // 계룡산 설명
             sec2Des.style.opacity = "1";
+            sec2Des.style.transform = "translateY(0)";
 
             // View More
             sec2View.style.opacity = "1";
@@ -48,7 +49,7 @@ window.addEventListener("scroll", () => {
 
         //부제목
         sec3subTitle.style.opacity = "1";
-        sec3subTitle.style.transform = "translateY(0)";
+        sec3subTitle.style.transform = "translateX(0)";
 
         // 제목
         sec3Title.style.opacity = "1";
@@ -82,7 +83,7 @@ window.addEventListener("scroll", () => {
 
         // 부제목
         sec4subTitle.style.opacity = "1";
-        sec4subTitle.style.transform = "translateY(0)";
+        sec4subTitle.style.transform = "translateX(0)";
 
         // 제목
         sec4Title.style.opacity = "1";

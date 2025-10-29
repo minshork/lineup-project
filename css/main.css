@@ -134,8 +134,10 @@ body {
   font-size: clamp(1rem, 1.1vw, 2rem);
 }
 #weather__icon {
-  width: 43%;
-  height: 43%;
+  width: 38%;
+  height: 38%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #weather__temp {
   font-size: clamp(1rem, 2.6vw, 3.2rem);
@@ -210,7 +212,7 @@ body {
   position: absolute;
   bottom: 0;
   transition: all 1s ease;
-  transform: translateY(50px);
+  transform: translateY(-50px);
   opacity: 0;
 }
 
@@ -239,7 +241,7 @@ body {
   color: #5b9960;
 
   opacity: 0;
-  transform: translateX(-50px);
+  transform: translateY(-50px);
   transition: all 1s ease;
 }
 .main__sec2__textGuideLine__text__title::before {
@@ -268,6 +270,7 @@ body {
   line-height: 1.6;
 
   opacity: 0;
+  transform: translateY(-50px);
   transition: all 1.5s ease;
 }
 
@@ -336,8 +339,14 @@ body {
   font-size: 2.8rem;
 
   opacity: 0;
-  transform: translateY(-30px);
   transition: all 1s ease;
+}
+
+.main__sec3__textBox__title > h2{
+    transform: translateX(-30px);
+}
+.main__sec4__textBox__title > h2{
+  transform: translateX(30px);
 }
 
 .main__sec3__textBox__title > h1,
@@ -497,8 +506,9 @@ body {
 
 .main__sec5__footerBg {
   position: absolute;
-  bottom: -200px;
-  width: 100vw;
+  width: 1200px;
+  bottom: -150px;
+  width: 100%;
   z-index: -1;
 }
 

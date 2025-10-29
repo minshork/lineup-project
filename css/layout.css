@@ -8,9 +8,9 @@ header {
   transition: 0.3s;
 }
 header::before {
-  content: '';
+  content: "";
   position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 70px;
   top: 100%;
   left: 0;
@@ -40,7 +40,7 @@ header.on::before {
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%)
+  transform: translateY(-50%);
 }
 .logo .on {
   opacity: 0;
@@ -96,8 +96,8 @@ nav {
 .depth02_wrap ul li a:hover {
   color: var(--color02);
 }
-.depth02_wrap ul li a::before{
-  content: '';
+.depth02_wrap ul li a::before {
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -109,10 +109,10 @@ nav {
   transition: 0.3s;
   opacity: 0.5;
 }
-.depth02_wrap ul li a:hover:before{
+.depth02_wrap ul li a:hover:before {
   width: calc(100% - 55px);
 }
-.m_menu{
+.m_menu {
   display: none;
 }
 .m_menu .menu_icon {
@@ -153,10 +153,10 @@ nav {
   opacity: 0;
 }
 .m_menu .menu_icon.active .bar:last-of-type {
-  transform: translateX(0px)translateY(-9px) rotate(-45deg);
+  transform: translateX(0px) translateY(-9px) rotate(-45deg);
 }
 
-@media screen and (hover : hover) {
+@media screen and (hover: hover) {
   header:hover {
     background: #fff;
   }
@@ -167,7 +167,7 @@ nav {
   header:hover .logo img:not(.on) {
     opacity: 0;
   }
-  .gnb_wrap .gnb>li:hover>.depth02_wrap {
+  .gnb_wrap .gnb > li:hover > .depth02_wrap {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
@@ -199,7 +199,7 @@ footer {
   color: #fff;
   font-size: 1.4rem;
 }
-.ft_top ul li a:hover{
+.ft_top ul li a:hover {
   text-decoration: underline;
   text-underline-offset: 0.4em;
 }
@@ -222,7 +222,7 @@ footer {
   font-size: 1.2rem;
   color: #fff;
 }
-.ft_info .info_txt p+p {
+.ft_info .info_txt p + p {
   margin-top: 5px;
 }
 .ft_info .info_txt p:last-of-type {
