@@ -3,9 +3,9 @@ window.addEventListener("scroll", () => {
     const scrY = window.scrollY;
 
     // Section Top
-    let sec2Top = document.querySelector(".main__sec2Wrapper").offsetTop;
-    let sec3Top = document.querySelector(".main__sec3").offsetTop;
-    let sec4Top = document.querySelector(".main__sec4").offsetTop;
+    const sec2Top = document.querySelector(".main__sec2Wrapper").offsetTop;
+    const sec3Top = document.querySelector(".main__sec3").offsetTop;
+    const sec4Top = document.querySelector(".main__sec4").offsetTop;
 
     // Section 2
     if(scrY > sec2Top - 500){
@@ -103,7 +103,3 @@ window.addEventListener("scroll", () => {
         }
     }
 });
-
-// console.log(sec2Top);
-// console.log(sec3Top);
-// console.log(sec4Top);
