@@ -332,7 +332,7 @@
   font-weight: 400;
   padding: 15px 15px 10px;
   text-align: center;
-  background: #fafafa;
+  background: #edf5ed;
 }
 .basic_table table thead tr th:not(:last-of-type) {
   border-right: 1px solid #ddd;
