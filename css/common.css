@@ -394,7 +394,7 @@ textarea:focus::placeholder {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .main__topButton::before {
-  content: url(assets/img/common/ico_top.svg);
+  content: url(../assets/img/common/ico_top.svg);
   display: block;
   position: absolute;
   left: 50%;
