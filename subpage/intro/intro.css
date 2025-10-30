@@ -203,6 +203,10 @@
 }
 
 /* 명소 시작 intro_02 */
+.intro_02_tap{
+    width: 100%;
+}
+
 .intro_02_spot_title{
     text-align: center;
     margin: 75px 0px;
@@ -216,6 +220,75 @@
     font-size: 1.6rem;
     margin-bottom: 30px;
     font-weight: 400;
+}
+
+.intro_02_spot_desBox{
+    width: 90%;
+    margin-bottom: 40px;
+    background-color: rgba(144, 238, 144, 0.15);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+    padding: 60px 30px;
+    border-radius: 12px;
+    font-family: var(--fontP);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto 30px auto;
+    gap: 40px;
+    /* border: 1px solid black; */
+}
+.intro_02_spot_desImg{
+    width: 35%;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+.intro_02_spot_01{background-image: url(../../assets/img/sub/intro/intro_02_spot_mountain01.jpg);}
+.intro_02_spot_02{background-image: url(../../assets/img/sub/intro/intro_02_spot_rock01.jpg);}
+.intro_02_spot_03{background-image: url(../../assets/img/sub/intro/intro_02_spot_top01.jpg);}
+.intro_02_spot_04{background-image: url(../../assets/img/sub/intro/intro_02_spot_museum.png);}
+
+.intro_02_spot_desText{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+.intro_02_spot_desText > h2{
+    color: var(--color01);
+    margin-bottom: 50px;
+}
+.intro_02_spot_desText02 > h2{margin-bottom: 30px;}
+.intro_02_spot_desText04 > h2{margin-bottom: 20px;}
+
+.intro_02_spot_desText > div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.intro_02_spot_desText02 > div{gap: 25px;}
+.intro_02_spot_desText04 > div{gap: 20px;}
+
+.intro_02_spot_tro{
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 30px;
+}
+
+.intro_02_spot_borderBox{
+    border-left: 5px solid var(--color01);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.intro_02_spot_borderBox h4{
+    font-size: 2.5rem;
+    color: var(--color01);
 }
 
 
