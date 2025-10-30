@@ -2,7 +2,7 @@ function addListUp(div){
     let ul = document.createElement("ul");
     for(let i = 1; i <= 5; i++){
         let list = document.createElement("li");
-        list.style.backgroundImage = `url(../assets/img/main/imgR${i}.jpg)`;
+        list.style.backgroundImage = `url(./assets/img/main/imgR${i}.jpg)`;
 
         ul.appendChild(list);
     }
@@ -16,7 +16,7 @@ function addListDown(div){
     let ul = document.createElement("ul");
     for(let i = 6; i <= 10; i++){
         let list = document.createElement("li");
-        list.style.backgroundImage = `url(../assets/img/main/imgR${i}.jpg)`;
+        list.style.backgroundImage = `url(./assets/img/main/imgR${i}.jpg)`;
 
         ul.appendChild(list);
     }

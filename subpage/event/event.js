@@ -1,5 +1,4 @@
 // event 01 계룡군문화축제
-
 // event01 item 이미지 슬라이드
 document.querySelectorAll(".itemBox__item__wrap").forEach((item) => {
   let imgBox = item.querySelector(".item__wrap__imgBox");
@@ -44,37 +43,56 @@ document.querySelectorAll(".itemBox__item__wrap").forEach((item) => {
   });
 });
 
-// 유튜브 재생바 제한
-let player1;
+
+// event01 재생 버튼 클릭 시 유튜브 영상 재생
+let players = {}
 
 function onYouTubeIframeAPIReady(){
-  player1 = new YT.Player('player1', {
-    videoId : 'VNklDNlh3H4',
-    playerVars: {
-      controls: 0,
-      modestbranding: 1,
-      rel: 0,
-      showinfo: 0,
-      fs: 0,
-      iv_load_policy: 3,
-      autoplay: 0,
-      playsinline: 1,
-      origin: window.location.origin
-    }
-  }) 
+  document.querySelectorAll('.videoBox').forEach((box, index) => {
+    let playerId = box.querySelector('div[id^="player"]').id
+    let thumbnail = box.querySelector('img')
+    let playBtn = box.querySelector('svg')
+
+    let videoId = getYouTubeIdFromThumbnail(thumbnail.src)
+
+    players[playerId] = new YT.Player(playerId, {
+      videoId : videoId,
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        rel: 0,
+        modestbranding: 1,
+      },
+      events: {
+        onReady: (event) => {
+          playBtn.addEventListener("click", () => {
+            thumbnail.style.display = 'none'
+            playBtn.style.display = 'none'
+            event.target.mute()
+            event.target.playVideo()
+          })
+        }
+      }
+    })
+  })
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  let btn = document.querySelector('.playBtn')
-  btn.addEventListener("click", ()=>{
-    player1.playVideo()
-    btn.style.display = 'none'
-  })
-})
+function getYouTubeIdFromThumbnail(url){
+  let parts = url.split('/')
+  let viIndex = parts.indexOf('vi')
 
-// event 02 자연생태체험
+  if(viIndex !== -1 && parts[viIndex + 1]){
+    return parts[viIndex + 1]
+  }
+
+  return null;
+}
+// event01 js 종료
+
 
 // event 03 고택체험
+
+// gallary
 document.querySelectorAll(".swiper-mini .swiper-img").forEach((img) => {
   img.setAttribute("draggable", "false");
 });
@@ -138,3 +156,4 @@ swiperWrap.addEventListener("touchmove", (e) => {
   let walk = (x - touchStartX) * 1.5;
   swiperWrap.scrollLeft = touchScrollLeft - walk;
 });
+// event03 js 종료

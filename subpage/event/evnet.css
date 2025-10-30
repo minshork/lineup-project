@@ -114,6 +114,7 @@
   color: var(--color01);
   margin-top: 60px;
 }
+
 /* 계룡軍문화축제 행사 ul, li */
 .itemBox {
   margin-top: 40px;
@@ -156,42 +157,91 @@
   transition: transform 0.6s ease-in-out;
 }
 
-.itemBox__item:nth-child(1) .arrow{
+
+.itemBox__item:nth-child(2) .arrow, .itemBox__item:nth-child(3) .arrow, .itemBox__item:nth-child(6) .arrow{
   display: none;
 }
 
-.item__wrap__imgBox > img, .videoBox{
+.item__wrap__imgBox > img{
   width: calc(100% / 7);
   height: 100%;
   object-fit: cover;
 }
 
+.item__wrap__videoBox{
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background-color: aqua;
+}
+
+
+
 /* 영상 영역 */
 .videoBox {
-  position: relative;
-  overflow: hidden;
-  z-index: 100;
-  /* background-color: aqua; */
-}
-
-#player1{
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* background-color: aqua; */
 }
-
-.playBtn{
+.videoThumbnail{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: absolute;
-  top: 48%; left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #333;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.3s;
-  width: 60px;
-  height: 60px;
+  z-index: 10;
 }
 
+#player1, #player2, #player3{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
 
+/* 플레이 버튼 */
+@import "compass/css3";
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.stroke-solid {
+  stroke-dashoffset: 0;
+  stroke-dashArray: 300;
+  stroke-width: 6px;
+  transition: stroke-dashoffset 1s ease, 
+              opacity 1s ease;
+}
+
+.icon {
+  transform: scale(.8);
+  transform-origin: 50% 50%;
+  transition: transform 200ms ease-out;
+}
+
+#play:hover {
+  .stroke-solid {
+    opacity: 1;
+    stroke-dashoffset: 300;
+  }
+  .icon {
+    transform: scale(.9);
+  }
+}
+
+body {
+  background-image: url("http://taylorswines.uat.playhousedigital.com/media/wysiwyg/TaylorsWines/Homepage/img_video.png");
+}
+
+#play {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
 
 /* 이미지 슬라이드 화살표 */
 .arrow {
@@ -433,4 +483,99 @@ tr > td:nth-child(1) {
   font-size: 4.4rem;
   text-align: center;
   margin: 100px 0 60px 0 ;
+}
+
+.event03__tab__con01, .event03__tab__con02{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event03__tab__con__top{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.event03__tab__con__img{
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.3);
+}
+
+.event03__tab__con__textBox{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+}
+.event03__tab__con__textBox>h1{
+  font-size: 4rem;
+  color: var(--color01);
+}
+.event03__tab__con__textBox>ul{
+  font-family: var(--fontP);
+  margin-left: 8%;
+}
+.event03__tab__con__textBox>ul>li{
+  list-style: disc;
+  margin-bottom: 15px;
+}
+.event03__tab__con__textBox>ul>li>ul{
+  margin-left: 3%;}
+.event03__tab__con__textBox>ul>li>ul>li{
+  list-style: circle;
+  margin-top: 5px;
+}
+.event03__tab__con__textBox>ul>li>ul>li::marker{
+  color: var(--color01);
+}
+.event03__tab__con__textBox > ul > li::marker {
+  color: var(--color01);
+}
+
+.event03__tab__con__bottom{
+  width: 95%;
+  background-color: #edf5ed;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.2);
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.event03__tab__con__bottom>ul{
+  padding: 40px 42px 40px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event03__tab__con__bottom>ul>li{
+  list-style: disc;
+  font-family: var(--fontP);
+  font-size: 1.6rem;
+}
+
+.event03__tab__con__bottom>ul>li::marker{
+  color: var(--color01);
+}
+
+/* 페이지 로드 애니메이션 */
+.fade-in{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.7s ease forwards
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

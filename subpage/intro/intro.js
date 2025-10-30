@@ -17,11 +17,13 @@ window.addEventListener("scroll", () => {
     const sec3Top = document.querySelector(".tab_container").offsetTop;
 
     // Section 1
-    if(scrY > sec1Top - 300){
+    if(scrY > sec1Top - 200){
         document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 95%)";
+        document.querySelector(".intro_01_title > p").style.boxShadow = "3px 3px 7px rgba(100,100,100,0.25)";
     }
-    else if(scrY < sec1Top - 300){
-        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 25%)";
+    else if(scrY < sec1Top - 100){
+        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 35%)";
+        document.querySelector(".intro_01_title > p").style.boxShadow = "none"
     }
 
     // Section 2
