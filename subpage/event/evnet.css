@@ -485,47 +485,97 @@ tr > td:nth-child(1) {
   margin: 100px 0 60px 0 ;
 }
 
-.event03__tab__con01{
-  width: 100%;
+.event03__tab__con01, .event03__tab__con02{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event03__tab__con__top{
+  width: 95%;
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
+  margin-bottom: 60px;
 }
 
-.event03__tab__con01__img{
+.event03__tab__con__img{
   width: 45%;
   border-radius: 12px;
-  /* box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.4); */
+  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.3);
 }
 
-.event03__tab__con01__textBox{
+.event03__tab__con__textBox{
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 50%;
 }
-.event03__tab__con01__textBox>h1{
+.event03__tab__con__textBox>h1{
   font-size: 4rem;
   color: var(--color01);
 }
-.event03__tab__con01__textBox>ul{
+.event03__tab__con__textBox>ul{
   font-family: var(--fontP);
   margin-left: 8%;
 }
-.event03__tab__con01__textBox>ul>li{
+.event03__tab__con__textBox>ul>li{
   list-style: disc;
   margin-bottom: 15px;
 }
-.event03__tab__con01__textBox>ul>li>ul{
+.event03__tab__con__textBox>ul>li>ul{
   margin-left: 3%;}
-.event03__tab__con01__textBox>ul>li>ul>li{
+.event03__tab__con__textBox>ul>li>ul>li{
   list-style: circle;
   margin-top: 5px;
 }
-.event03__tab__con01__textBox>ul>li>ul>li::marker{
+.event03__tab__con__textBox>ul>li>ul>li::marker{
   color: var(--color01);
 }
-.event03__tab__con01__textBox > ul > li::marker {
+.event03__tab__con__textBox > ul > li::marker {
   color: var(--color01);
 }
 
+.event03__tab__con__bottom{
+  width: 95%;
+  background-color: #edf5ed;
+  border-radius: 12px;
+  box-shadow: 3px 3px 10px rgba(100, 100, 100, 0.2);
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.event03__tab__con__bottom>ul{
+  padding: 40px 42px 40px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event03__tab__con__bottom>ul>li{
+  list-style: disc;
+  font-family: var(--fontP);
+  font-size: 1.6rem;
+}
+
+.event03__tab__con__bottom>ul>li::marker{
+  color: var(--color01);
+}
+
+/* 페이지 로드 애니메이션 */
+.fade-in{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.7s ease forwards
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
