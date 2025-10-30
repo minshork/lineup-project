@@ -3,17 +3,17 @@
 /* 폰트 */
 @font-face {
   font-family: "GmarketSans";
-  src: url("/assets/font/GmarketSansMedium.woff") format("woff");
+  src: url("../assets/font/GmarketSansMedium.woff") format("woff");
   font-weight: 400;
 }
 @font-face {
   font-family: "GmarketSans";
-  src: url("/assets/font/GmarketSansBold.woff") format("woff");
+  src: url("../assets/font/GmarketSansBold.woff") format("woff");
   font-weight: 600;
 }
 @font-face {
   font-family: "Pretendard";
-  src: url("/assets/font/Pretendard-Regular") format("woff");
+  src: url("../assets/font/Pretendard-Regular") format("woff");
   font-weight: 600;
 }
 
