@@ -4,7 +4,7 @@ window.addEventListener("load", () => {
   let mainText = document.querySelector(".main__sec1__imgBox__textBox img");
 
   // 텍스트
-  mainText.style.transform = "scale(1)";
+  mainText.style.transform = "translateY(0)";
 
   // 도트
   dots.style.bottom = "20%";
@@ -29,20 +29,19 @@ window.addEventListener("scroll", () => {
   // Section 2
   if (scrY > sec2Top - 500) {
     // Section2 변수
-    let sec2Back = document.querySelector(".main__sec2__background > img");
     let set2Title = document.querySelector(
       ".main__sec2__textGuideLine__text__title"
     );
 
     // 산 배경 이벤트
-    sec2Back.style.opacity = "1";
-    sec2Back.style.transform = "translateY(0)";
+    const mountain = document.querySelector(".main__sec2__background");
+    mountain.classList.add("on");
 
     // 계룡산 제목
-    set2Title.style.top = "0";
+    set2Title.style.transform = "translateY(0px)";
     set2Title.style.opacity = "1";
 
-    if (scrY > sec2Top - 200) {
+    if (scrY > sec2Top - 300) {
       // Section2 변수
       let sec2Des = document.querySelector(
         ".main__sec2__textGuideLine__text > p"
@@ -50,6 +49,7 @@ window.addEventListener("scroll", () => {
       let sec2View = document.querySelector(".main__sec2__textGuideLine__btn");
 
       // 계룡산 설명
+      sec2Des.style.transform = "translateY(0)";
       sec2Des.style.opacity = "1";
 
       // View More
@@ -128,11 +128,5 @@ window.addEventListener("scroll", () => {
       sec4View.style.opacity = "1";
       sec4View.style.transform = "scaleX(1)";
     }
-  }
-
-  if (scrY > sec5Top + 200) {
-    let sec5Bg = document.querySelector(".main__sec5__footerBg");
-    sec5Bg.style.opacity = "1";
-    sec5Bg.style.transform = "translateY(0)";
   }
 });
