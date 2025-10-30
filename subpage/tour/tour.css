@@ -366,7 +366,7 @@
 }
 
 .panel {
-  display: none;
+  /* display: none; */
   width: 100%;
   padding: 15px 20px;
   background: #f9fff3;
@@ -380,12 +380,67 @@
   object-fit: cover;
   margin-top: 15px;
 }
+.imgs > div {
+  flex: 1;
+}
 .imgs img {
   width: 100%;
-  flex: 1;
-  height: 200px;
+  height: 100%;
+  object-fit: cover;
   border-radius: 5px;
 }
 .info_area p {
+  font-size: 1.8rem;
+  font-weight: 400;
   font-family: var(--fontP);
+}
+
+.toilet_list_wp > ul li + li {
+  margin-top: 25px;
+}
+.toilet_list_wp > ul li .arcoBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #f5f5f5;
+  line-height: 80px;
+  text-align: left;
+  padding: 2px 25px 0;
+  font-size: 1.8rem;
+  border-radius: 10px;
+}
+.toilet_list_wp > ul li .arcoBtn.on {
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  background-color: var(--color01);
+  transition: 0.3s;
+}
+.toilet_list_wp > ul li .arcoBtn::after {
+  content: "";
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url(../../assets/img/sub/info/ico_arco_arrow.svg) no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+}
+.toilet_list_wp > ul li .arcoBtn.on::after {
+  background-image: url(../../assets/img/sub/info/ico_arco_arrow_on.svg);
+  transform: rotate(180deg);
+}
+.toilet_list_wp > ul li .toilet_map {
+  opacity: 0;
+  transition: 0.5s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+.toilet_list_wp > ul li .arcoBtn.on + .toilet_map {
+  opacity: 1;
+  max-height: 600px;
+}
+.toilet_list_wp > ul li .toilet_map .inner {
+  padding: 25px;
+  font-family: var(--fontP);
+  font-weight: 600;
 }

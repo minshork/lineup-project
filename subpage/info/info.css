@@ -175,6 +175,8 @@
   transition: all 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn.on::after {
+  background: url(../../assets/img/sub/info/ico_arco_arrow_on.svg);
+  background-size: contain;
   transform: rotate(180deg);
 }
 .toilet_list_wp > ul li .arcoBtn + .toilet_map :is(.location, .time) {
