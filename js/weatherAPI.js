@@ -44,6 +44,7 @@ let getWeather = async (lat, lon) => {
     case "04":
     case "50":
       icon.setAttribute("href", "sprites.xml#weather-cloudy");
+      des.textContent = "흐림";
       break;
 
     // 비
