@@ -9,7 +9,7 @@
 }
 
 .map_info {
-  background: var(--color02);
+  background: var(--color01);
   border-radius: 0 0 15px 15px;
 }
 
@@ -134,7 +134,7 @@
   transition: all 0.3s;
 }
 .traffic_btn button:hover {
-  background: #94d3a4;
+  background: #45a54c;
   color: #fff;
 }
 
@@ -161,7 +161,8 @@
 }
 .toilet_list_wp > ul li .arcoBtn.on {
   border-radius: 10px 10px 0 0;
-  color: var(--color01);
+  color: #fff;
+  background-color: var(--color01);
   transition: 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn::after {
@@ -207,6 +208,8 @@
 }
 .toilet_list_wp > ul li .toilet_map .inner {
   padding: 25px;
+  font-family: var(--fontP);
+  font-weight: 600;
 }
 .toilet_list_wp > ul li .toilet_map .text {
   margin-bottom: 20px;
