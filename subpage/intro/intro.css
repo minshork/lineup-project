@@ -68,7 +68,7 @@
     margin-bottom: 50px;
     position: absolute;
     top: 0; left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 35%);
 
     transition: all 1.0s ease;
 }
