@@ -378,7 +378,14 @@
   display: flex;
   gap: 30px;
   object-fit: cover;
+  margin-top: 15px;
 }
 .imgs img {
   width: 100%;
+  flex: 1;
+  height: 200px;
+  border-radius: 5px;
+}
+.info_area p {
+  font-family: var(--fontP);
 }
