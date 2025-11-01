@@ -78,33 +78,72 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 // 아코디언 기능만
-document.addEventListener("DOMContentLoaded", function () {
-  const acc = document.querySelectorAll(".arrcordian");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const acc = document.querySelectorAll(".arrcordian");
 
-  acc.forEach((btn) => {
+//   acc.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       // 활성화 클래스 토글
+//       btn.classList.toggle("active");
+
+//       // 내부의 panel 찾기 (현재 HTML 구조 기준)
+//       const panel = btn.querySelector(".panel");
+
+//       if (!panel) return;
+
+//       // 열기/닫기 토글
+//       if (panel.style.display === "block") {
+//         panel.style.display = "none";
+//       } else {
+//         // 다른 아코디언 패널은 닫고, 현재만 열리게 하고 싶다면:
+//         acc.forEach((other) => {
+//           const otherPanel = other.querySelector(".panel");
+//           if (otherPanel && other !== btn) {
+//             otherPanel.style.display = "none";
+//             other.classList.remove("active");
+//           }
+//         });
+
+//         panel.style.display = "block";
+//       }
+//     });
+//   });
+// });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab_btn_wrap button");
+  const tabContents = document.querySelectorAll(".tab_con_wrap");
+  const arcoBtns = document.querySelectorAll(".arcoBtn");
+
+  // ✅ 1. 탭 전환 기능
+  tabButtons.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      // 활성화 클래스 토글
-      btn.classList.toggle("active");
+      // 모든 탭 버튼, 콘텐츠 초기화
+      tabButtons.forEach((b) => b.classList.remove("current"));
+      tabContents.forEach((con) => con.classList.remove("on"));
 
-      // 내부의 panel 찾기 (현재 HTML 구조 기준)
-      const panel = btn.querySelector(".panel");
+      // 클릭한 탭만 활성화
+      btn.classList.add("current");
+      tabContents[index].classList.add("on");
+    });
+  });
 
-      if (!panel) return;
+  // ✅ 2. 아코디언 기능
+  arcoBtns.forEach((item) => {
+    item.addEventListener("click", function () {
+      const parentWrap = item.closest(".tab_con_wrap");
 
-      // 열기/닫기 토글
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        // 다른 아코디언 패널은 닫고, 현재만 열리게 하고 싶다면:
-        acc.forEach((other) => {
-          const otherPanel = other.querySelector(".panel");
-          if (otherPanel && other !== btn) {
-            otherPanel.style.display = "none";
-            other.classList.remove("active");
-          }
+      // 부모 탭이 열려 있을 때만 작동
+      if (parentWrap && parentWrap.classList.contains("on")) {
+        const isActive = item.classList.contains("on");
+
+        // 같은 탭 안의 다른 아코디언 닫기
+        parentWrap.querySelectorAll(".arcoBtn").forEach((btn) => {
+          btn.classList.remove("on");
         });
 
-        panel.style.display = "block";
+        // 클릭한 아코디언만 열기/닫기
+        if (!isActive) this.classList.add("on");
       }
     });
   });

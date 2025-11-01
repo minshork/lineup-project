@@ -18,7 +18,7 @@ window.addEventListener("scroll", () => {
 
     // Section 1
     if(scrY > sec1Top - 200){
-        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 95%)";
+        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 100%)";
         document.querySelector(".intro_01_title > p").style.boxShadow = "3px 3px 7px rgba(100,100,100,0.25)";
     }
     else if(scrY < sec1Top - 100){
