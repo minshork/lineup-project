@@ -4,6 +4,7 @@
 .direction_map_wrap #map {
   border-radius: 10px 10px 0 0;
   width: 100%;
+  height: 350px;
   overflow: hidden;
   border: 1px solid #e5e5e5;
 }
@@ -62,6 +63,7 @@
 .map_info .map_contents .address_wrap li span {
   display: inline-block;
   min-width: 75px;
+  flex-shrink: 0;
 }
 
 .map_info .map_contents .address_wrap li + li {
@@ -137,6 +139,145 @@
   background: #45a54c;
   color: #fff;
 }
+.transpo_wrap {
+  margin-top: 55px;
+}
+.transpo_wrap .info {
+  gap: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.transpo_wrap .info:not(:last-of-type) {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40px;
+}
+.transpo_wrap .info + .info {
+  margin-top: 40px;
+}
+.transpo_wrap .info .left_ico {
+  flex: 0 0 20%;
+  text-align: center;
+  font-size: 1.8rem;
+}
+.transpo_wrap .info .left_ico::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 70px;
+  background: url(../../assets/img/sub/info/map_car.png) no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+.transpo_wrap .info:nth-of-type(2) .left_ico::before {
+  background-image: url(../../assets/img/sub/info/map_train.png);
+}
+.transpo_wrap .info:nth-of-type(3) .left_ico::before {
+  background-image: url(../../assets/img/sub/info/map_bus.png);
+}
+.transpo_wrap .info .right_info .name {
+  color: #2157ad;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.transpo_wrap .info .right_info ul li {
+  position: relative;
+  font-family: var(--fontP);
+  font-size: 1.8rem;
+  padding-left: 12px;
+  letter-spacing: -0.02em;
+}
+.transpo_wrap .info .right_info ul li::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #2157ad;
+  border-radius: 50%;
+  left: 0;
+  top: 10px;
+}
+.transpo_wrap .info .right_info .box + .box {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1024px) {
+  .map_info .map_contents {
+    padding: 40px 20px;
+    gap: 25px 80px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .map_info .map_contents .logo_img {
+    width: 100%;
+    text-align: center;
+  }
+  .map_info .map_contents .logo_img::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .direction_map_wrap #map {
+    height: 250px;
+  }
+  .map_info .map_contents {
+    padding: 30px 20px;
+  }
+  .map_info .map_contents .address_wrap li span {
+    min-width: 62px;
+  }
+  .map_info .map_contents .address_wrap li span::before {
+    vertical-align: text-bottom;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+  }
+  .map_info .map_contents .logo_img {
+    max-width: 130px;
+  }
+  .map_info .map_contents .address_wrap li {
+    font-size: 1.4rem;
+    line-height: 22px;
+  }
+  .transpo_wrap {
+    margin-top: 35px;
+  }
+  .traffic_btn button {
+    min-height: 35px;
+    min-width: 110px;
+    font-size: 1.4rem;
+  }
+  .transpo_wrap .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  .transpo_wrap .info .left_ico::before {
+    width: 55px;
+    height: 55px;
+  }
+  .transpo_wrap .info .left_ico {
+    font-size: 1.6rem;
+  }
+  .transpo_wrap .info .right_info {
+    width: 100%;
+  }
+  .transpo_wrap .info .right_info .name {
+    font-size: 1.6rem;
+  }
+  .transpo_wrap .info .right_info ul li {
+    font-size: 1.4rem;
+    padding-left: 10px;
+  }
+  .transpo_wrap .info .right_info ul li + li {
+    margin-top: 5px;
+  }
+  .transpo_wrap .info .right_info ul li::before {
+    top: 7px;
+  }
+  .transpo_wrap .info .right_info .box + .box {
+    margin-top: 20px;
+  }
+}
 
 /* 편의안내 - 공중 화장실 */
 .top_sub_txt {
@@ -175,9 +316,8 @@
   transition: all 0.3s;
 }
 .toilet_list_wp > ul li .arcoBtn.on::after {
-  background: url(../../assets/img/sub/info/ico_arco_arrow_on.svg);
-  background-size: contain;
   transform: rotate(180deg);
+  background-image: url(../../assets/img/sub/info/ico_arco_arrow_on.svg);
 }
 .toilet_list_wp > ul li .arcoBtn + .toilet_map :is(.location, .time) {
   transform: translateY(10px);
@@ -293,70 +433,44 @@
   height: 12px;
   background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
 }
-.transpo_wrap {
-  margin-top: 55px;
-}
-.transpo_wrap .info {
-  display: flex;
-  align-items: flex-start;
-}
-.transpo_wrap .info:not(:last-of-type) {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 40px;
-}
-.transpo_wrap .info + .info {
-  margin-top: 40px;
-}
-.transpo_wrap .info .left_ico {
-  flex: 0 0 20%;
-  text-align: center;
-  font-size: 1.8rem;
-}
-.transpo_wrap .info .left_ico::before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 70px;
-  background: url(../../assets/img/sub/info/map_car.png) no-repeat;
-  background-size: contain;
-  margin: 0 auto;
-}
-.transpo_wrap .info:nth-of-type(2) .left_ico::before {
-  background-image: url(../../assets/img/sub/info/map_train.png);
-}
-.transpo_wrap .info:nth-of-type(3) .left_ico::before {
-  background-image: url(../../assets/img/sub/info/map_bus.png);
-}
-.transpo_wrap .info .right_info .name {
-  color: #2157ad;
-  font-size: 1.8rem;
-  margin-bottom: 5px;
-}
-.transpo_wrap .info .right_info ul li {
-  position: relative;
-  font-family: var(--fontP);
-  font-size: 1.8rem;
-  padding-left: 12px;
-  letter-spacing: -0.02em;
-}
-.transpo_wrap .info .right_info ul li::before {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  background: #2157ad;
-  border-radius: 50%;
-  left: 0;
-  top: 10px;
-}
-.transpo_wrap .info .right_info .box + .box {
-  margin-top: 25px;
+
+@media screen and (max-width: 768px) {
+  .top_sub_txt {
+    font-size: 1.6rem;
+  }
+  .toilet_list_wp > ul li .arcoBtn {
+    line-height: 50px;
+    padding: 2px 15px 0;
+    font-size: 1.6rem;
+  }
+  .toilet_list_wp > ul li .arcoBtn::after {
+    width: 25px;
+    height: 25px;
+  }
+  .toilet_list_wp > ul li .toilet_map .inner {
+    padding: 20px 15px;
+  }
+  .toilet_list_wp > ul li .toilet_map .text p {
+    font-size: 1.4rem;
+  }
+  .maps {
+    height: 250px;
+  }
 }
 
 /* 편의시설 - 안전 정보 */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
 .basic_table .scroll_table {
+  display: block;
   overflow-x: auto;
 }
+
 .basic_table table {
   min-width: 670px;
   white-space: nowrap;
@@ -433,21 +547,60 @@
   margin-top: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  .basic_table .scroll_table {
+    max-width: 650px;
+  }
+  .bg_safety_box {
+    padding: 25px 20px;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .bg_safety_box::before {
+    width: 90px;
+    height: 90px;
+    background-size: 50px;
+  }
+  .bg_safety_box .box_wrap {
+    width: 100%;
+  }
+  .bg_safety_box .box_wrap .basic_txt {
+    font-size: 1.6rem;
+  }
+  .bg_safety_box .box_wrap .strong {
+    font-size: 1.6rem;
+  }
+  .bg_safety_box .box_wrap ul li {
+    padding-left: 11px;
+    font-size: 1.4rem;
+    line-height: 22px;
+  }
+  .bg_safety_box .box_wrap ul li::before {
+    width: 4px;
+    height: 4px;
+    top: 6px;
+  }
+  .bg_safety_box .box_wrap ul li + li {
+    margin-top: 10px;
+  }
+}
+
 /* 편의시설 - 문화 관광 해설사 */
 .tourism_guide_wrap .guide_info > ul {
   display: flex;
   gap: 30px;
 }
 .tourism_guide_wrap .guide_info > ul > li {
-  flex: 1;
+  flex: 1 1 300px;
   border-radius: 15px;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .tourism_guide_wrap .guide_info > ul > li .img_wp {
-  max-height: 250px;
-  height: 100%;
+  width: 100%;
+  aspect-ratio: 10 / 8;
   overflow: hidden;
-  position: relative;
   background-color: #d7e7e7;
 }
 .tourism_guide_wrap .guide_info > ul > li .img_wp img {
@@ -458,8 +611,9 @@
 .tourism_guide_wrap .guide_info > ul > li .txt_wp {
   padding: 25px 15px;
   border: 1px solid #ddd;
-  height: calc(100% - 250px);
   border-radius: 0 0 15px 15px;
+  flex-grow: 1;
+  height: auto;
 }
 .tourism_guide_wrap .guide_info > ul > li .txt_wp .tit_txt {
   text-align: center;
@@ -549,4 +703,37 @@
 
 .tourism_guide_wrap .bg_safety_box .btn_link:hover {
   background-position: right center;
+}
+
+@media screen and (max-width: 768px) {
+  .tourism_guide_wrap .guide_info > ul {
+    flex-direction: column;
+  }
+  .tourism_guide_wrap .guide_info > ul > li {
+    flex: auto;
+  }
+  .tourism_guide_wrap .guide_info > ul > li .img_wp {
+    aspect-ratio: 10 / 6;
+  }
+  .tourism_guide_wrap .guide_info > ul > li .txt_wp .tit_txt {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  .tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt p {
+    font-size: 1.4rem;
+  }
+  .tourism_guide_wrap .bg_safety_box .btn_link {
+    font-size: 1.3rem;
+  }
+  .tourism_guide_wrap .bg_safety_box .btn_link::after {
+    width: 20px;
+    height: 20px;
+  }
+  .bar_list li {
+    font-size: 1.4rem;
+    padding-left: 12px;
+  }
+  .bar_list li + li {
+    margin-top: 2px;
+  }
 }
