@@ -93,7 +93,7 @@
 .direction_map_wrap .parking {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 5px 20px;
   margin-top: 20px;
   line-height: 24px;
   font-family: var(--fontP);
@@ -548,9 +548,6 @@ table {
 }
 
 @media screen and (max-width: 768px) {
-  .basic_table .scroll_table {
-    max-width: 650px;
-  }
   .bg_safety_box {
     padding: 25px 20px;
     flex-direction: column;
@@ -721,6 +718,7 @@ table {
   }
   .tourism_guide_wrap .guide_info > ul > li .txt_wp .explan_txt p {
     font-size: 1.4rem;
+    line-height: 21px;
   }
   .tourism_guide_wrap .bg_safety_box .btn_link {
     font-size: 1.3rem;
