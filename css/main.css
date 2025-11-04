@@ -23,6 +23,7 @@ body {
 .main__sec1__imgBox {
   width: 100vw;
   aspect-ratio: 1400 / 720;
+  min-height: 900px;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -45,6 +46,7 @@ body {
 .main__sec1__imgBox__textBox {
   width: 100vw;
   aspect-ratio: 1400 / 720;
+  min-height: 900px;
   /* background-color: aqua; */
   display: flex;
   justify-content: center;
@@ -92,6 +94,16 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+  .main__sec1__imgBox {
+    min-height: 600px;
+  }
+  .main__sec1__imgBox__textBox {
+    min-height: 600px;
+  }
+}
+
 /* 섹션 1 종료 */
 
 /* 퀵메뉴 고정을 위한 컨테이너 */
@@ -106,7 +118,9 @@ body {
   transform: translate(-50%, -80%);
   opacity: 0;
   top: 0;
-  width: 60vw;
+  max-width: 1152px;
+  width: calc(100% - 240px);
+  /* width: 60vw; */
   aspect-ratio: 5 / 1;
   background-color: #e1eed1;
   display: flex;
@@ -203,6 +217,14 @@ body {
   color: #59945d;
   transition: all 0.4s ease;
 }
+
+@media screen and (max-width: 1024px) {
+  #weather__icon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
 /* 퀵메뉴 종료 */
 
 /* 섹션 2 시작 */
@@ -334,6 +356,51 @@ body {
 .main__sec2__textGuideLine__btn:hover::after {
   width: 100%;
 }
+
+@media screen and (max-width: 1250px) {
+  .main__sec2__background .bg_box {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main__sec2__textGuideLine {
+    width: calc(100% - 40px);
+    justify-content: center;
+    align-items: baseline;
+  }
+  .main__sec2 {
+    min-height: 800px;
+    padding: 55px 0 0;
+  }
+  .main__sec2__textGuideLine__text {
+    gap: 25px;
+  }
+  .main__sec2__textGuideLine__text__title {
+    font-size: 3.4rem;
+  }
+  .main__sec2__textGuideLine__text__title::before {
+    width: 25px;
+    height: 25px;
+    border-top: 5px solid #5b9960;
+    border-left: 5px solid #5b9960;
+    margin: 20px 15px;
+  }
+  .main__sec2__textGuideLine__text__title::after {
+    width: 25px;
+    height: 25px;
+    border-right: 5px solid #5b9960;
+    border-bottom: 5px solid #5b9960;
+    margin: -20px 15px;
+  }
+  .main__sec2__textGuideLine__text > p {
+    font-size: 1.6rem;
+  }
+  .main__sec2__textGuideLine__btn {
+    font-size: 1.6rem;
+  }
+}
+
 /* 섹션 2 종료 */
 
 /* 섹션 3 - 4 공통 css */
@@ -438,6 +505,13 @@ body {
   padding-top: 160px;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .main__sec3,
+  .main__sec4 {
+    padding: 0;
+  }
 }
 
 /* 섹션 3 - 4 공통 css 종료 */
