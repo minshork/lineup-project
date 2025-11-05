@@ -111,7 +111,6 @@
   line-height: 21px;
   font-size: 1.3rem;
   margin-right: 8px;
-  margin-top: -1px;
   position: relative;
   top: -2px;
 }
@@ -276,6 +275,18 @@
   }
   .transpo_wrap .info .right_info .box + .box {
     margin-top: 20px;
+  }
+  .direction_map_wrap .parking {
+    font-size: 1.4rem;
+    line-height: 20px;
+    gap: 7px 15px;
+  }
+  .direction_map_wrap .parking span::before {
+    width: 20px;
+    height: 20px;
+    font-size: 1.2rem;
+    margin-right: 5px;
+    top: -1px;
   }
 }
 
@@ -448,13 +459,28 @@
     height: 25px;
   }
   .toilet_list_wp > ul li .toilet_map .inner {
-    padding: 20px 15px;
+    padding: 20px 15px 0;
   }
   .toilet_list_wp > ul li .toilet_map .text p {
     font-size: 1.4rem;
   }
   .maps {
     height: 250px;
+  }
+  .customoverlay a {
+    background-size: 7px;
+    background-position: center right 10px;
+  }
+  .toilet_list_wp > ul li .toilet_map .text .location::before {
+    background-size: 27px;
+  }
+  .toilet_list_wp > ul li .toilet_map .text .time::before {
+    background-size: 19px;
+  }
+  .customoverlay .title {
+    padding: 7px 10px;
+    font-size: 14px;
+    margin-right: 25px;
   }
 }
 
@@ -472,8 +498,7 @@ table {
 }
 
 .basic_table table {
-  min-width: 670px;
-  white-space: nowrap;
+  min-width: 500px;
   border-top: 2px solid var(--color01);
 }
 .basic_table table thead tr {
@@ -548,6 +573,14 @@ table {
 }
 
 @media screen and (max-width: 768px) {
+  .basic_table table thead tr th {
+    padding: 10px 10px 5px;
+    font-size: 1.5rem;
+  }
+  .basic_table table tbody tr td {
+    padding: 10px 10px 5px;
+    font-size: 1.4rem;
+  }
   .bg_safety_box {
     padding: 25px 20px;
     flex-direction: column;
@@ -575,10 +608,10 @@ table {
   .bg_safety_box .box_wrap ul li::before {
     width: 4px;
     height: 4px;
-    top: 6px;
+    top: 7px;
   }
   .bg_safety_box .box_wrap ul li + li {
-    margin-top: 10px;
+    margin-top: 7px;
   }
 }
 
