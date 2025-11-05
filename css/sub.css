@@ -66,6 +66,7 @@
   }
 }
 .sub_inner {
+  width: 100%;
   flex: 1;
   padding-top: 80px;
   padding-bottom: 100px;

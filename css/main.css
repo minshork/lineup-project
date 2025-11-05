@@ -56,7 +56,7 @@ body {
   left: 0;
 }
 .main__sec1__imgBox__textBox > img {
-  width: clamp(30vw, 60vw, 700px);
+  width: clamp(30vw, 80vw, 700px);
   /* clamp(최소값, 선호값, 최대값); */
   /* 화면 크기에 따라 선호값을 계산하되, 최소값보다 작아지지 않고 최대값보다 커지지 않게 제한 */
   height: auto;
@@ -101,6 +101,13 @@ body {
   }
   .main__sec1__imgBox__textBox {
     min-height: 600px;
+  }
+  .main__sec1__curImg {
+    padding: 11px 15px;
+  }
+  .main__sec1__curImg span {
+    width: 8px;
+    height: 8px;
   }
 }
 
@@ -219,9 +226,48 @@ body {
 }
 
 @media screen and (max-width: 1024px) {
+  .main__sec1__quickmenu {
+    width: calc(100% - 40px);
+    transform: translate(-50%, -45%);
+    border-radius: 70px;
+    flex-wrap: wrap;
+    aspect-ratio: inherit;
+  }
   #weather__icon {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 65px;
+    height: 65px;
+  }
+  .quickmenu__weather {
+    width: 100%;
+    border-radius: 0;
+    padding: 15px 0;
+  }
+  #weather__des {
+    font-size: 1.4rem;
+  }
+  .quickmenu__weather > div,
+  .quickmenu__weather > svg {
+    margin-left: 0;
+  }
+  #weather__temp {
+    font-size: 1.4rem;
+  }
+  .quickmenu__btnBox {
+    width: 100%;
+  }
+  .quickmenu__btnBox__btn {
+    padding: 30px 20px;
+    gap: 10px;
+  }
+  .quickmenu__btnBox__btn__icon {
+    width: 35px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+  .quickmenu__btnBox__btn > p {
+    font-size: 1.4rem;
   }
 }
 
@@ -371,7 +417,7 @@ body {
   }
   .main__sec2 {
     min-height: 800px;
-    padding: 55px 0 0;
+    padding: 180px 0 0;
   }
   .main__sec2__textGuideLine__text {
     gap: 25px;

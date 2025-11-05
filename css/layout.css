@@ -226,8 +226,8 @@ nav {
   }
   .gnb_wrap .gnb li .depth01 {
     color: #000;
-    line-height: 50px;
-    padding: 2px 20px 0;
+    line-height: 45px;
+    padding: 4px 20px 0;
     font-size: 1.6rem;
     border-bottom: 1px solid #ddd;
     transition: none;
