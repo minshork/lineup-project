@@ -230,27 +230,35 @@ nav {
     padding: 4px 20px 0;
     font-size: 1.6rem;
     border-bottom: 1px solid #ddd;
-    transition: none;
+    transition: 0.3s;
+    transition-delay: 0.1s;
   }
   .gnb_wrap .gnb li .depth01:hover {
-    background: var(--color02);
+    background: var(--color01);
     color: #fff;
   }
   .gnb_wrap .gnb li.open .depth01 {
-    background: var(--color02);
-    border-color: var(--color02);
+    background: var(--color01);
+    border-color: var(--color01);
     color: #fff;
   }
   .gnb_wrap .gnb li:not(:last-of-type) .depth01 {
     padding-right: 0;
   }
+  .depth02_wrap {
+    transition: all 0.5s;
+    visibility: inherit;
+    transition: 0.5s;
+    overflow: hidden;
+    transition-delay: 0.5s;
+  }
   .depth02_wrap.on {
     opacity: 1;
-    visibility: visible;
     position: static;
     pointer-events: inherit;
     border-bottom: 1px solid #ddd;
     border-top: none;
+    transition: 0.5s;
   }
   .depth02_wrap .depth02_inner {
     width: 100%;
@@ -267,6 +275,9 @@ nav {
     line-height: 28px;
     padding: 10px 20px 0;
     font-size: 1.4rem;
+  }
+  .depth02_wrap ul li a:hover {
+    color: var(--color01);
   }
   .depth02_wrap ul li:last-of-type a {
     padding-bottom: 10px;
