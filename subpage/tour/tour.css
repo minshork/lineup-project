@@ -479,19 +479,18 @@
   }
   /* 드라이빙카페 */
   .tree_outBox {
-    display: block;
+    flex-direction: column;
+    height: 100vh;
   }
   .tree_textBox {
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    order: 2;
+  }
+  .tree_gallerys {
+    order: 1;
   }
   .tree_textBox p {
     font-size: 18px;
-  }
-  .tree_textBox:nth-child(odd) {
-    margin-bottom: 45px;
-  }
-  .tree_textBox:nth-child(even) {
-    margin-bottom: 20px;
   }
 }
