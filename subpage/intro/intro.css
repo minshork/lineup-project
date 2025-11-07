@@ -80,6 +80,9 @@
 
     transition: all 1.0s ease;
 }
+.intro_01_title > img.down{
+    transform: translate(-50%, 100%);
+}
 
 /* 장소 콘텐츠 */
 .intro_01_placeCon {
@@ -210,6 +213,41 @@
     transition: all 1s ease;
 }
 
+@media screen and (max-width: 768px){
+    .intro_01_title{
+        margin-bottom: 430px;
+    }
+    .intro_01_title > img{
+        transform: translate(-50%, 18vh);
+    }
+    .intro_01_title > img.down{
+        transform: translate(-50%, 60vh);
+    }
+
+    .intro_01_history01 > div{
+        flex-direction: column-reverse;
+    }
+    .intro_01_place01,
+    .intro_01_place02{
+        flex-direction: column-reverse;
+    }
+    .intro_01_place01 p,
+    .intro_01_place02 p {
+        margin-bottom: 12px;
+        color: #333;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        font-family: var(--fontP);
+        text-align: center;
+    }
+    .intro_01_place01 img,
+    .intro_01_place02 img {
+        width: 70%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+}
+
 /* 명소 시작 intro_02 */
 .intro_02_tap{
     width: 100%;
@@ -305,6 +343,24 @@
 .intro_02_spot_borderBox h4{
     font-size: 2.5rem;
     color: var(--color01);
+}
+
+@media screen and (max-width: 768px) {
+    .intro_02_spot_desBox{
+        flex-direction: column-reverse;
+    }
+
+    .intro_02_spot_desImg{
+        width: 100%;
+    }
+
+    .intro_02_spot_desText{
+        width: 100%;
+    }
+
+    .intro_02_spot_03{
+        height: 400px;
+    }
 }
 
 
@@ -414,6 +470,9 @@
 
     transition: all 0.5s ease;
 }
+.intro_03_des_title.open{
+    width: 100%;
+}
 #intro03_des_close{
     position: absolute;
     top: 50%; right: 20px;
@@ -463,4 +522,18 @@
 }
 .intro_03_ad > p{
     padding: 5px 0px;
+}
+
+@media screen and (max-width: 768px){
+    .intro_03_des_img {
+        width: 240px;
+        height: 250px;
+    }
+
+    .intro_03_des_title {
+        width: 240px;
+    }
+    .intro_03_des_title.open{
+        width: 100%;
+    }
 }
