@@ -494,4 +494,36 @@
   .tree_textBox p {
     font-size: 18px;
   }
+  .arcoBtn {
+    height: auto !important;
+    padding: 20px 25px !important;
+    line-height: 2 !important;
+  }
+
+  /* 드라이빙코스 */
+
+  .tour_course_wrap .toilet_list_wp > ul li .arcoBtn {
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    padding: 15px;
+    min-height: 50px;
+    font-size: 1.6rem;
+    line-height: normal !important;
+  }
+  .toilet_list_wp > ul li .arcoBtn::after {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+  .imgs {
+    flex-direction: column;
+    margin-bottom: -15px;
+  }
+  .toilet_list_wp > ul li .arcoBtn.on + .toilet_map {
+    max-height: 2000px;
+  }
+  .info_area p {
+    font-size: 15px;
+  }
 }

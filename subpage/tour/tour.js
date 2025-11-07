@@ -132,7 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   arcoBtns.forEach((item) => {
     item.addEventListener("click", function () {
       const parentWrap = item.closest(".tab_con_wrap");
-
       // 부모 탭이 열려 있을 때만 작동
       if (parentWrap && parentWrap.classList.contains("on")) {
         const isActive = item.classList.contains("on");
@@ -141,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         parentWrap.querySelectorAll(".arcoBtn").forEach((btn) => {
           btn.classList.remove("on");
         });
-
         // 클릭한 아코디언만 열기/닫기
         if (!isActive) this.classList.add("on");
       }
