@@ -26,14 +26,23 @@ function mobileResize() {
         if (i !== item) {
           i.classList.remove("open");
           const sub = i.querySelector(".depth02_wrap");
-          if (sub) sub.classList.remove("on");
+          sub.style.height = "0px";
         }
       });
 
       item.classList.toggle("open");
       const depth02 = item.querySelector(".depth02_wrap");
-      if (depth02) {
-        depth02.classList.toggle("on", item.classList.contains("open"));
+      const isOpen = item.classList.contains("open");
+      const height = depth02.scrollHeight;
+      if (isOpen) {
+        depth02.style.transition = `height 0.5s`;
+        requestAnimationFrame(() => {
+          depth02.style.height = height + "px";
+        });
+      } else {
+        requestAnimationFrame(() => {
+          depth02.style.height = "0px";
+        });
       }
     });
   });

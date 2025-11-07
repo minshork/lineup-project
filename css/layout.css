@@ -229,7 +229,6 @@ nav {
     line-height: 45px;
     padding: 4px 20px 0;
     font-size: 1.6rem;
-    border-bottom: 1px solid #ddd;
     transition: 0.3s;
     transition-delay: 0.1s;
   }
@@ -245,20 +244,19 @@ nav {
   .gnb_wrap .gnb li:not(:last-of-type) .depth01 {
     padding-right: 0;
   }
+  .gnb_wrap .gnb li.open {
+    border-bottom: 1px solid #ddd;
+  }
   .depth02_wrap {
     transition: all 0.5s;
     visibility: inherit;
-    transition: 0.5s;
+    pointer-events: inherit;
     overflow: hidden;
     transition-delay: 0.5s;
-  }
-  .depth02_wrap.on {
+    transition-duration: 0.5s;
     opacity: 1;
+    height: 0;
     position: static;
-    pointer-events: inherit;
-    border-bottom: 1px solid #ddd;
-    border-top: none;
-    transition: 0.5s;
   }
   .depth02_wrap .depth02_inner {
     width: 100%;
