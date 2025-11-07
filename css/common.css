@@ -347,6 +347,11 @@ textarea:focus::placeholder {
   --fontP: "Pretendard";
 }
 
+@media screen and (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+}
 /* TOP버튼 */
 .main__topButton {
   width: 50px;
