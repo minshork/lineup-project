@@ -615,10 +615,10 @@ body {
   background-image: url(../assets/img/main/main_img6.jpg);
   border-radius: 0 999px 999px 0;
   left: 0;
-
   opacity: 0;
   transition: all 1.5s ease;
   transform: translateX(-100px);
+  will-change: transform;
 }
 
 @media screen and (max-width: 1024px) {
