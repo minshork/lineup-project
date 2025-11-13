@@ -19,11 +19,11 @@ window.addEventListener("scroll", () => {
     // Section 1
     if(scrY > sec1Top - 200){
         document.querySelector(".intro_01_title > img").classList.add("down");
-        document.querySelector(".intro_01_title > p").style.boxShadow = "3px 3px 7px rgba(100,100,100,0.25)";
+        document.querySelector(".intro_01_title_des").style.boxShadow = "3px 3px 7px rgba(100,100,100,0.25)";
     }
     else if(scrY < sec1Top - 100){
         document.querySelector(".intro_01_title > img").classList.remove("down");
-        document.querySelector(".intro_01_title > p").style.boxShadow = "none"
+        document.querySelector(".intro_01_title_des").style.boxShadow = "none"
     }
 
     // Section 2
