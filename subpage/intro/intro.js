@@ -18,11 +18,11 @@ window.addEventListener("scroll", () => {
 
     // Section 1
     if(scrY > sec1Top - 200){
-        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 100%)";
+        document.querySelector(".intro_01_title > img").classList.add("down");
         document.querySelector(".intro_01_title > p").style.boxShadow = "3px 3px 7px rgba(100,100,100,0.25)";
     }
     else if(scrY < sec1Top - 100){
-        document.querySelector(".intro_01_title > img").style.transform = "translate(-50%, 35%)";
+        document.querySelector(".intro_01_title > img").classList.remove("down");
         document.querySelector(".intro_01_title > p").style.boxShadow = "none"
     }
 
@@ -144,7 +144,7 @@ function imgDesOpen_intro03(num){
     document.querySelector(".intro_03_des > p").innerHTML = products[num].des;
     document.querySelector(".intro_03_adr").innerHTML = products[num].addr;
     document.querySelector(".intro_03_des_box").style.transform = "scaleX(1)";
-    document.querySelector(".intro_03_des_title").style.width = "100%";
+    document.querySelector(".intro_03_des_title").classList.add("open");
     document.querySelector(".intro_03_des_img").style.borderRadius = "0px 0px 0px 15px";
     document.querySelector(".intro_03_des_wrap").style.transition = "all 1.3s ease";
     document.querySelector(".intro_03_des_wrap").style.boxShadow = "0px 3px 7px rgba(100,100,100,0.25)";
@@ -159,7 +159,7 @@ function imgDesClose_intro03(){
     document.querySelector(".intro_03_des_wrap").style.transition = "all 0.2s ease";
     document.querySelector(".intro_03_des_wrap").style.boxShadow = "none";
     document.querySelector(".intro_03_des_box").style.transform = "scaleX(0)";
-    document.querySelector(".intro_03_des_title").style.width = "290px";
+    document.querySelector(".intro_03_des_title").classList.remove("open");
     setTimeout(() => {
         arrow.style.transform = "translateY(-50%) rotate(450deg)";
         document.querySelector(".intro_03_des_img").style.borderRadius = "0px 0px 15px 15px";
@@ -171,7 +171,6 @@ function imgDesClose_intro03(){
 
 function clickimg_intro03(){
     const imgBoxs = document.querySelectorAll(".intro_03_product_con");
-    const introWrap = document.querySelector(".intro_03_wrap");
     const desBox = document.querySelector(".intro_03_des_wrap");
 
     for(let i = 0; i < imgBoxs.length; i++){
@@ -180,10 +179,13 @@ function clickimg_intro03(){
                 imgBoxs[j].style.opacity = "0";
                 imgBoxs[j].style.pointerEvents = "none";
             }
+            desBox.style.display = "block";
             setTimeout(() => {
+                for(let i = 0; i < imgBoxs.length; i++){
+                    imgBoxs[i].style.display = "none";
+                };
                 document.querySelector(".intro_03_des_title > p").innerHTML = products[i].title;
                 document.querySelector(".intro_03_des_img").style.backgroundImage = `url(${products[i].url})`;
-                introWrap.style.height = "586px";
                 desBox.style.opacity = "1";
                 desBox.style.pointerEvents = "auto";
                 setTimeout(() => {
@@ -196,7 +198,6 @@ function clickimg_intro03(){
 
 function closeimg_intro03(){
     const imgBoxs = document.querySelectorAll(".intro_03_product_con");
-    const introWrap = document.querySelector(".intro_03_wrap");
     const desBox = document.querySelector(".intro_03_des_wrap");
     
     imgDesClose_intro03()
@@ -205,10 +206,16 @@ function closeimg_intro03(){
         desBox.style.pointerEvents = "none";
         setTimeout(() => {
             for(let i = 0; i < imgBoxs.length; i++){
-                introWrap.style.height = "auto";
+                imgBoxs[i].style.display = "block";
+            };
+        }, 500)
+        
+        setTimeout(() => {
+            for(let i = 0; i < imgBoxs.length; i++){
                 imgBoxs[i].style.opacity = "1";
                 imgBoxs[i].style.pointerEvents = "auto";
             };
+            desBox.style.display = "none";
         }, 1000);
     }, 1000);
 }

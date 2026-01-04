@@ -193,6 +193,7 @@
   flex-direction: column;
   gap: 50px;
 }
+
 /* 드라이빙 카페 */
 .tree_outBox {
   display: flex;
@@ -287,26 +288,6 @@
   transform: translate(-50%, -50%) rotate(135deg);
 }
 
-/* #prev,
-#next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 30px;
-}
-#prev {
-  left: 10px;
-}
-#next {
-  right: 10px;
-} */
-/* 자세히보기 버튼 */
 .detail_btn {
   display: inline-block;
   padding: 10px 15px 9px;
@@ -443,4 +424,106 @@
   padding: 25px;
   font-family: var(--fontP);
   font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  /* 중앙 선, 점 제거 */
+  .timeline::before,
+  .timeline-item::before {
+    display: none;
+    content: none;
+  }
+
+  /* 각 아이템 위치 초기화 */
+  .timeline-item {
+    width: 85%;
+    margin: 0 auto 130px auto;
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center !important;
+    padding: 0 !important;
+    position: relative !important;
+  }
+
+  /* 왼쪽/오른쪽 분기 무시 */
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0 !important;
+    right: 0 !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  /* 첫 번째 카드만 간격 줄이기 */
+  .timeline-item:first-child {
+    margin-top: 5px;
+  }
+
+  /* 상위 레이아웃 정리 */
+  .timeline,
+  .timeline-wrap,
+  .tab_con_wrap,
+  .tab_contents,
+  .tab_container,
+  .tour_course_wrap {
+    display: block !important;
+    justify-content: unset !important;
+    align-items: unset !important;
+    gap: 0 !important;
+  }
+  .timeline-wrap {
+    margin-bottom: -130px; /* 실제로 여백을 줄이고 싶을 때는 margin 사용 */
+  }
+  .text-box p {
+    font-size: 18px;
+  }
+  /* 드라이빙카페 */
+  .tree_outBox {
+    flex-direction: column;
+  }
+  .tree_textBox {
+    width: 100%;
+    padding-bottom: 30px;
+    order: 2;
+  }
+  .tree_gallerys {
+    order: 1;
+    aspect-ratio: 16 / 9;
+  }
+
+  .tree_textBox p {
+    font-size: 18px;
+  }
+  .arcoBtn {
+    height: auto !important;
+    padding: 20px 25px !important;
+    line-height: 2 !important;
+  }
+
+  /* 드라이빙코스 */
+
+  .tour_course_wrap .toilet_list_wp > ul li .arcoBtn {
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    padding: 15px;
+    min-height: 50px;
+    font-size: 1.6rem;
+    line-height: normal !important;
+  }
+  .toilet_list_wp > ul li .arcoBtn::after {
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+  }
+  .imgs {
+    flex-direction: column;
+    margin-bottom: -15px;
+  }
+  .toilet_list_wp > ul li .arcoBtn.on + .toilet_map {
+    max-height: 2000px;
+  }
+  .info_area p {
+    font-size: 15px;
+  }
 }

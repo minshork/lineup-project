@@ -347,6 +347,11 @@ textarea:focus::placeholder {
   --fontP: "Pretendard";
 }
 
+@media screen and (max-width: 1024px) {
+  .pc {
+    display: none;
+  }
+}
 /* TOP버튼 */
 .main__topButton {
   width: 50px;
@@ -401,4 +406,20 @@ textarea:focus::placeholder {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 11;
+}
+
+@media screen and (max-width: 768px) {
+  .main__topButton {
+    width: 35px;
+    height: 35px;
+    right: 25px;
+    bottom: 25px;
+  }
+  .main__topButton::after {
+    left: calc(-50% + 14px);
+    top: calc(-50% + 14px);
+  }
+  .main__topButton::before {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
 }

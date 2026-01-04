@@ -30,7 +30,7 @@
 /* 첫 타이틀 영역 */
 .intro_01_title {
     text-align: center;
-    margin-bottom: 600px;
+    margin-bottom: 60%;
     position: relative;
 }
 
@@ -75,22 +75,26 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     margin-bottom: 50px;
     position: absolute;
-    top: 0; left: 50%;
-    transform: translate(-50%, 35%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35%;
 
     transition: all 1.0s ease;
+}
+.intro_01_title > img.down{
+    top: 103%;
 }
 
 /* 장소 콘텐츠 */
 .intro_01_placeCon {
-    margin-bottom: 50px;
+    margin-bottom: 5%;
 }
 
 .intro_01_placeCon h1 {
     font-size: 4.6rem;
     text-align: center;
     color: var(--color01);
-    margin-bottom: 60px;
+    margin-bottom: 5%;
 
     transform: translateY(-30px);
     transition: all 0.8s ease;
@@ -110,7 +114,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 10%;
 }
 
 .intro_01_place01 img,
@@ -210,6 +214,80 @@
     transition: all 1s ease;
 }
 
+@media screen and (max-width: 768px){
+    .intro_01_title_text > h4{
+        font-size: 2.2rem;
+        /* margin-bottom: 30px; */
+        font-weight: 400;
+    }
+    .intro_01_title_text > h1 {
+        font-size: 3.5rem;
+        color: var(--color01);
+    }
+    .intro_01_title_text > h6{
+        font-size: 1.3rem;
+        /* margin-bottom: 30px; */
+        font-weight: 400;
+    }
+    .intro_01_title > p{
+        padding: 10%;
+        font-size: 0.9rem;
+    }
+
+    .intro_01_title{
+        margin-bottom: 70%;
+    }
+    .intro_01_title > img{
+        top: 40%;
+    }
+    .intro_01_title > img.down{
+        top: 100%;
+    }
+
+    .intro_01_history01 > div{
+        flex-direction: column-reverse;
+    }
+    .intro_01_history02 > div{
+        flex-direction: column;
+    }
+    .intro_01_history01 h1,
+    .intro_01_history02 h1{
+        font-size: 3.5rem;
+    }
+    .intro_01_history01 p,
+    .intro_01_history02 p{
+        font-size: 1.4rem;
+    }
+    .intro_01_history02 > div > img{
+        width: 100%;
+        height: auto;
+    }
+
+    .intro_01_placeCon h1{
+        font-size: 3.5rem;
+    }
+
+    .intro_01_place01,
+    .intro_01_place02{
+        flex-direction: column-reverse;
+    }
+    .intro_01_place01 p,
+    .intro_01_place02 p {
+        margin-bottom: 12px;
+        color: #333;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        font-family: var(--fontP);
+        text-align: center;
+    }
+    .intro_01_place01 img,
+    .intro_01_place02 img {
+        width: 70%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+}
+
 /* 명소 시작 intro_02 */
 .intro_02_tap{
     width: 100%;
@@ -307,6 +385,49 @@
     color: var(--color01);
 }
 
+@media screen and (max-width: 768px) {
+    .intro_02_spot_title > h1 {
+        font-size: 3.5rem;
+        color: var(--color01);
+    }
+    .intro_02_spot_title > h4{
+        font-size: 1.9rem;
+        font-weight: 400;
+    }
+    .intro_02_spot_title > h6{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .intro_02_spot_desBox{
+        flex-direction: column-reverse;
+    }
+    .intro_02_spot_desText{
+        font-size: 1.5rem;
+    }
+
+    .intro_02_spot_desImg{
+        width: 100%;
+    }
+
+    .intro_02_spot_desText{
+        width: 100%;
+    }
+    .intro_02_spot_desText > h2{
+        font-size: 2.2rem;
+    }
+
+    .intro_02_spot_03{
+        height: 350px;
+    }
+    .intro_02_spot_borderBox{
+        font-size: 1.4rem;
+    }
+    .intro_02_spot_borderBox h4{
+        font-size: 2.2rem;
+    }
+}
+
 
 /* 특산품 시작 intro_03 */
 .intro_03_wrap{
@@ -395,10 +516,10 @@
 }
 
 .intro_03_des_wrap{
-    /* display: none; */
-    position: absolute;
+    display: none;
+    /* position: relative;
     top: 50%; left: 0;
-    transform: translateY(-40%);
+    transform: translateY(-40%); */
     pointer-events: none;
     opacity: 0;
     transition: all 1.5s ease;
@@ -413,6 +534,9 @@
     border-radius: 15px 15px 0px 0px;
 
     transition: all 0.5s ease;
+}
+.intro_03_des_title.open{
+    width: 100%;
 }
 #intro03_des_close{
     position: absolute;
@@ -463,4 +587,36 @@
 }
 .intro_03_ad > p{
     padding: 5px 0px;
+}
+
+@media screen and (max-width: 768px){
+    .intro_03_title > h1 {
+        font-size: 3.5rem;
+        color: var(--color01);
+    }
+    .intro_03_title > h4{
+        font-size: 2.2rem;
+        font-weight: 400;
+    }
+    .intro_03_title > h6{
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .intro_03_des_title,
+    .intro_03_des_img{
+        width: 100%;
+    }
+
+    .intro_03_container{
+        grid-template-columns: repeat(1, 0.85fr);
+        justify-content: center;
+    }
+
+    .intro_03_product_con > p{
+        font-size: 1.7rem;
+    }
+    .intro_03_des_con{
+        flex-direction: column;
+    }
 }
